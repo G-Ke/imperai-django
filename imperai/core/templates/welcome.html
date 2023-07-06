@@ -1,0 +1,23 @@
+{% extends 'newbase.html' %}
+{% load static tailwind_tags %}
+
+{% block pagename %}imperai{% endblock %}
+{% block content %}
+<section class="relative isolate overflow-hidden bg-white px-6 py-24 sm:py-32 lg:px-8 shadow-2xl shadow-indigo-500/60 rounded-2xl">
+    <h1 class="text-center mb-6 pb-6 text-5xl font-extrabold leading-none tracking-tight text-gray-900 md:text-4xl lg:text-5xl">
+        Welcome to
+    </h1>
+    <div class="absolute inset-0 -z-10 bg-[radial-gradient(45rem_50rem_at_top,theme(colors.indigo.100),white)] opacity-20"></div>
+    <div class="absolute inset-y-0 right-1/2 -z-10 mr-16 w-[200%] origin-bottom-left skew-x-[-30deg] bg-white shadow-xl shadow-indigo-600/10 ring-1 ring-indigo-50 sm:mr-28 lg:mr-0 xl:mr-16 xl:origin-center"></div>
+    <div class="mx-auto max-w-2xl lg:max-w-4xl">
+        <img class="mx-auto" src="https://i.ibb.co/3B2CfNk/default.png" alt="">
+        <figure class="mt-10">
+            <blockquote class="text-center text-xl font-semibold leading-8 text-gray-900 sm:text-2xl sm:leading-9">
+                <p>We're connecting the world with cutting-edge AI.</p>
+                <p class="mt-2 text-lg leading-8 text-gray-600">Workflows, integrations, fine-tuning, and custom models. Control at everyone's fingertips.</p>
+
+            </blockquote>
+        </figure>
+    </div>
+</section>
+{% endblock content %}
