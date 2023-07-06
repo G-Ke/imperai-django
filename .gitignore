@@ -1,0 +1,24 @@
+# Secret files
+*.env
+*.pem
+*.key
+*.keychain
+
+# Database files
+*.sqlite3
+*.db
+
+# Log files
+*.log
+
+# Compiled Python files
+*.pyc
+
+# Byte-compiled files for Python 3
+__pycache__/
+
+# Media files
+media/
+
+# Virtual environments
+*.venv
