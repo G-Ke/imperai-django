@@ -1,0 +1,33 @@
+{% extends 'newbase.html' %}
+{% load account socialaccount %}
+{% load widget_tweaks %}
+{% block head_title %}Logout{% endblock %}
+{% block pagename %}Logout{% endblock %}
+
+{% block content %}
+{% if user.is_authenticated %}
+    {% for hidden in form.hidden_fields %}
+        {{ hidden }}
+    {% endfor %}
+    <section class="relative isolate mx-auto w-1/2 overflow-hidden bg-white px-6 py-24 sm:py-32 lg:px-8 shadow-2xl shadow-indigo-500/60 rounded-2xl">
+        <div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
+            <div class="sm:mx-auto sm:w-full sm:max-w-sm">
+                <img class="mx-auto h-20 w-auto" src="https://i.ibb.co/N3vG7Xd/imperai-logo-only.png" alt="imperai logo">
+                <h2 class="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">Logout of your imperai account</h2>
+            </div>
+            <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
+                <form class="logout space-y-6" method="POST" action="{% url 'account_logout' %}">
+                    {% csrf_token %}
+                    <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
+                        {% for error in field.errors %}
+                            <span class="help-block">{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                    <button type="submit" class="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Logout</button>
+                </form>
+                <p class="mt-10 text-center text-sm text-gray-500">Thanks for visiting imperai</p>
+            </div>
+        </div>
+    </section>
+{% endif %}
+{% endblock content %}
