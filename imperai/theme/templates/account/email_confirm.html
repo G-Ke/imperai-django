@@ -1,0 +1,35 @@
+{% extends 'newbase.html' %}
+{% load widget_tweaks %}
+{% block head_title %}Email Confirmation{% endblock %}
+{% block pagename %}Email Confirmation{% endblock %}
+{% load account %}
+{% block content %}
+
+
+<section class="relative isolate mx-auto overflow-hidden bg-white px-4 py-6 sm:py-10 lg:px-8 shadow-2xl shadow-indigo-500/60 rounded-2xl">
+    <div class="flex min-h-full flex-col justify-center">
+        <div class="space-y-12">
+            <div class="border-b border-purple-900/10 pb-4">
+                <h2 class="text-xl font-bold leading-7 text-zinc-900">Confirm Email Address</h2>
+            </div>
+            {% if confirmation %}
+                {% user_display confirmation.email_address.user as user_display %}
+                    {% if can_confirm %}
+                    <p>
+                        Please confirm that <a href="mailto:{{ email }}">{{ email }}</a> is an e-mail address for user {{ user_display }}.
+                    </p>
+                    <form method="post" action="{% url 'account_confirm_email' confirmation.key %}">
+                    {% csrf_token %}
+                        <button type="submit">Confirm</button>
+                    </form>
+                    {% else %}
+                    <p>Unable to confirm {{ email }} because it is already confirmed by a different account. Please contact support if you need assistance.</p>
+                    {% endif %}
+            {% else %}
+                {% url 'account_email' as email_url %}
+                <p>This e-mail confirmation link expired or is invalid. Please <a href="{{ email_url }}">issue a new e-mail confirmation request</a>.</p>
+            {% endif %}
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -9,18 +9,29 @@ https://docs.djangoproject.com/en/4.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
-
-from pathlib import Path
 import os
+from pathlib import Path
+from dotenv import load_dotenv
+from django.core.exceptions import ImproperlyConfigured
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
+# Django load_dotenv and get_env_value functions
+load_dotenv()
+
+def get_env_value(env_variable):
+    try:
+        return os.environ[env_variable]
+    except KeyError: # pragma: no cover
+        error_msg = 'Set the {} environment variable'.format(env_variable)
+        raise ImproperlyConfigured(error_msg)
+
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('SECRET_KEY')
+SECRET_KEY = get_env_value('DJANGO_SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -29,7 +40,9 @@ ALLOWED_HOSTS = [
     
 ]
 
-
+INTERNAL_IPS = [
+    "127.0.0.1",
+]
 # Application definition
 
 INSTALLED_APPS = [
@@ -44,6 +57,12 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'allauth.socialaccount.providers.auth0',
+    'core',
+    'tailwind',
+    'theme',
+    'ml',
+    'django_browser_reload',
+    'widget_tweaks',
 ]
 
 MIDDLEWARE = [
@@ -54,6 +73,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django_browser_reload.middleware.BrowserReloadMiddleware',
 ]
 
 ROOT_URLCONF = 'imperai.urls'
@@ -61,7 +81,7 @@ ROOT_URLCONF = 'imperai.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'theme', 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -146,9 +166,28 @@ SITE_ID = 1
 SOCIALACCOUNT_PROVIDERS = {
     'auth0': {
         'APP': {
-            'client_id': os.environ.get('AUTH0_CLIENT_ID'),
-            'secret': os.environ.get('AUTH0_CLIENT_SECRET'),
-            'key': os.environ.get('AUTH0_DOMAIN'),
+            'client_id': get_env_value('AUTH0_CLIENT_ID'),
+            'secret': get_env_value('AUTH0_CLIENT_SECRET'),
+            'key': get_env_value('AUTH0_DOMAIN'),
         }
     }
 }
+
+# Django Tailwind
+TAILWIND_APP_NAME = 'theme'
+NPM_BIN_PATH = r'C:\Program Files\nodejs\npm.cmd'
+
+
+# Django Allauth - https://django-allauth.readthedocs.io/en/latest/configuration.html
+LOGIN_REDIRECT_URL = 'welcome'
+SIGNUP_REDIRECT_URL = 'welcome'
+ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
+ACCOUNT_MAX_EMAIL_ADDRESSES = 2
+ACCOUNT_LOGOUT_REDIRECT_URL = 'welcome'
+ACCOUNT_CONFIRM_EMAIL_ON_GET = True
+ACCOUNT_LOGIN_ON_EMAIL_CONFIRMATION = True
+ACCOUNT_EMAIL_CONFIRMATION_EXPIRE_DAYS = 1
+
+EMAIL_BACKEND = "django.core.mail.backends.filebased.EmailBackend"
+EMAIL_FILE_PATH = BASE_DIR / "sent_emails"
