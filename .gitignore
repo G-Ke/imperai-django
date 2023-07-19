@@ -27,3 +27,4 @@ media/
 *notes.md
 
 migrations/
+imperai/db.sqlite3.old
