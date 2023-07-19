@@ -22,3 +22,8 @@ media/
 
 # Virtual environments
 *.venv
+
+# My Notes
+*notes.md
+
+migrations/

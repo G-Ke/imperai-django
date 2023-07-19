@@ -26,7 +26,7 @@ load_dotenv()
 def get_env_value(env_variable):
     try:
         return os.environ[env_variable]
-    except KeyError:
+    except KeyError: # pragma: no cover
         error_msg = 'Set the {} environment variable'.format(env_variable)
         raise ImproperlyConfigured(error_msg)
 
@@ -60,6 +60,7 @@ INSTALLED_APPS = [
     'core',
     'tailwind',
     'theme',
+    'ml',
     'django_browser_reload',
     'widget_tweaks',
 ]

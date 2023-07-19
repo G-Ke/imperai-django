@@ -27,7 +27,7 @@ class Profile(models.Model):
     title = models.CharField(max_length=60, blank=True, null=True)
 
     def __str__(self):
-        return str(self.user)
+        return str(self.user.email)
 
 @receiver(post_save, sender=settings.AUTH_USER_MODEL)
 def create_user_profile(sender, instance, created, **kwargs):
