@@ -57,12 +57,14 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'allauth.socialaccount.providers.auth0',
+    'allauth.socialaccount.providers.shopify',
     'core',
     'tailwind',
     'theme',
     'ml',
     'django_browser_reload',
     'widget_tweaks',
+    'shopifymanagement',
 ]
 
 MIDDLEWARE = [
@@ -170,6 +172,9 @@ SOCIALACCOUNT_PROVIDERS = {
             'secret': get_env_value('AUTH0_CLIENT_SECRET'),
             'key': get_env_value('AUTH0_DOMAIN'),
         }
+    },
+    'shopify': {
+        'AUTH_PARAMS': {'grant_options[]': 'per-user'}
     }
 }
 
@@ -188,6 +193,8 @@ ACCOUNT_LOGOUT_REDIRECT_URL = 'welcome'
 ACCOUNT_CONFIRM_EMAIL_ON_GET = True
 ACCOUNT_LOGIN_ON_EMAIL_CONFIRMATION = True
 ACCOUNT_EMAIL_CONFIRMATION_EXPIRE_DAYS = 1
+ACCOUNT_PREVENT_ENUMERATION = True
+# ACCOUNT_ADAPTER = 'shopifymanagement.adapter.MyAccountAdapter'
 
 EMAIL_BACKEND = "django.core.mail.backends.filebased.EmailBackend"
 EMAIL_FILE_PATH = BASE_DIR / "sent_emails"
