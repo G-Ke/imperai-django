@@ -1530,26 +1530,6 @@
 																"disableBodyPruning": true
 															},
 															"request": {
-																"auth": {
-																	"type": "apikey",
-																	"apikey": [
-																		{
-																			"key": "key",
-																			"value": "sessionid",
-																			"type": "string"
-																		},
-																		{
-																			"key": "value",
-																			"value": "{{apiKey}}",
-																			"type": "string"
-																		},
-																		{
-																			"key": "in",
-																			"value": "header",
-																			"type": "string"
-																		}
-																	]
-																},
 																"method": "GET",
 																"header": [
 																	{
@@ -1730,26 +1710,6 @@
 														"disableBodyPruning": true
 													},
 													"request": {
-														"auth": {
-															"type": "apikey",
-															"apikey": [
-																{
-																	"key": "key",
-																	"value": "sessionid",
-																	"type": "string"
-																},
-																{
-																	"key": "value",
-																	"value": "{{apiKey}}",
-																	"type": "string"
-																},
-																{
-																	"key": "in",
-																	"value": "header",
-																	"type": "string"
-																}
-															]
-														},
 														"method": "POST",
 														"header": [
 															{
@@ -2097,26 +2057,6 @@
 														"disableBodyPruning": true
 													},
 													"request": {
-														"auth": {
-															"type": "apikey",
-															"apikey": [
-																{
-																	"key": "key",
-																	"value": "sessionid",
-																	"type": "string"
-																},
-																{
-																	"key": "value",
-																	"value": "{{apiKey}}",
-																	"type": "string"
-																},
-																{
-																	"key": "in",
-																	"value": "header",
-																	"type": "string"
-																}
-															]
-														},
 														"method": "GET",
 														"header": [
 															{
@@ -2125,7 +2065,7 @@
 															}
 														],
 														"url": {
-															"raw": "{{baseUrl}}/api/v1/vertex/chat/contextdetails/?page=<integer>",
+															"raw": "{{baseUrl}}/api/v1/vertex/chat/contextdetails/?page=1",
 															"host": [
 																"{{baseUrl}}"
 															],
@@ -2139,9 +2079,9 @@
 															],
 															"query": [
 																{
-																	"description": "A page number within the paginated result set.",
 																	"key": "page",
-																	"value": "<integer>"
+																	"value": "1",
+																	"description": "A page number within the paginated result set."
 																}
 															]
 														}
@@ -3695,26 +3635,6 @@
 														"disableBodyPruning": true
 													},
 													"request": {
-														"auth": {
-															"type": "apikey",
-															"apikey": [
-																{
-																	"key": "key",
-																	"value": "sessionid",
-																	"type": "string"
-																},
-																{
-																	"key": "value",
-																	"value": "{{apiKey}}",
-																	"type": "string"
-																},
-																{
-																	"key": "in",
-																	"value": "header",
-																	"type": "string"
-																}
-															]
-														},
 														"method": "GET",
 														"header": [
 															{
@@ -3723,7 +3643,7 @@
 															}
 														],
 														"url": {
-															"raw": "{{baseUrl}}/api/v1/vertex/chat/exampleiopairs/?page=<integer>",
+															"raw": "{{baseUrl}}/api/v1/vertex/chat/exampleiopairs/?page=1",
 															"host": [
 																"{{baseUrl}}"
 															],
@@ -3737,9 +3657,9 @@
 															],
 															"query": [
 																{
-																	"description": "A page number within the paginated result set.",
 																	"key": "page",
-																	"value": "<integer>"
+																	"value": "1",
+																	"description": "A page number within the paginated result set."
 																}
 															]
 														}
@@ -3794,6 +3714,87 @@
 															],
 															"cookie": [],
 															"body": "{\n  \"count\": \"<integer>\",\n  \"next\": \"<uri>\",\n  \"previous\": \"<uri>\",\n  \"results\": [\n    {\n      \"description\": \"<string>\",\n      \"input_text\": \"<string>\",\n      \"managed_status\": 2,\n      \"name\": \"<string>\",\n      \"output_text\": \"<string>\",\n      \"url\": \"<uri>\",\n      \"user\": \"<uri>\"\n    },\n    {\n      \"description\": \"<string>\",\n      \"input_text\": \"<string>\",\n      \"managed_status\": 1,\n      \"name\": \"<string>\",\n      \"output_text\": \"<string>\",\n      \"url\": \"<uri>\",\n      \"user\": \"<uri>\"\n    }\n  ]\n}"
+														},
+														{
+															"id": "45e10022-aa4e-4084-946f-5da0d57c613f",
+															"name": "api v1 vertex chat exampleiopairs list",
+															"originalRequest": {
+																"method": "GET",
+																"header": [
+																	{
+																		"key": "Accept",
+																		"value": "application/json"
+																	}
+																],
+																"url": {
+																	"raw": "{{baseUrl}}/api/v1/vertex/chat/exampleiopairs/?page=1",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"api",
+																		"v1",
+																		"vertex",
+																		"chat",
+																		"exampleiopairs",
+																		""
+																	],
+																	"query": [
+																		{
+																			"key": "page",
+																			"value": "1",
+																			"description": "A page number within the paginated result set."
+																		}
+																	]
+																}
+															},
+															"status": "OK",
+															"code": 200,
+															"_postman_previewlanguage": "json",
+															"header": [
+																{
+																	"key": "Date",
+																	"value": "Tue, 01 Aug 2023 06:19:45 GMT"
+																},
+																{
+																	"key": "Server",
+																	"value": "WSGIServer/0.2 CPython/3.10.6"
+																},
+																{
+																	"key": "Content-Type",
+																	"value": "application/json"
+																},
+																{
+																	"key": "Vary",
+																	"value": "Accept, Cookie"
+																},
+																{
+																	"key": "Allow",
+																	"value": "GET, POST"
+																},
+																{
+																	"key": "X-Frame-Options",
+																	"value": "DENY"
+																},
+																{
+																	"key": "Content-Length",
+																	"value": "434"
+																},
+																{
+																	"key": "X-Content-Type-Options",
+																	"value": "nosniff"
+																},
+																{
+																	"key": "Referrer-Policy",
+																	"value": "same-origin"
+																},
+																{
+																	"key": "Cross-Origin-Opener-Policy",
+																	"value": "same-origin"
+																}
+															],
+															"cookie": [],
+															"body": "{\n    \"count\": 1,\n    \"next\": null,\n    \"previous\": null,\n    \"results\": [\n        {\n            \"url\": \"http://127.0.0.1:8000/api/v1/vertex/chat/exampleiopairs/ecebd885-5a3f-4908-9e01-c63dc13dc6b0/\",\n            \"name\": \"Test IO Pair\",\n            \"input_text\": \"What is the name of your store?\",\n            \"output_text\": \"The name of this store is ShoeCrafters. Welcome!\",\n            \"description\": \"A general question IO pair for what is the name of your store.\",\n            \"managed_status\": 1,\n            \"user\": \"http://127.0.0.1:8000/api/v1/users/2/\"\n        }\n    ]\n}"
 														}
 													]
 												},
@@ -3804,26 +3805,6 @@
 														"disableBodyPruning": true
 													},
 													"request": {
-														"auth": {
-															"type": "apikey",
-															"apikey": [
-																{
-																	"key": "key",
-																	"value": "sessionid",
-																	"type": "string"
-																},
-																{
-																	"key": "value",
-																	"value": "{{apiKey}}",
-																	"type": "string"
-																},
-																{
-																	"key": "in",
-																	"value": "header",
-																	"type": "string"
-																}
-															]
-														},
 														"method": "POST",
 														"header": [
 															{
