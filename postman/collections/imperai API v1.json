@@ -1641,26 +1641,6 @@
 														"disableBodyPruning": true
 													},
 													"request": {
-														"auth": {
-															"type": "apikey",
-															"apikey": [
-																{
-																	"key": "key",
-																	"value": "sessionid",
-																	"type": "string"
-																},
-																{
-																	"key": "value",
-																	"value": "{{apiKey}}",
-																	"type": "string"
-																},
-																{
-																	"key": "in",
-																	"value": "header",
-																	"type": "string"
-																}
-															]
-														},
 														"method": "GET",
 														"header": [
 															{
@@ -1669,7 +1649,7 @@
 															}
 														],
 														"url": {
-															"raw": "{{baseUrl}}/api/v1/vertex/chat/configs/?page=<integer>",
+															"raw": "{{baseUrl}}/api/v1/vertex/chat/configs/?page=1",
 															"host": [
 																"{{baseUrl}}"
 															],
@@ -1683,9 +1663,9 @@
 															],
 															"query": [
 																{
-																	"description": "A page number within the paginated result set.",
 																	"key": "page",
-																	"value": "<integer>"
+																	"value": "1",
+																	"description": "A page number within the paginated result set"
 																}
 															]
 														}
@@ -4438,11 +4418,41 @@
 			"id": "1fa5a807-5e88-464f-8d7e-f44924022d8e"
 		}
 	],
-	"variable": [
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "username",
+				"value": "{{dev_admin_test_email}}",
+				"type": "string"
+			},
+			{
+				"key": "password",
+				"value": "{{dev_admin_test_password}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
 		{
-			"id": "768e80d6-750c-4ba5-9c7e-0836df0859b9",
-			"key": "baseUrl",
-			"value": "/"
+			"listen": "prerequest",
+			"script": {
+				"id": "c4276091-5212-43df-a5e1-c9d4a8234f99",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "f70d1958-2995-4580-ad84-0dd9e61e8c28",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
 		}
 	]
 }
