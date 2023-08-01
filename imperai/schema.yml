@@ -1,0 +1,1299 @@
+openapi: 3.0.3
+info:
+  title: imperai API v1
+  version: 1.0.0
+  description: imperai
+paths:
+  /api/v1/groups/:
+    get:
+      operationId: api_v1_groups_list
+      parameters:
+      - name: page
+        required: false
+        in: query
+        description: A page number within the paginated result set.
+        schema:
+          type: integer
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedGroupList'
+          description: ''
+    post:
+      operationId: api_v1_groups_create
+      tags:
+      - api
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Group'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Group'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Group'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Group'
+          description: ''
+  /api/v1/groups/{id}/:
+    get:
+      operationId: api_v1_groups_retrieve
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this group.
+        required: true
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Group'
+          description: ''
+    put:
+      operationId: api_v1_groups_update
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this group.
+        required: true
+      tags:
+      - api
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Group'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Group'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Group'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Group'
+          description: ''
+    patch:
+      operationId: api_v1_groups_partial_update
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this group.
+        required: true
+      tags:
+      - api
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchedGroup'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PatchedGroup'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PatchedGroup'
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Group'
+          description: ''
+    delete:
+      operationId: api_v1_groups_destroy
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this group.
+        required: true
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      responses:
+        '204':
+          description: No response body
+  /api/v1/users/:
+    get:
+      operationId: api_v1_users_list
+      parameters:
+      - name: page
+        required: false
+        in: query
+        description: A page number within the paginated result set.
+        schema:
+          type: integer
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedUserList'
+          description: ''
+    post:
+      operationId: api_v1_users_create
+      tags:
+      - api
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/User'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/User'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/User'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+          description: ''
+  /api/v1/users/{id}/:
+    get:
+      operationId: api_v1_users_retrieve
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this user.
+        required: true
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+          description: ''
+    put:
+      operationId: api_v1_users_update
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this user.
+        required: true
+      tags:
+      - api
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/User'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/User'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/User'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+          description: ''
+    patch:
+      operationId: api_v1_users_partial_update
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this user.
+        required: true
+      tags:
+      - api
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchedUser'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PatchedUser'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PatchedUser'
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+          description: ''
+    delete:
+      operationId: api_v1_users_destroy
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this user.
+        required: true
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      responses:
+        '204':
+          description: No response body
+  /api/v1/vertex/chat/configs/:
+    get:
+      operationId: api_v1_vertex_chat_configs_list
+      parameters:
+      - name: page
+        required: false
+        in: query
+        description: A page number within the paginated result set.
+        schema:
+          type: integer
+      tags:
+      - Vertex Chat
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedVertexChatConfigList'
+          description: ''
+    post:
+      operationId: api_v1_vertex_chat_configs_create
+      tags:
+      - Vertex Chat
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/VertexChatConfig'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/VertexChatConfig'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/VertexChatConfig'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/VertexChatConfig'
+          description: ''
+  /api/v1/vertex/chat/configs/{id}/:
+    get:
+      operationId: api_v1_vertex_chat_configs_retrieve
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+          format: uuid
+        description: A UUID string identifying this vertex chat config.
+        required: true
+      tags:
+      - Vertex Chat
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/VertexChatConfig'
+          description: ''
+  /api/v1/vertex/chat/contextdetails/:
+    get:
+      operationId: api_v1_vertex_chat_contextdetails_list
+      parameters:
+      - name: page
+        required: false
+        in: query
+        description: A page number within the paginated result set.
+        schema:
+          type: integer
+      tags:
+      - Vertex Chat Context
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedVertexChatContextDetailList'
+          description: ''
+    post:
+      operationId: api_v1_vertex_chat_contextdetails_create
+      tags:
+      - Vertex Chat Context
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/VertexChatContextDetail'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/VertexChatContextDetail'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/VertexChatContextDetail'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/VertexChatContextDetail'
+          description: ''
+  /api/v1/vertex/chat/contextdetails/{id}/:
+    get:
+      operationId: api_v1_vertex_chat_contextdetails_retrieve
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+          format: uuid
+        description: A UUID string identifying this vertex chat context detail.
+        required: true
+      tags:
+      - Vertex Chat Context
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/VertexChatContextDetail'
+          description: ''
+  /api/v1/vertex/chat/contextinstructs/:
+    get:
+      operationId: api_v1_vertex_chat_contextinstructs_list
+      parameters:
+      - name: page
+        required: false
+        in: query
+        description: A page number within the paginated result set.
+        schema:
+          type: integer
+      tags:
+      - Vertex Chat Context
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedVertexChatContextInstructList'
+          description: ''
+    post:
+      operationId: api_v1_vertex_chat_contextinstructs_create
+      tags:
+      - Vertex Chat Context
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/VertexChatContextInstruct'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/VertexChatContextInstruct'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/VertexChatContextInstruct'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/VertexChatContextInstruct'
+          description: ''
+  /api/v1/vertex/chat/contextinstructs/{id}/:
+    get:
+      operationId: api_v1_vertex_chat_contextinstructs_retrieve
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+          format: uuid
+        description: A UUID string identifying this vertex chat context instruct.
+        required: true
+      tags:
+      - Vertex Chat Context
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/VertexChatContextInstruct'
+          description: ''
+  /api/v1/vertex/chat/contextrules/:
+    get:
+      operationId: api_v1_vertex_chat_contextrules_list
+      parameters:
+      - name: page
+        required: false
+        in: query
+        description: A page number within the paginated result set.
+        schema:
+          type: integer
+      tags:
+      - Vertex Chat Context
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedVertexChatContextRuleList'
+          description: ''
+    post:
+      operationId: api_v1_vertex_chat_contextrules_create
+      tags:
+      - Vertex Chat Context
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/VertexChatContextRule'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/VertexChatContextRule'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/VertexChatContextRule'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/VertexChatContextRule'
+          description: ''
+  /api/v1/vertex/chat/contextrules/{id}/:
+    get:
+      operationId: api_v1_vertex_chat_contextrules_retrieve
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+          format: uuid
+        description: A UUID string identifying this vertex chat context rule.
+        required: true
+      tags:
+      - Vertex Chat Context
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/VertexChatContextRule'
+          description: ''
+  /api/v1/vertex/chat/contexts/:
+    get:
+      operationId: api_v1_vertex_chat_contexts_list
+      parameters:
+      - name: page
+        required: false
+        in: query
+        description: A page number within the paginated result set.
+        schema:
+          type: integer
+      tags:
+      - Vertex Chat Context
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedVertexChatContextList'
+          description: ''
+    post:
+      operationId: api_v1_vertex_chat_contexts_create
+      tags:
+      - Vertex Chat Context
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/VertexChatContext'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/VertexChatContext'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/VertexChatContext'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/VertexChatContext'
+          description: ''
+  /api/v1/vertex/chat/contexts/{id}/:
+    get:
+      operationId: api_v1_vertex_chat_contexts_retrieve
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+          format: uuid
+        description: A UUID string identifying this vertex chat context.
+        required: true
+      tags:
+      - Vertex Chat Context
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/VertexChatContext'
+          description: ''
+  /api/v1/vertex/chat/exampleiopairs/:
+    get:
+      operationId: api_v1_vertex_chat_exampleiopairs_list
+      parameters:
+      - name: page
+        required: false
+        in: query
+        description: A page number within the paginated result set.
+        schema:
+          type: integer
+      tags:
+      - Vertex Chat
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedVertexChatExampleIOPairList'
+          description: ''
+    post:
+      operationId: api_v1_vertex_chat_exampleiopairs_create
+      tags:
+      - Vertex Chat
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/VertexChatExampleIOPair'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/VertexChatExampleIOPair'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/VertexChatExampleIOPair'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/VertexChatExampleIOPair'
+          description: ''
+  /api/v1/vertex/chat/exampleiopairs/{id}/:
+    get:
+      operationId: api_v1_vertex_chat_exampleiopairs_retrieve
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+          format: uuid
+        description: A UUID string identifying this vertex chat example io pair.
+        required: true
+      tags:
+      - Vertex Chat
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/VertexChatExampleIOPair'
+          description: ''
+  /api/v1/vertex/chat/requests/:
+    get:
+      operationId: api_v1_vertex_chat_requests_list
+      parameters:
+      - name: page
+        required: false
+        in: query
+        description: A page number within the paginated result set.
+        schema:
+          type: integer
+      tags:
+      - Vertex Chat
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedVertexChatRequestList'
+          description: ''
+    post:
+      operationId: api_v1_vertex_chat_requests_create
+      tags:
+      - Vertex Chat
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/VertexChatRequest'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/VertexChatRequest'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/VertexChatRequest'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/VertexChatRequest'
+          description: ''
+  /api/v1/vertex/chat/requests/{id}/:
+    get:
+      operationId: api_v1_vertex_chat_requests_retrieve
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+          format: uuid
+        description: A UUID string identifying this vertex chat request.
+        required: true
+      tags:
+      - Vertex Chat
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/VertexChatRequest'
+          description: ''
+components:
+  schemas:
+    Group:
+      type: object
+      properties:
+        url:
+          type: string
+          format: uri
+          readOnly: true
+        name:
+          type: string
+          maxLength: 150
+      required:
+      - name
+      - url
+    ManagedStatusEnum:
+      enum:
+      - 1
+      - 2
+      - 3
+      - 4
+      type: integer
+      description: |-
+        * `1` - imperai Managed
+        * `2` - Unmanaged
+        * `3` - Partner Managed
+        * `4` - Hybrid Managed
+    PaginatedGroupList:
+      type: object
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=4
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=2
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/Group'
+    PaginatedUserList:
+      type: object
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=4
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=2
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/User'
+    PaginatedVertexChatConfigList:
+      type: object
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=4
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=2
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/VertexChatConfig'
+    PaginatedVertexChatContextDetailList:
+      type: object
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=4
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=2
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/VertexChatContextDetail'
+    PaginatedVertexChatContextInstructList:
+      type: object
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=4
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=2
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/VertexChatContextInstruct'
+    PaginatedVertexChatContextList:
+      type: object
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=4
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=2
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/VertexChatContext'
+    PaginatedVertexChatContextRuleList:
+      type: object
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=4
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=2
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/VertexChatContextRule'
+    PaginatedVertexChatExampleIOPairList:
+      type: object
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=4
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=2
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/VertexChatExampleIOPair'
+    PaginatedVertexChatRequestList:
+      type: object
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=4
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=2
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/VertexChatRequest'
+    PatchedGroup:
+      type: object
+      properties:
+        url:
+          type: string
+          format: uri
+          readOnly: true
+        name:
+          type: string
+          maxLength: 150
+    PatchedUser:
+      type: object
+      properties:
+        url:
+          type: string
+          format: uri
+          readOnly: true
+        email:
+          type: string
+          format: email
+          title: Email address
+          maxLength: 254
+        groups:
+          type: array
+          items:
+            type: string
+            format: uri
+          description: The groups this user belongs to. A user will get all permissions
+            granted to each of their groups.
+    User:
+      type: object
+      properties:
+        url:
+          type: string
+          format: uri
+          readOnly: true
+        email:
+          type: string
+          format: email
+          title: Email address
+          maxLength: 254
+        groups:
+          type: array
+          items:
+            type: string
+            format: uri
+          description: The groups this user belongs to. A user will get all permissions
+            granted to each of their groups.
+      required:
+      - email
+      - url
+    VertexChatConfig:
+      type: object
+      properties:
+        url:
+          type: string
+          format: uri
+          readOnly: true
+        is_advanced:
+          type: boolean
+        is_active:
+          type: boolean
+        is_copy:
+          type: boolean
+        copy_id:
+          type: integer
+        managed_status:
+          $ref: '#/components/schemas/ManagedStatusEnum'
+        chat_model:
+          type: string
+          maxLength: 256
+        location:
+          type: string
+          maxLength: 256
+        project:
+          type: string
+          maxLength: 256
+        temperature:
+          type: number
+          format: double
+        max_tokens:
+          type: integer
+        top_k:
+          type: integer
+        top_p:
+          type: number
+          format: double
+        user:
+          type: string
+          format: uri
+      required:
+      - chat_model
+      - copy_id
+      - location
+      - managed_status
+      - max_tokens
+      - project
+      - temperature
+      - top_k
+      - top_p
+      - url
+      - user
+    VertexChatContext:
+      type: object
+      properties:
+        url:
+          type: string
+          format: uri
+          readOnly: true
+        name:
+          type: string
+          maxLength: 256
+        managed_status:
+          $ref: '#/components/schemas/ManagedStatusEnum'
+        context:
+          type: string
+        user:
+          type: string
+          format: uri
+        instruct:
+          type: string
+          format: uri
+        rule:
+          type: string
+          format: uri
+        detail:
+          type: string
+          format: uri
+      required:
+      - context
+      - detail
+      - instruct
+      - managed_status
+      - name
+      - rule
+      - url
+      - user
+    VertexChatContextDetail:
+      type: object
+      properties:
+        url:
+          type: string
+          format: uri
+          readOnly: true
+        name:
+          type: string
+          maxLength: 256
+        detail:
+          type: string
+        managed_status:
+          $ref: '#/components/schemas/ManagedStatusEnum'
+        user:
+          type: string
+          format: uri
+      required:
+      - detail
+      - managed_status
+      - name
+      - url
+      - user
+    VertexChatContextInstruct:
+      type: object
+      properties:
+        url:
+          type: string
+          format: uri
+          readOnly: true
+        name:
+          type: string
+          maxLength: 256
+        instruct:
+          type: string
+        managed_status:
+          $ref: '#/components/schemas/ManagedStatusEnum'
+        user:
+          type: string
+          format: uri
+      required:
+      - instruct
+      - managed_status
+      - name
+      - url
+      - user
+    VertexChatContextRule:
+      type: object
+      properties:
+        url:
+          type: string
+          format: uri
+          readOnly: true
+        name:
+          type: string
+          maxLength: 256
+        rule:
+          type: string
+        managed_status:
+          $ref: '#/components/schemas/ManagedStatusEnum'
+        user:
+          type: string
+          format: uri
+      required:
+      - managed_status
+      - name
+      - rule
+      - url
+      - user
+    VertexChatExampleIOPair:
+      type: object
+      properties:
+        url:
+          type: string
+          format: uri
+          readOnly: true
+        name:
+          type: string
+          maxLength: 256
+        input_text:
+          type: string
+          maxLength: 256
+        output_text:
+          type: string
+          maxLength: 256
+        description:
+          type: string
+        managed_status:
+          $ref: '#/components/schemas/ManagedStatusEnum'
+        user:
+          type: string
+          format: uri
+      required:
+      - description
+      - input_text
+      - managed_status
+      - name
+      - output_text
+      - url
+      - user
+    VertexChatRequest:
+      type: object
+      properties:
+        url:
+          type: string
+          format: uri
+          readOnly: true
+        id:
+          type: string
+          format: uuid
+          readOnly: true
+        user:
+          type: string
+          format: uri
+        chat_config:
+          type: string
+          format: uri
+        context:
+          type: string
+          format: uri
+        example:
+          type: array
+          items:
+            type: string
+            format: uri
+        managed_status:
+          $ref: '#/components/schemas/ManagedStatusEnum'
+      required:
+      - chat_config
+      - context
+      - example
+      - id
+      - managed_status
+      - url
+      - user
+  securitySchemes:
+    basicAuth:
+      type: http
+      scheme: basic
+    cookieAuth:
+      type: apiKey
+      in: cookie
+      name: sessionid
+tags:
+- name: Vertex Chat
+  description: General endpoints
+- name: Vertex Chat Context
+  description: Context endpoints
