@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {# Including the Head #}
+        {% include 'head.html' %}
+    </head>
+    {# Including Scripts that should be loaded outside of Head #}
+    {% include 'scripts.html' %}
+    {# Including extra sitewide Styles #}
+    {% include 'styles.html' %}
+    <body class="min-h-screen">
+        {# Including the Nav #}
+        {% include 'sidenav.html' %}
+        <div class="p-4 sm:ml-64">
+            <div class="p-4 mt-14">
+                <main>
+                {% if messages %}
+                    {% for message in messages %}
+                        {% include 'messages.html' %}
+                    {% endfor %}
+                {% endif %}
+                {% block content %}
+                    {# Content from pages inserted here! #}
+                {% endblock content %}
+                </main>
+            </div>
+        </div>
+    </body>
+    <div class="p-2 sm:ml-64 sticky top-[100vh]">
+        <div class="p-4 mt-14">
+            {# Including the Footer #}
+            {% include 'footer.html' %}
+        </div>
+    </div>
+</html>

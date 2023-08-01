@@ -1,5 +1,4 @@
-{% extends 'newbase.html' %}
-{% load account socialaccount %}
+{% extends 'rebase.html' %}
 {% load widget_tweaks %}
 {% block head_title %}Sign Up{% endblock %}
 {% block pagename %}Sign Up{% endblock %}
@@ -9,7 +8,7 @@
     {% for hidden in form.hidden_fields %}
         {{ hidden }}
     {% endfor %}
-    <section class="relative isolate mx-auto w-1/2 overflow-hidden bg-white px-6 py-24 sm:py-32 lg:px-8 shadow-2xl shadow-indigo-500/60 rounded-2xl">
+    <section class="relative isolate mx-auto max-w-lg overflow-hidden bg-white px-6 py-24 sm:py-32 lg:px-8 shadow-2xl shadow-indigo-500/60 rounded-2xl">
         <div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
             <div class="sm:mx-auto sm:w-full sm:max-w-sm">
                 <img class="mx-auto h-20 w-auto" src="https://i.ibb.co/N3vG7Xd/imperai-logo-only.png" alt="imperai logo">
