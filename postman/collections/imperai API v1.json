@@ -1,0 +1,4448 @@
+{
+	"info": {
+		"_postman_id": "3419ff6c-e2cb-4d3e-b974-12ba214fc934",
+		"name": "imperai API v1",
+		"description": "imperai",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "9026267-3419ff6c-e2cb-4d3e-b974-12ba214fc934"
+	},
+	"item": [
+		{
+			"name": "api",
+			"item": [
+				{
+					"name": "v1",
+					"item": [
+						{
+							"name": "groups",
+							"item": [
+								{
+									"name": "{id}",
+									"item": [
+										{
+											"name": "api v1 groups retrieve",
+											"id": "152f7510-e5ac-4434-a72e-907f55823a09",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "apikey",
+													"apikey": [
+														{
+															"key": "key",
+															"value": "sessionid",
+															"type": "string"
+														},
+														{
+															"key": "value",
+															"value": "{{apiKey}}",
+															"type": "string"
+														},
+														{
+															"key": "in",
+															"value": "header",
+															"type": "string"
+														}
+													]
+												},
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/groups/:id/",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"groups",
+														":id",
+														""
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "<integer>"
+														}
+													]
+												}
+											},
+											"response": [
+												{
+													"id": "ed1b9e16-3615-4609-9549-45275a29cc4d",
+													"name": "Untitled Example",
+													"originalRequest": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															},
+															{
+																"description": "Added as a part of security scheme: apikey",
+																"key": "sessionid",
+																"value": "<API Key>"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v1/groups/:id/",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v1",
+																"groups",
+																":id",
+																""
+															],
+															"variable": [
+																{
+																	"key": "id"
+																}
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"name\": \"<string>\",\n  \"url\": \"<uri>\"\n}"
+												}
+											]
+										},
+										{
+											"name": "api v1 groups update",
+											"id": "bd8696e6-ed0b-4ddf-a2e2-c608dcc87e0e",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "apikey",
+													"apikey": [
+														{
+															"key": "key",
+															"value": "sessionid",
+															"type": "string"
+														},
+														{
+															"key": "value",
+															"value": "{{apiKey}}",
+															"type": "string"
+														},
+														{
+															"key": "in",
+															"value": "header",
+															"type": "string"
+														}
+													]
+												},
+												"method": "PUT",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/x-www-form-urlencoded"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "urlencoded",
+													"urlencoded": [
+														{
+															"description": "(Required) ",
+															"key": "name",
+															"value": "<string>"
+														},
+														{
+															"description": "(Required) ",
+															"key": "url",
+															"value": "<uri>"
+														}
+													]
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/groups/:id/",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"groups",
+														":id",
+														""
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "<integer>"
+														}
+													]
+												}
+											},
+											"response": [
+												{
+													"id": "3706f5e6-4137-42d4-af14-6c205a6e3944",
+													"name": "Untitled Example",
+													"originalRequest": {
+														"method": "PUT",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/x-www-form-urlencoded"
+															},
+															{
+																"key": "Accept",
+																"value": "application/json"
+															},
+															{
+																"description": "Added as a part of security scheme: apikey",
+																"key": "sessionid",
+																"value": "<API Key>"
+															}
+														],
+														"body": {
+															"mode": "urlencoded",
+															"urlencoded": [
+																{
+																	"description": "(Required) ",
+																	"key": "name",
+																	"value": "<string>"
+																},
+																{
+																	"description": "(Required) ",
+																	"key": "url",
+																	"value": "<uri>"
+																}
+															]
+														},
+														"url": {
+															"raw": "{{baseUrl}}/api/v1/groups/:id/",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v1",
+																"groups",
+																":id",
+																""
+															],
+															"variable": [
+																{
+																	"key": "id"
+																}
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"name\": \"<string>\",\n  \"url\": \"<uri>\"\n}"
+												}
+											]
+										},
+										{
+											"name": "api v1 groups partial update",
+											"id": "b3b3bb85-4c2d-44a7-a408-5e2abbd2d26f",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "apikey",
+													"apikey": [
+														{
+															"key": "key",
+															"value": "sessionid",
+															"type": "string"
+														},
+														{
+															"key": "value",
+															"value": "{{apiKey}}",
+															"type": "string"
+														},
+														{
+															"key": "in",
+															"value": "header",
+															"type": "string"
+														}
+													]
+												},
+												"method": "PATCH",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/x-www-form-urlencoded"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "urlencoded",
+													"urlencoded": [
+														{
+															"key": "url",
+															"value": "<uri>"
+														},
+														{
+															"key": "name",
+															"value": "<string>"
+														}
+													]
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/groups/:id/",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"groups",
+														":id",
+														""
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "<integer>"
+														}
+													]
+												}
+											},
+											"response": [
+												{
+													"id": "a35e6175-3f43-4e31-9496-53e7e0be2d91",
+													"name": "Untitled Example",
+													"originalRequest": {
+														"method": "PATCH",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/x-www-form-urlencoded"
+															},
+															{
+																"key": "Accept",
+																"value": "application/json"
+															},
+															{
+																"description": "Added as a part of security scheme: apikey",
+																"key": "sessionid",
+																"value": "<API Key>"
+															}
+														],
+														"body": {
+															"mode": "urlencoded",
+															"urlencoded": [
+																{
+																	"key": "url",
+																	"value": "<uri>"
+																},
+																{
+																	"key": "name",
+																	"value": "<string>"
+																}
+															]
+														},
+														"url": {
+															"raw": "{{baseUrl}}/api/v1/groups/:id/",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v1",
+																"groups",
+																":id",
+																""
+															],
+															"variable": [
+																{
+																	"key": "id"
+																}
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"name\": \"<string>\",\n  \"url\": \"<uri>\"\n}"
+												}
+											]
+										},
+										{
+											"name": "api v1 groups destroy",
+											"id": "f7488db8-959e-4d9c-a570-c717da9ddd38",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "apikey",
+													"apikey": [
+														{
+															"key": "key",
+															"value": "sessionid",
+															"type": "string"
+														},
+														{
+															"key": "value",
+															"value": "{{apiKey}}",
+															"type": "string"
+														},
+														{
+															"key": "in",
+															"value": "header",
+															"type": "string"
+														}
+													]
+												},
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/groups/:id/",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"groups",
+														":id",
+														""
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "<integer>"
+														}
+													]
+												}
+											},
+											"response": [
+												{
+													"id": "9488f797-330a-4fae-8d81-7af5aae40f48",
+													"name": "No response body",
+													"originalRequest": {
+														"method": "DELETE",
+														"header": [
+															{
+																"description": "Added as a part of security scheme: apikey",
+																"key": "sessionid",
+																"value": "<API Key>"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v1/groups/:id/",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v1",
+																"groups",
+																":id",
+																""
+															],
+															"variable": [
+																{
+																	"key": "id"
+																}
+															]
+														}
+													},
+													"status": "No Content",
+													"code": 204,
+													"_postman_previewlanguage": "text",
+													"header": [],
+													"cookie": []
+												}
+											]
+										}
+									],
+									"id": "88084692-563e-48d2-9e1b-b63fd0524437"
+								},
+								{
+									"name": "api v1 groups list",
+									"id": "02eef159-35ac-4160-99f4-923012f5fb50",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "apikey",
+											"apikey": [
+												{
+													"key": "key",
+													"value": "sessionid",
+													"type": "string"
+												},
+												{
+													"key": "value",
+													"value": "{{apiKey}}",
+													"type": "string"
+												},
+												{
+													"key": "in",
+													"value": "header",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/groups/?page=<integer>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"groups",
+												""
+											],
+											"query": [
+												{
+													"description": "A page number within the paginated result set.",
+													"key": "page",
+													"value": "<integer>"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"id": "d656d1a6-4228-43f9-b95d-bb4fa786185d",
+											"name": "Untitled Example",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													},
+													{
+														"description": "Added as a part of security scheme: apikey",
+														"key": "sessionid",
+														"value": "<API Key>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/groups/?page=<integer>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"groups",
+														""
+													],
+													"query": [
+														{
+															"description": "A page number within the paginated result set.",
+															"key": "page",
+															"value": "<integer>"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"count\": \"<integer>\",\n  \"next\": \"<uri>\",\n  \"previous\": \"<uri>\",\n  \"results\": [\n    {\n      \"name\": \"<string>\",\n      \"url\": \"<uri>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"url\": \"<uri>\"\n    }\n  ]\n}"
+										}
+									]
+								},
+								{
+									"name": "api v1 groups create",
+									"id": "9df867ac-d3ee-4fdc-98b3-1efbf5ccb49d",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "apikey",
+											"apikey": [
+												{
+													"key": "key",
+													"value": "sessionid",
+													"type": "string"
+												},
+												{
+													"key": "value",
+													"value": "{{apiKey}}",
+													"type": "string"
+												},
+												{
+													"key": "in",
+													"value": "header",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/x-www-form-urlencoded"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"description": "(Required) ",
+													"key": "name",
+													"value": "<string>"
+												},
+												{
+													"description": "(Required) ",
+													"key": "url",
+													"value": "<uri>"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/groups/",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"groups",
+												""
+											]
+										}
+									},
+									"response": [
+										{
+											"id": "647847e8-e84e-4801-a2a6-cb551028be28",
+											"name": "Untitled Example",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/x-www-form-urlencoded"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													},
+													{
+														"description": "Added as a part of security scheme: apikey",
+														"key": "sessionid",
+														"value": "<API Key>"
+													}
+												],
+												"body": {
+													"mode": "urlencoded",
+													"urlencoded": [
+														{
+															"description": "(Required) ",
+															"key": "name",
+															"value": "<string>"
+														},
+														{
+															"description": "(Required) ",
+															"key": "url",
+															"value": "<uri>"
+														}
+													]
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/groups/",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"groups",
+														""
+													]
+												}
+											},
+											"status": "Created",
+											"code": 201,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"name\": \"<string>\",\n  \"url\": \"<uri>\"\n}"
+										}
+									]
+								}
+							],
+							"id": "edddb445-6302-42d9-8c3d-532e6fefa549"
+						},
+						{
+							"name": "users",
+							"item": [
+								{
+									"name": "{id}",
+									"item": [
+										{
+											"name": "api v1 users retrieve",
+											"id": "064f469f-fda1-4647-942e-c06d635ceb9e",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "apikey",
+													"apikey": [
+														{
+															"key": "key",
+															"value": "sessionid",
+															"type": "string"
+														},
+														{
+															"key": "value",
+															"value": "{{apiKey}}",
+															"type": "string"
+														},
+														{
+															"key": "in",
+															"value": "header",
+															"type": "string"
+														}
+													]
+												},
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/users/:id/",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"users",
+														":id",
+														""
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "<integer>"
+														}
+													]
+												}
+											},
+											"response": [
+												{
+													"id": "8c2f9ecc-244c-4776-9b16-40a544835f73",
+													"name": "Untitled Example",
+													"originalRequest": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															},
+															{
+																"description": "Added as a part of security scheme: apikey",
+																"key": "sessionid",
+																"value": "<API Key>"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v1/users/:id/",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v1",
+																"users",
+																":id",
+																""
+															],
+															"variable": [
+																{
+																	"key": "id"
+																}
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"email\": \"<email>\",\n  \"url\": \"<uri>\",\n  \"groups\": [\n    \"<uri>\",\n    \"<uri>\"\n  ]\n}"
+												}
+											]
+										},
+										{
+											"name": "api v1 users update",
+											"id": "e0d402ef-72f1-4be6-be36-d491675e7bd7",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "apikey",
+													"apikey": [
+														{
+															"key": "key",
+															"value": "sessionid",
+															"type": "string"
+														},
+														{
+															"key": "value",
+															"value": "{{apiKey}}",
+															"type": "string"
+														},
+														{
+															"key": "in",
+															"value": "header",
+															"type": "string"
+														}
+													]
+												},
+												"method": "PUT",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/x-www-form-urlencoded"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "urlencoded",
+													"urlencoded": [
+														{
+															"description": "(Required) ",
+															"key": "email",
+															"value": "<email>"
+														},
+														{
+															"description": "(Required) ",
+															"key": "url",
+															"value": "<uri>"
+														},
+														{
+															"description": "The groups this user belongs to. A user will get all permissions granted to each of their groups.",
+															"key": "groups",
+															"value": "<uri>"
+														},
+														{
+															"description": "The groups this user belongs to. A user will get all permissions granted to each of their groups.",
+															"key": "groups",
+															"value": "<uri>"
+														}
+													]
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/users/:id/",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"users",
+														":id",
+														""
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "<integer>"
+														}
+													]
+												}
+											},
+											"response": [
+												{
+													"id": "e03b11a9-3135-476a-b354-92e6169b24b0",
+													"name": "Untitled Example",
+													"originalRequest": {
+														"method": "PUT",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/x-www-form-urlencoded"
+															},
+															{
+																"key": "Accept",
+																"value": "application/json"
+															},
+															{
+																"description": "Added as a part of security scheme: apikey",
+																"key": "sessionid",
+																"value": "<API Key>"
+															}
+														],
+														"body": {
+															"mode": "urlencoded",
+															"urlencoded": [
+																{
+																	"description": "(Required) ",
+																	"key": "email",
+																	"value": "<email>"
+																},
+																{
+																	"description": "(Required) ",
+																	"key": "url",
+																	"value": "<uri>"
+																},
+																{
+																	"description": "The groups this user belongs to. A user will get all permissions granted to each of their groups.",
+																	"key": "groups",
+																	"value": "<uri>"
+																},
+																{
+																	"description": "The groups this user belongs to. A user will get all permissions granted to each of their groups.",
+																	"key": "groups",
+																	"value": "<uri>"
+																}
+															]
+														},
+														"url": {
+															"raw": "{{baseUrl}}/api/v1/users/:id/",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v1",
+																"users",
+																":id",
+																""
+															],
+															"variable": [
+																{
+																	"key": "id"
+																}
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"email\": \"<email>\",\n  \"url\": \"<uri>\",\n  \"groups\": [\n    \"<uri>\",\n    \"<uri>\"\n  ]\n}"
+												}
+											]
+										},
+										{
+											"name": "api v1 users partial update",
+											"id": "2a76539c-d588-4a53-b8d2-ed7d1f25f57e",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "apikey",
+													"apikey": [
+														{
+															"key": "key",
+															"value": "sessionid",
+															"type": "string"
+														},
+														{
+															"key": "value",
+															"value": "{{apiKey}}",
+															"type": "string"
+														},
+														{
+															"key": "in",
+															"value": "header",
+															"type": "string"
+														}
+													]
+												},
+												"method": "PATCH",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/x-www-form-urlencoded"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "urlencoded",
+													"urlencoded": [
+														{
+															"key": "url",
+															"value": "<uri>"
+														},
+														{
+															"key": "email",
+															"value": "<email>"
+														},
+														{
+															"description": "The groups this user belongs to. A user will get all permissions granted to each of their groups.",
+															"key": "groups",
+															"value": "<uri>"
+														},
+														{
+															"description": "The groups this user belongs to. A user will get all permissions granted to each of their groups.",
+															"key": "groups",
+															"value": "<uri>"
+														}
+													]
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/users/:id/",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"users",
+														":id",
+														""
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "<integer>"
+														}
+													]
+												}
+											},
+											"response": [
+												{
+													"id": "ceac166a-5b39-4d40-8180-b14462811c6e",
+													"name": "Untitled Example",
+													"originalRequest": {
+														"method": "PATCH",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/x-www-form-urlencoded"
+															},
+															{
+																"key": "Accept",
+																"value": "application/json"
+															},
+															{
+																"description": "Added as a part of security scheme: apikey",
+																"key": "sessionid",
+																"value": "<API Key>"
+															}
+														],
+														"body": {
+															"mode": "urlencoded",
+															"urlencoded": [
+																{
+																	"key": "url",
+																	"value": "<uri>"
+																},
+																{
+																	"key": "email",
+																	"value": "<email>"
+																},
+																{
+																	"description": "The groups this user belongs to. A user will get all permissions granted to each of their groups.",
+																	"key": "groups",
+																	"value": "<uri>"
+																},
+																{
+																	"description": "The groups this user belongs to. A user will get all permissions granted to each of their groups.",
+																	"key": "groups",
+																	"value": "<uri>"
+																}
+															]
+														},
+														"url": {
+															"raw": "{{baseUrl}}/api/v1/users/:id/",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v1",
+																"users",
+																":id",
+																""
+															],
+															"variable": [
+																{
+																	"key": "id"
+																}
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"email\": \"<email>\",\n  \"url\": \"<uri>\",\n  \"groups\": [\n    \"<uri>\",\n    \"<uri>\"\n  ]\n}"
+												}
+											]
+										},
+										{
+											"name": "api v1 users destroy",
+											"id": "d561ab44-d798-422c-bdc5-670d80fc7ed7",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "apikey",
+													"apikey": [
+														{
+															"key": "key",
+															"value": "sessionid",
+															"type": "string"
+														},
+														{
+															"key": "value",
+															"value": "{{apiKey}}",
+															"type": "string"
+														},
+														{
+															"key": "in",
+															"value": "header",
+															"type": "string"
+														}
+													]
+												},
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/users/:id/",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"users",
+														":id",
+														""
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "<integer>"
+														}
+													]
+												}
+											},
+											"response": [
+												{
+													"id": "b350432d-a168-4c12-8f66-ffb68fa150f2",
+													"name": "No response body",
+													"originalRequest": {
+														"method": "DELETE",
+														"header": [
+															{
+																"description": "Added as a part of security scheme: apikey",
+																"key": "sessionid",
+																"value": "<API Key>"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v1/users/:id/",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v1",
+																"users",
+																":id",
+																""
+															],
+															"variable": [
+																{
+																	"key": "id"
+																}
+															]
+														}
+													},
+													"status": "No Content",
+													"code": 204,
+													"_postman_previewlanguage": "text",
+													"header": [],
+													"cookie": []
+												}
+											]
+										}
+									],
+									"id": "adffe53c-a311-4218-8293-22ec9fddc1a9"
+								},
+								{
+									"name": "api v1 users list",
+									"id": "33336a42-5ba0-453a-a95d-419ac9588a56",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "apikey",
+											"apikey": [
+												{
+													"key": "key",
+													"value": "sessionid",
+													"type": "string"
+												},
+												{
+													"key": "value",
+													"value": "{{apiKey}}",
+													"type": "string"
+												},
+												{
+													"key": "in",
+													"value": "header",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/users/?page=<integer>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"users",
+												""
+											],
+											"query": [
+												{
+													"description": "A page number within the paginated result set.",
+													"key": "page",
+													"value": "<integer>"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"id": "eb63f9d3-156a-4149-8cc0-cbb4aa3f8aa0",
+											"name": "Untitled Example",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													},
+													{
+														"description": "Added as a part of security scheme: apikey",
+														"key": "sessionid",
+														"value": "<API Key>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/users/?page=<integer>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"users",
+														""
+													],
+													"query": [
+														{
+															"description": "A page number within the paginated result set.",
+															"key": "page",
+															"value": "<integer>"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"count\": \"<integer>\",\n  \"next\": \"<uri>\",\n  \"previous\": \"<uri>\",\n  \"results\": [\n    {\n      \"email\": \"<email>\",\n      \"url\": \"<uri>\",\n      \"groups\": [\n        \"<uri>\",\n        \"<uri>\"\n      ]\n    },\n    {\n      \"email\": \"<email>\",\n      \"url\": \"<uri>\",\n      \"groups\": [\n        \"<uri>\",\n        \"<uri>\"\n      ]\n    }\n  ]\n}"
+										}
+									]
+								},
+								{
+									"name": "api v1 users create",
+									"id": "0d002529-bbcf-4b9d-9f79-b8f3c2b4e520",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "apikey",
+											"apikey": [
+												{
+													"key": "key",
+													"value": "sessionid",
+													"type": "string"
+												},
+												{
+													"key": "value",
+													"value": "{{apiKey}}",
+													"type": "string"
+												},
+												{
+													"key": "in",
+													"value": "header",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/x-www-form-urlencoded"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"description": "(Required) ",
+													"key": "email",
+													"value": "<email>"
+												},
+												{
+													"description": "(Required) ",
+													"key": "url",
+													"value": "<uri>"
+												},
+												{
+													"description": "The groups this user belongs to. A user will get all permissions granted to each of their groups.",
+													"key": "groups",
+													"value": "<uri>"
+												},
+												{
+													"description": "The groups this user belongs to. A user will get all permissions granted to each of their groups.",
+													"key": "groups",
+													"value": "<uri>"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/users/",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"users",
+												""
+											]
+										}
+									},
+									"response": [
+										{
+											"id": "8d735b96-0846-4032-95a3-381ce15370be",
+											"name": "Untitled Example",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/x-www-form-urlencoded"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													},
+													{
+														"description": "Added as a part of security scheme: apikey",
+														"key": "sessionid",
+														"value": "<API Key>"
+													}
+												],
+												"body": {
+													"mode": "urlencoded",
+													"urlencoded": [
+														{
+															"description": "(Required) ",
+															"key": "email",
+															"value": "<email>"
+														},
+														{
+															"description": "(Required) ",
+															"key": "url",
+															"value": "<uri>"
+														},
+														{
+															"description": "The groups this user belongs to. A user will get all permissions granted to each of their groups.",
+															"key": "groups",
+															"value": "<uri>"
+														},
+														{
+															"description": "The groups this user belongs to. A user will get all permissions granted to each of their groups.",
+															"key": "groups",
+															"value": "<uri>"
+														}
+													]
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/users/",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"users",
+														""
+													]
+												}
+											},
+											"status": "Created",
+											"code": 201,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"email\": \"<email>\",\n  \"url\": \"<uri>\",\n  \"groups\": [\n    \"<uri>\",\n    \"<uri>\"\n  ]\n}"
+										}
+									]
+								}
+							],
+							"id": "66a7f433-85e8-4514-927a-a49b8938c400"
+						},
+						{
+							"name": "vertex",
+							"item": [
+								{
+									"name": "chat",
+									"item": [
+										{
+											"name": "configs",
+											"item": [
+												{
+													"name": "{id}",
+													"item": [
+														{
+															"name": "api v1 vertex chat configs retrieve",
+															"id": "45e1b996-b5c0-4c9e-b621-f855f333885a",
+															"protocolProfileBehavior": {
+																"disableBodyPruning": true
+															},
+															"request": {
+																"auth": {
+																	"type": "apikey",
+																	"apikey": [
+																		{
+																			"key": "key",
+																			"value": "sessionid",
+																			"type": "string"
+																		},
+																		{
+																			"key": "value",
+																			"value": "{{apiKey}}",
+																			"type": "string"
+																		},
+																		{
+																			"key": "in",
+																			"value": "header",
+																			"type": "string"
+																		}
+																	]
+																},
+																"method": "GET",
+																"header": [
+																	{
+																		"key": "Accept",
+																		"value": "application/json"
+																	}
+																],
+																"url": {
+																	"raw": "{{baseUrl}}/api/v1/vertex/chat/configs/:id/",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"api",
+																		"v1",
+																		"vertex",
+																		"chat",
+																		"configs",
+																		":id",
+																		""
+																	],
+																	"variable": [
+																		{
+																			"key": "id",
+																			"value": "<uuid>"
+																		}
+																	]
+																}
+															},
+															"response": [
+																{
+																	"id": "1e1c95aa-526d-4a9b-a93d-f484d9728af2",
+																	"name": "Untitled Example",
+																	"originalRequest": {
+																		"method": "GET",
+																		"header": [
+																			{
+																				"key": "Accept",
+																				"value": "application/json"
+																			},
+																			{
+																				"description": "Added as a part of security scheme: apikey",
+																				"key": "sessionid",
+																				"value": "<API Key>"
+																			}
+																		],
+																		"url": {
+																			"raw": "{{baseUrl}}/api/v1/vertex/chat/configs/:id/",
+																			"host": [
+																				"{{baseUrl}}"
+																			],
+																			"path": [
+																				"api",
+																				"v1",
+																				"vertex",
+																				"chat",
+																				"configs",
+																				":id",
+																				""
+																			],
+																			"variable": [
+																				{
+																					"key": "id"
+																				}
+																			]
+																		}
+																	},
+																	"status": "OK",
+																	"code": 200,
+																	"_postman_previewlanguage": "json",
+																	"header": [
+																		{
+																			"key": "Content-Type",
+																			"value": "application/json"
+																		}
+																	],
+																	"cookie": [],
+																	"body": "{\n  \"chat_model\": \"<string>\",\n  \"copy_id\": \"<integer>\",\n  \"location\": \"<string>\",\n  \"managed_status\": 4,\n  \"max_tokens\": \"<integer>\",\n  \"project\": \"<string>\",\n  \"temperature\": \"<double>\",\n  \"top_k\": \"<integer>\",\n  \"top_p\": \"<double>\",\n  \"url\": \"<uri>\",\n  \"user\": \"<uri>\",\n  \"is_advanced\": \"<boolean>\",\n  \"is_active\": \"<boolean>\",\n  \"is_copy\": \"<boolean>\"\n}"
+																}
+															]
+														}
+													],
+													"id": "a065a6ca-5061-414d-bd98-2d622f84527f"
+												},
+												{
+													"name": "api v1 vertex chat configs list",
+													"id": "80062a6b-c292-4f59-9058-949bf150249a",
+													"protocolProfileBehavior": {
+														"disableBodyPruning": true
+													},
+													"request": {
+														"auth": {
+															"type": "apikey",
+															"apikey": [
+																{
+																	"key": "key",
+																	"value": "sessionid",
+																	"type": "string"
+																},
+																{
+																	"key": "value",
+																	"value": "{{apiKey}}",
+																	"type": "string"
+																},
+																{
+																	"key": "in",
+																	"value": "header",
+																	"type": "string"
+																}
+															]
+														},
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v1/vertex/chat/configs/?page=<integer>",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v1",
+																"vertex",
+																"chat",
+																"configs",
+																""
+															],
+															"query": [
+																{
+																	"description": "A page number within the paginated result set.",
+																	"key": "page",
+																	"value": "<integer>"
+																}
+															]
+														}
+													},
+													"response": [
+														{
+															"id": "b399078a-4f54-48cc-bfe0-05a737fd4985",
+															"name": "Untitled Example",
+															"originalRequest": {
+																"method": "GET",
+																"header": [
+																	{
+																		"key": "Accept",
+																		"value": "application/json"
+																	},
+																	{
+																		"description": "Added as a part of security scheme: apikey",
+																		"key": "sessionid",
+																		"value": "<API Key>"
+																	}
+																],
+																"url": {
+																	"raw": "{{baseUrl}}/api/v1/vertex/chat/configs/?page=<integer>",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"api",
+																		"v1",
+																		"vertex",
+																		"chat",
+																		"configs",
+																		""
+																	],
+																	"query": [
+																		{
+																			"description": "A page number within the paginated result set.",
+																			"key": "page",
+																			"value": "<integer>"
+																		}
+																	]
+																}
+															},
+															"status": "OK",
+															"code": 200,
+															"_postman_previewlanguage": "json",
+															"header": [
+																{
+																	"key": "Content-Type",
+																	"value": "application/json"
+																}
+															],
+															"cookie": [],
+															"body": "{\n  \"count\": \"<integer>\",\n  \"next\": \"<uri>\",\n  \"previous\": \"<uri>\",\n  \"results\": [\n    {\n      \"chat_model\": \"<string>\",\n      \"copy_id\": \"<integer>\",\n      \"location\": \"<string>\",\n      \"managed_status\": 2,\n      \"max_tokens\": \"<integer>\",\n      \"project\": \"<string>\",\n      \"temperature\": \"<double>\",\n      \"top_k\": \"<integer>\",\n      \"top_p\": \"<double>\",\n      \"url\": \"<uri>\",\n      \"user\": \"<uri>\",\n      \"is_advanced\": \"<boolean>\",\n      \"is_active\": \"<boolean>\",\n      \"is_copy\": \"<boolean>\"\n    },\n    {\n      \"chat_model\": \"<string>\",\n      \"copy_id\": \"<integer>\",\n      \"location\": \"<string>\",\n      \"managed_status\": 3,\n      \"max_tokens\": \"<integer>\",\n      \"project\": \"<string>\",\n      \"temperature\": \"<double>\",\n      \"top_k\": \"<integer>\",\n      \"top_p\": \"<double>\",\n      \"url\": \"<uri>\",\n      \"user\": \"<uri>\",\n      \"is_advanced\": \"<boolean>\",\n      \"is_active\": \"<boolean>\",\n      \"is_copy\": \"<boolean>\"\n    }\n  ]\n}"
+														}
+													]
+												},
+												{
+													"name": "api v1 vertex chat configs create",
+													"id": "df78d836-8e33-4ee8-947f-ef6c9589eee1",
+													"protocolProfileBehavior": {
+														"disableBodyPruning": true
+													},
+													"request": {
+														"auth": {
+															"type": "apikey",
+															"apikey": [
+																{
+																	"key": "key",
+																	"value": "sessionid",
+																	"type": "string"
+																},
+																{
+																	"key": "value",
+																	"value": "{{apiKey}}",
+																	"type": "string"
+																},
+																{
+																	"key": "in",
+																	"value": "header",
+																	"type": "string"
+																}
+															]
+														},
+														"method": "POST",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/x-www-form-urlencoded"
+															},
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"body": {
+															"mode": "urlencoded",
+															"urlencoded": [
+																{
+																	"description": "(Required) ",
+																	"key": "chat_model",
+																	"value": "<string>"
+																},
+																{
+																	"description": "(Required) ",
+																	"key": "copy_id",
+																	"value": "<integer>"
+																},
+																{
+																	"description": "(Required) ",
+																	"key": "location",
+																	"value": "<string>"
+																},
+																{
+																	"description": "(Required) * `1` - imperai Managed\n* `2` - Unmanaged\n* `3` - Partner Managed\n* `4` - Hybrid Managed",
+																	"key": "managed_status",
+																	"value": "4"
+																},
+																{
+																	"description": "(Required) ",
+																	"key": "max_tokens",
+																	"value": "<integer>"
+																},
+																{
+																	"description": "(Required) ",
+																	"key": "project",
+																	"value": "<string>"
+																},
+																{
+																	"description": "(Required) ",
+																	"key": "temperature",
+																	"value": "<double>"
+																},
+																{
+																	"description": "(Required) ",
+																	"key": "top_k",
+																	"value": "<integer>"
+																},
+																{
+																	"description": "(Required) ",
+																	"key": "top_p",
+																	"value": "<double>"
+																},
+																{
+																	"description": "(Required) ",
+																	"key": "url",
+																	"value": "<uri>"
+																},
+																{
+																	"description": "(Required) ",
+																	"key": "user",
+																	"value": "<uri>"
+																},
+																{
+																	"key": "is_advanced",
+																	"value": "<boolean>"
+																},
+																{
+																	"key": "is_active",
+																	"value": "<boolean>"
+																},
+																{
+																	"key": "is_copy",
+																	"value": "<boolean>"
+																}
+															]
+														},
+														"url": {
+															"raw": "{{baseUrl}}/api/v1/vertex/chat/configs/",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v1",
+																"vertex",
+																"chat",
+																"configs",
+																""
+															]
+														}
+													},
+													"response": [
+														{
+															"id": "32f6f386-4b7f-46c7-bf00-94a0a080b135",
+															"name": "Untitled Example",
+															"originalRequest": {
+																"method": "POST",
+																"header": [
+																	{
+																		"key": "Content-Type",
+																		"value": "application/x-www-form-urlencoded"
+																	},
+																	{
+																		"key": "Accept",
+																		"value": "application/json"
+																	},
+																	{
+																		"description": "Added as a part of security scheme: apikey",
+																		"key": "sessionid",
+																		"value": "<API Key>"
+																	}
+																],
+																"body": {
+																	"mode": "urlencoded",
+																	"urlencoded": [
+																		{
+																			"description": "(Required) ",
+																			"key": "chat_model",
+																			"value": "<string>"
+																		},
+																		{
+																			"description": "(Required) ",
+																			"key": "copy_id",
+																			"value": "<integer>"
+																		},
+																		{
+																			"description": "(Required) ",
+																			"key": "location",
+																			"value": "<string>"
+																		},
+																		{
+																			"description": "(Required) * `1` - imperai Managed\n* `2` - Unmanaged\n* `3` - Partner Managed\n* `4` - Hybrid Managed",
+																			"key": "managed_status",
+																			"value": "4"
+																		},
+																		{
+																			"description": "(Required) ",
+																			"key": "max_tokens",
+																			"value": "<integer>"
+																		},
+																		{
+																			"description": "(Required) ",
+																			"key": "project",
+																			"value": "<string>"
+																		},
+																		{
+																			"description": "(Required) ",
+																			"key": "temperature",
+																			"value": "<double>"
+																		},
+																		{
+																			"description": "(Required) ",
+																			"key": "top_k",
+																			"value": "<integer>"
+																		},
+																		{
+																			"description": "(Required) ",
+																			"key": "top_p",
+																			"value": "<double>"
+																		},
+																		{
+																			"description": "(Required) ",
+																			"key": "url",
+																			"value": "<uri>"
+																		},
+																		{
+																			"description": "(Required) ",
+																			"key": "user",
+																			"value": "<uri>"
+																		},
+																		{
+																			"key": "is_advanced",
+																			"value": "<boolean>"
+																		},
+																		{
+																			"key": "is_active",
+																			"value": "<boolean>"
+																		},
+																		{
+																			"key": "is_copy",
+																			"value": "<boolean>"
+																		}
+																	]
+																},
+																"url": {
+																	"raw": "{{baseUrl}}/api/v1/vertex/chat/configs/",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"api",
+																		"v1",
+																		"vertex",
+																		"chat",
+																		"configs",
+																		""
+																	]
+																}
+															},
+															"status": "Created",
+															"code": 201,
+															"_postman_previewlanguage": "json",
+															"header": [
+																{
+																	"key": "Content-Type",
+																	"value": "application/json"
+																}
+															],
+															"cookie": [],
+															"body": "{\n  \"chat_model\": \"<string>\",\n  \"copy_id\": \"<integer>\",\n  \"location\": \"<string>\",\n  \"managed_status\": 4,\n  \"max_tokens\": \"<integer>\",\n  \"project\": \"<string>\",\n  \"temperature\": \"<double>\",\n  \"top_k\": \"<integer>\",\n  \"top_p\": \"<double>\",\n  \"url\": \"<uri>\",\n  \"user\": \"<uri>\",\n  \"is_advanced\": \"<boolean>\",\n  \"is_active\": \"<boolean>\",\n  \"is_copy\": \"<boolean>\"\n}"
+														}
+													]
+												}
+											],
+											"id": "5c4a7bc2-2bee-4ca2-95cc-6e1ed1e9dc54"
+										},
+										{
+											"name": "contextdetails",
+											"item": [
+												{
+													"name": "{id}",
+													"item": [
+														{
+															"name": "api v1 vertex chat contextdetails retrieve",
+															"id": "16661259-c6ac-4cec-b5e6-41cfa23367df",
+															"protocolProfileBehavior": {
+																"disableBodyPruning": true
+															},
+															"request": {
+																"auth": {
+																	"type": "apikey",
+																	"apikey": [
+																		{
+																			"key": "key",
+																			"value": "sessionid",
+																			"type": "string"
+																		},
+																		{
+																			"key": "value",
+																			"value": "{{apiKey}}",
+																			"type": "string"
+																		},
+																		{
+																			"key": "in",
+																			"value": "header",
+																			"type": "string"
+																		}
+																	]
+																},
+																"method": "GET",
+																"header": [
+																	{
+																		"key": "Accept",
+																		"value": "application/json"
+																	}
+																],
+																"url": {
+																	"raw": "{{baseUrl}}/api/v1/vertex/chat/contextdetails/:id/",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"api",
+																		"v1",
+																		"vertex",
+																		"chat",
+																		"contextdetails",
+																		":id",
+																		""
+																	],
+																	"variable": [
+																		{
+																			"key": "id",
+																			"value": "<uuid>"
+																		}
+																	]
+																}
+															},
+															"response": [
+																{
+																	"id": "7019952d-7a1a-4fcc-a8d0-af794ea1828f",
+																	"name": "Untitled Example",
+																	"originalRequest": {
+																		"method": "GET",
+																		"header": [
+																			{
+																				"key": "Accept",
+																				"value": "application/json"
+																			},
+																			{
+																				"description": "Added as a part of security scheme: apikey",
+																				"key": "sessionid",
+																				"value": "<API Key>"
+																			}
+																		],
+																		"url": {
+																			"raw": "{{baseUrl}}/api/v1/vertex/chat/contextdetails/:id/",
+																			"host": [
+																				"{{baseUrl}}"
+																			],
+																			"path": [
+																				"api",
+																				"v1",
+																				"vertex",
+																				"chat",
+																				"contextdetails",
+																				":id",
+																				""
+																			],
+																			"variable": [
+																				{
+																					"key": "id"
+																				}
+																			]
+																		}
+																	},
+																	"status": "OK",
+																	"code": 200,
+																	"_postman_previewlanguage": "json",
+																	"header": [
+																		{
+																			"key": "Content-Type",
+																			"value": "application/json"
+																		}
+																	],
+																	"cookie": [],
+																	"body": "{\n  \"detail\": \"<string>\",\n  \"managed_status\": 3,\n  \"name\": \"<string>\",\n  \"url\": \"<uri>\",\n  \"user\": \"<uri>\"\n}"
+																}
+															]
+														}
+													],
+													"id": "d52f339e-a946-49b1-9899-96f94e997e35"
+												},
+												{
+													"name": "api v1 vertex chat contextdetails list",
+													"id": "d9662f1e-694a-4d23-8774-b173957898ab",
+													"protocolProfileBehavior": {
+														"disableBodyPruning": true
+													},
+													"request": {
+														"auth": {
+															"type": "apikey",
+															"apikey": [
+																{
+																	"key": "key",
+																	"value": "sessionid",
+																	"type": "string"
+																},
+																{
+																	"key": "value",
+																	"value": "{{apiKey}}",
+																	"type": "string"
+																},
+																{
+																	"key": "in",
+																	"value": "header",
+																	"type": "string"
+																}
+															]
+														},
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v1/vertex/chat/contextdetails/?page=<integer>",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v1",
+																"vertex",
+																"chat",
+																"contextdetails",
+																""
+															],
+															"query": [
+																{
+																	"description": "A page number within the paginated result set.",
+																	"key": "page",
+																	"value": "<integer>"
+																}
+															]
+														}
+													},
+													"response": [
+														{
+															"id": "20bde1b7-6a87-4fd5-a95a-1eec1d929221",
+															"name": "Untitled Example",
+															"originalRequest": {
+																"method": "GET",
+																"header": [
+																	{
+																		"key": "Accept",
+																		"value": "application/json"
+																	},
+																	{
+																		"description": "Added as a part of security scheme: apikey",
+																		"key": "sessionid",
+																		"value": "<API Key>"
+																	}
+																],
+																"url": {
+																	"raw": "{{baseUrl}}/api/v1/vertex/chat/contextdetails/?page=<integer>",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"api",
+																		"v1",
+																		"vertex",
+																		"chat",
+																		"contextdetails",
+																		""
+																	],
+																	"query": [
+																		{
+																			"description": "A page number within the paginated result set.",
+																			"key": "page",
+																			"value": "<integer>"
+																		}
+																	]
+																}
+															},
+															"status": "OK",
+															"code": 200,
+															"_postman_previewlanguage": "json",
+															"header": [
+																{
+																	"key": "Content-Type",
+																	"value": "application/json"
+																}
+															],
+															"cookie": [],
+															"body": "{\n  \"count\": \"<integer>\",\n  \"next\": \"<uri>\",\n  \"previous\": \"<uri>\",\n  \"results\": [\n    {\n      \"detail\": \"<string>\",\n      \"managed_status\": 4,\n      \"name\": \"<string>\",\n      \"url\": \"<uri>\",\n      \"user\": \"<uri>\"\n    },\n    {\n      \"detail\": \"<string>\",\n      \"managed_status\": 4,\n      \"name\": \"<string>\",\n      \"url\": \"<uri>\",\n      \"user\": \"<uri>\"\n    }\n  ]\n}"
+														}
+													]
+												},
+												{
+													"name": "api v1 vertex chat contextdetails create",
+													"id": "bffcdbb0-d3ef-4040-aee9-b36ab2fdd51b",
+													"protocolProfileBehavior": {
+														"disableBodyPruning": true
+													},
+													"request": {
+														"auth": {
+															"type": "apikey",
+															"apikey": [
+																{
+																	"key": "key",
+																	"value": "sessionid",
+																	"type": "string"
+																},
+																{
+																	"key": "value",
+																	"value": "{{apiKey}}",
+																	"type": "string"
+																},
+																{
+																	"key": "in",
+																	"value": "header",
+																	"type": "string"
+																}
+															]
+														},
+														"method": "POST",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/x-www-form-urlencoded"
+															},
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"body": {
+															"mode": "urlencoded",
+															"urlencoded": [
+																{
+																	"description": "(Required) ",
+																	"key": "detail",
+																	"value": "<string>"
+																},
+																{
+																	"description": "(Required) * `1` - imperai Managed\n* `2` - Unmanaged\n* `3` - Partner Managed\n* `4` - Hybrid Managed",
+																	"key": "managed_status",
+																	"value": "3"
+																},
+																{
+																	"description": "(Required) ",
+																	"key": "name",
+																	"value": "<string>"
+																},
+																{
+																	"description": "(Required) ",
+																	"key": "url",
+																	"value": "<uri>"
+																},
+																{
+																	"description": "(Required) ",
+																	"key": "user",
+																	"value": "<uri>"
+																}
+															]
+														},
+														"url": {
+															"raw": "{{baseUrl}}/api/v1/vertex/chat/contextdetails/",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v1",
+																"vertex",
+																"chat",
+																"contextdetails",
+																""
+															]
+														}
+													},
+													"response": [
+														{
+															"id": "fb23bd54-240a-485a-a725-75cfe9f89267",
+															"name": "Untitled Example",
+															"originalRequest": {
+																"method": "POST",
+																"header": [
+																	{
+																		"key": "Content-Type",
+																		"value": "application/x-www-form-urlencoded"
+																	},
+																	{
+																		"key": "Accept",
+																		"value": "application/json"
+																	},
+																	{
+																		"description": "Added as a part of security scheme: apikey",
+																		"key": "sessionid",
+																		"value": "<API Key>"
+																	}
+																],
+																"body": {
+																	"mode": "urlencoded",
+																	"urlencoded": [
+																		{
+																			"description": "(Required) ",
+																			"key": "detail",
+																			"value": "<string>"
+																		},
+																		{
+																			"description": "(Required) * `1` - imperai Managed\n* `2` - Unmanaged\n* `3` - Partner Managed\n* `4` - Hybrid Managed",
+																			"key": "managed_status",
+																			"value": "3"
+																		},
+																		{
+																			"description": "(Required) ",
+																			"key": "name",
+																			"value": "<string>"
+																		},
+																		{
+																			"description": "(Required) ",
+																			"key": "url",
+																			"value": "<uri>"
+																		},
+																		{
+																			"description": "(Required) ",
+																			"key": "user",
+																			"value": "<uri>"
+																		}
+																	]
+																},
+																"url": {
+																	"raw": "{{baseUrl}}/api/v1/vertex/chat/contextdetails/",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"api",
+																		"v1",
+																		"vertex",
+																		"chat",
+																		"contextdetails",
+																		""
+																	]
+																}
+															},
+															"status": "Created",
+															"code": 201,
+															"_postman_previewlanguage": "json",
+															"header": [
+																{
+																	"key": "Content-Type",
+																	"value": "application/json"
+																}
+															],
+															"cookie": [],
+															"body": "{\n  \"detail\": \"<string>\",\n  \"managed_status\": 3,\n  \"name\": \"<string>\",\n  \"url\": \"<uri>\",\n  \"user\": \"<uri>\"\n}"
+														}
+													]
+												}
+											],
+											"id": "79153d0c-06de-47a9-995c-ccfafb60e6a1"
+										},
+										{
+											"name": "contextinstructs",
+											"item": [
+												{
+													"name": "{id}",
+													"item": [
+														{
+															"name": "api v1 vertex chat contextinstructs retrieve",
+															"id": "f58a49d8-9971-4b21-b7a5-3c2512579435",
+															"protocolProfileBehavior": {
+																"disableBodyPruning": true
+															},
+															"request": {
+																"auth": {
+																	"type": "apikey",
+																	"apikey": [
+																		{
+																			"key": "key",
+																			"value": "sessionid",
+																			"type": "string"
+																		},
+																		{
+																			"key": "value",
+																			"value": "{{apiKey}}",
+																			"type": "string"
+																		},
+																		{
+																			"key": "in",
+																			"value": "header",
+																			"type": "string"
+																		}
+																	]
+																},
+																"method": "GET",
+																"header": [
+																	{
+																		"key": "Accept",
+																		"value": "application/json"
+																	}
+																],
+																"url": {
+																	"raw": "{{baseUrl}}/api/v1/vertex/chat/contextinstructs/:id/",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"api",
+																		"v1",
+																		"vertex",
+																		"chat",
+																		"contextinstructs",
+																		":id",
+																		""
+																	],
+																	"variable": [
+																		{
+																			"key": "id",
+																			"value": "<uuid>"
+																		}
+																	]
+																}
+															},
+															"response": [
+																{
+																	"id": "726262d5-5efd-41b1-8129-3c078b4a0f30",
+																	"name": "Untitled Example",
+																	"originalRequest": {
+																		"method": "GET",
+																		"header": [
+																			{
+																				"key": "Accept",
+																				"value": "application/json"
+																			},
+																			{
+																				"description": "Added as a part of security scheme: apikey",
+																				"key": "sessionid",
+																				"value": "<API Key>"
+																			}
+																		],
+																		"url": {
+																			"raw": "{{baseUrl}}/api/v1/vertex/chat/contextinstructs/:id/",
+																			"host": [
+																				"{{baseUrl}}"
+																			],
+																			"path": [
+																				"api",
+																				"v1",
+																				"vertex",
+																				"chat",
+																				"contextinstructs",
+																				":id",
+																				""
+																			],
+																			"variable": [
+																				{
+																					"key": "id"
+																				}
+																			]
+																		}
+																	},
+																	"status": "OK",
+																	"code": 200,
+																	"_postman_previewlanguage": "json",
+																	"header": [
+																		{
+																			"key": "Content-Type",
+																			"value": "application/json"
+																		}
+																	],
+																	"cookie": [],
+																	"body": "{\n  \"instruct\": \"<string>\",\n  \"managed_status\": 2,\n  \"name\": \"<string>\",\n  \"url\": \"<uri>\",\n  \"user\": \"<uri>\"\n}"
+																}
+															]
+														}
+													],
+													"id": "0b08db79-8ec1-4a28-be3e-c7e40ba88261"
+												},
+												{
+													"name": "api v1 vertex chat contextinstructs list",
+													"id": "44cb4daf-d278-4a7d-bef6-4965f38312a0",
+													"protocolProfileBehavior": {
+														"disableBodyPruning": true
+													},
+													"request": {
+														"auth": {
+															"type": "apikey",
+															"apikey": [
+																{
+																	"key": "key",
+																	"value": "sessionid",
+																	"type": "string"
+																},
+																{
+																	"key": "value",
+																	"value": "{{apiKey}}",
+																	"type": "string"
+																},
+																{
+																	"key": "in",
+																	"value": "header",
+																	"type": "string"
+																}
+															]
+														},
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v1/vertex/chat/contextinstructs/?page=<integer>",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v1",
+																"vertex",
+																"chat",
+																"contextinstructs",
+																""
+															],
+															"query": [
+																{
+																	"description": "A page number within the paginated result set.",
+																	"key": "page",
+																	"value": "<integer>"
+																}
+															]
+														}
+													},
+													"response": [
+														{
+															"id": "5ea96b2f-17ff-4104-9106-e9d748941ecb",
+															"name": "Untitled Example",
+															"originalRequest": {
+																"method": "GET",
+																"header": [
+																	{
+																		"key": "Accept",
+																		"value": "application/json"
+																	},
+																	{
+																		"description": "Added as a part of security scheme: apikey",
+																		"key": "sessionid",
+																		"value": "<API Key>"
+																	}
+																],
+																"url": {
+																	"raw": "{{baseUrl}}/api/v1/vertex/chat/contextinstructs/?page=<integer>",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"api",
+																		"v1",
+																		"vertex",
+																		"chat",
+																		"contextinstructs",
+																		""
+																	],
+																	"query": [
+																		{
+																			"description": "A page number within the paginated result set.",
+																			"key": "page",
+																			"value": "<integer>"
+																		}
+																	]
+																}
+															},
+															"status": "OK",
+															"code": 200,
+															"_postman_previewlanguage": "json",
+															"header": [
+																{
+																	"key": "Content-Type",
+																	"value": "application/json"
+																}
+															],
+															"cookie": [],
+															"body": "{\n  \"count\": \"<integer>\",\n  \"next\": \"<uri>\",\n  \"previous\": \"<uri>\",\n  \"results\": [\n    {\n      \"instruct\": \"<string>\",\n      \"managed_status\": 1,\n      \"name\": \"<string>\",\n      \"url\": \"<uri>\",\n      \"user\": \"<uri>\"\n    },\n    {\n      \"instruct\": \"<string>\",\n      \"managed_status\": 3,\n      \"name\": \"<string>\",\n      \"url\": \"<uri>\",\n      \"user\": \"<uri>\"\n    }\n  ]\n}"
+														}
+													]
+												},
+												{
+													"name": "api v1 vertex chat contextinstructs create",
+													"id": "d41cef45-e490-4abf-8bc8-cbca992c3583",
+													"protocolProfileBehavior": {
+														"disableBodyPruning": true
+													},
+													"request": {
+														"auth": {
+															"type": "apikey",
+															"apikey": [
+																{
+																	"key": "key",
+																	"value": "sessionid",
+																	"type": "string"
+																},
+																{
+																	"key": "value",
+																	"value": "{{apiKey}}",
+																	"type": "string"
+																},
+																{
+																	"key": "in",
+																	"value": "header",
+																	"type": "string"
+																}
+															]
+														},
+														"method": "POST",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/x-www-form-urlencoded"
+															},
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"body": {
+															"mode": "urlencoded",
+															"urlencoded": [
+																{
+																	"description": "(Required) ",
+																	"key": "instruct",
+																	"value": "<string>"
+																},
+																{
+																	"description": "(Required) * `1` - imperai Managed\n* `2` - Unmanaged\n* `3` - Partner Managed\n* `4` - Hybrid Managed",
+																	"key": "managed_status",
+																	"value": "2"
+																},
+																{
+																	"description": "(Required) ",
+																	"key": "name",
+																	"value": "<string>"
+																},
+																{
+																	"description": "(Required) ",
+																	"key": "url",
+																	"value": "<uri>"
+																},
+																{
+																	"description": "(Required) ",
+																	"key": "user",
+																	"value": "<uri>"
+																}
+															]
+														},
+														"url": {
+															"raw": "{{baseUrl}}/api/v1/vertex/chat/contextinstructs/",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v1",
+																"vertex",
+																"chat",
+																"contextinstructs",
+																""
+															]
+														}
+													},
+													"response": [
+														{
+															"id": "1ee88dea-b93d-4b42-a297-65a6b88a6687",
+															"name": "Untitled Example",
+															"originalRequest": {
+																"method": "POST",
+																"header": [
+																	{
+																		"key": "Content-Type",
+																		"value": "application/x-www-form-urlencoded"
+																	},
+																	{
+																		"key": "Accept",
+																		"value": "application/json"
+																	},
+																	{
+																		"description": "Added as a part of security scheme: apikey",
+																		"key": "sessionid",
+																		"value": "<API Key>"
+																	}
+																],
+																"body": {
+																	"mode": "urlencoded",
+																	"urlencoded": [
+																		{
+																			"description": "(Required) ",
+																			"key": "instruct",
+																			"value": "<string>"
+																		},
+																		{
+																			"description": "(Required) * `1` - imperai Managed\n* `2` - Unmanaged\n* `3` - Partner Managed\n* `4` - Hybrid Managed",
+																			"key": "managed_status",
+																			"value": "2"
+																		},
+																		{
+																			"description": "(Required) ",
+																			"key": "name",
+																			"value": "<string>"
+																		},
+																		{
+																			"description": "(Required) ",
+																			"key": "url",
+																			"value": "<uri>"
+																		},
+																		{
+																			"description": "(Required) ",
+																			"key": "user",
+																			"value": "<uri>"
+																		}
+																	]
+																},
+																"url": {
+																	"raw": "{{baseUrl}}/api/v1/vertex/chat/contextinstructs/",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"api",
+																		"v1",
+																		"vertex",
+																		"chat",
+																		"contextinstructs",
+																		""
+																	]
+																}
+															},
+															"status": "Created",
+															"code": 201,
+															"_postman_previewlanguage": "json",
+															"header": [
+																{
+																	"key": "Content-Type",
+																	"value": "application/json"
+																}
+															],
+															"cookie": [],
+															"body": "{\n  \"instruct\": \"<string>\",\n  \"managed_status\": 2,\n  \"name\": \"<string>\",\n  \"url\": \"<uri>\",\n  \"user\": \"<uri>\"\n}"
+														}
+													]
+												}
+											],
+											"id": "43c318ce-de24-4838-86d7-1012efcc9d5e"
+										},
+										{
+											"name": "contextrules",
+											"item": [
+												{
+													"name": "{id}",
+													"item": [
+														{
+															"name": "api v1 vertex chat contextrules retrieve",
+															"id": "8c50d2c7-31af-4d47-a8ed-db6e5cda54fa",
+															"protocolProfileBehavior": {
+																"disableBodyPruning": true
+															},
+															"request": {
+																"auth": {
+																	"type": "apikey",
+																	"apikey": [
+																		{
+																			"key": "key",
+																			"value": "sessionid",
+																			"type": "string"
+																		},
+																		{
+																			"key": "value",
+																			"value": "{{apiKey}}",
+																			"type": "string"
+																		},
+																		{
+																			"key": "in",
+																			"value": "header",
+																			"type": "string"
+																		}
+																	]
+																},
+																"method": "GET",
+																"header": [
+																	{
+																		"key": "Accept",
+																		"value": "application/json"
+																	}
+																],
+																"url": {
+																	"raw": "{{baseUrl}}/api/v1/vertex/chat/contextrules/:id/",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"api",
+																		"v1",
+																		"vertex",
+																		"chat",
+																		"contextrules",
+																		":id",
+																		""
+																	],
+																	"variable": [
+																		{
+																			"key": "id",
+																			"value": "<uuid>"
+																		}
+																	]
+																}
+															},
+															"response": [
+																{
+																	"id": "9240f8b6-d8e0-47d9-a7d3-c5c4faab4be1",
+																	"name": "Untitled Example",
+																	"originalRequest": {
+																		"method": "GET",
+																		"header": [
+																			{
+																				"key": "Accept",
+																				"value": "application/json"
+																			},
+																			{
+																				"description": "Added as a part of security scheme: apikey",
+																				"key": "sessionid",
+																				"value": "<API Key>"
+																			}
+																		],
+																		"url": {
+																			"raw": "{{baseUrl}}/api/v1/vertex/chat/contextrules/:id/",
+																			"host": [
+																				"{{baseUrl}}"
+																			],
+																			"path": [
+																				"api",
+																				"v1",
+																				"vertex",
+																				"chat",
+																				"contextrules",
+																				":id",
+																				""
+																			],
+																			"variable": [
+																				{
+																					"key": "id"
+																				}
+																			]
+																		}
+																	},
+																	"status": "OK",
+																	"code": 200,
+																	"_postman_previewlanguage": "json",
+																	"header": [
+																		{
+																			"key": "Content-Type",
+																			"value": "application/json"
+																		}
+																	],
+																	"cookie": [],
+																	"body": "{\n  \"managed_status\": 2,\n  \"name\": \"<string>\",\n  \"rule\": \"<string>\",\n  \"url\": \"<uri>\",\n  \"user\": \"<uri>\"\n}"
+																}
+															]
+														}
+													],
+													"id": "e53ff500-4b45-49bb-be83-f038813f2796"
+												},
+												{
+													"name": "api v1 vertex chat contextrules list",
+													"id": "c3716636-f687-448e-966a-1cb2acbcf893",
+													"protocolProfileBehavior": {
+														"disableBodyPruning": true
+													},
+													"request": {
+														"auth": {
+															"type": "apikey",
+															"apikey": [
+																{
+																	"key": "key",
+																	"value": "sessionid",
+																	"type": "string"
+																},
+																{
+																	"key": "value",
+																	"value": "{{apiKey}}",
+																	"type": "string"
+																},
+																{
+																	"key": "in",
+																	"value": "header",
+																	"type": "string"
+																}
+															]
+														},
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v1/vertex/chat/contextrules/?page=<integer>",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v1",
+																"vertex",
+																"chat",
+																"contextrules",
+																""
+															],
+															"query": [
+																{
+																	"description": "A page number within the paginated result set.",
+																	"key": "page",
+																	"value": "<integer>"
+																}
+															]
+														}
+													},
+													"response": [
+														{
+															"id": "ca19c259-29c8-4cf4-8349-60331322d77f",
+															"name": "Untitled Example",
+															"originalRequest": {
+																"method": "GET",
+																"header": [
+																	{
+																		"key": "Accept",
+																		"value": "application/json"
+																	},
+																	{
+																		"description": "Added as a part of security scheme: apikey",
+																		"key": "sessionid",
+																		"value": "<API Key>"
+																	}
+																],
+																"url": {
+																	"raw": "{{baseUrl}}/api/v1/vertex/chat/contextrules/?page=<integer>",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"api",
+																		"v1",
+																		"vertex",
+																		"chat",
+																		"contextrules",
+																		""
+																	],
+																	"query": [
+																		{
+																			"description": "A page number within the paginated result set.",
+																			"key": "page",
+																			"value": "<integer>"
+																		}
+																	]
+																}
+															},
+															"status": "OK",
+															"code": 200,
+															"_postman_previewlanguage": "json",
+															"header": [
+																{
+																	"key": "Content-Type",
+																	"value": "application/json"
+																}
+															],
+															"cookie": [],
+															"body": "{\n  \"count\": \"<integer>\",\n  \"next\": \"<uri>\",\n  \"previous\": \"<uri>\",\n  \"results\": [\n    {\n      \"managed_status\": 1,\n      \"name\": \"<string>\",\n      \"rule\": \"<string>\",\n      \"url\": \"<uri>\",\n      \"user\": \"<uri>\"\n    },\n    {\n      \"managed_status\": 1,\n      \"name\": \"<string>\",\n      \"rule\": \"<string>\",\n      \"url\": \"<uri>\",\n      \"user\": \"<uri>\"\n    }\n  ]\n}"
+														}
+													]
+												},
+												{
+													"name": "api v1 vertex chat contextrules create",
+													"id": "b5d95b98-c516-4499-8863-494d6c3adf8d",
+													"protocolProfileBehavior": {
+														"disableBodyPruning": true
+													},
+													"request": {
+														"auth": {
+															"type": "apikey",
+															"apikey": [
+																{
+																	"key": "key",
+																	"value": "sessionid",
+																	"type": "string"
+																},
+																{
+																	"key": "value",
+																	"value": "{{apiKey}}",
+																	"type": "string"
+																},
+																{
+																	"key": "in",
+																	"value": "header",
+																	"type": "string"
+																}
+															]
+														},
+														"method": "POST",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/x-www-form-urlencoded"
+															},
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"body": {
+															"mode": "urlencoded",
+															"urlencoded": [
+																{
+																	"description": "(Required) * `1` - imperai Managed\n* `2` - Unmanaged\n* `3` - Partner Managed\n* `4` - Hybrid Managed",
+																	"key": "managed_status",
+																	"value": "2"
+																},
+																{
+																	"description": "(Required) ",
+																	"key": "name",
+																	"value": "<string>"
+																},
+																{
+																	"description": "(Required) ",
+																	"key": "rule",
+																	"value": "<string>"
+																},
+																{
+																	"description": "(Required) ",
+																	"key": "url",
+																	"value": "<uri>"
+																},
+																{
+																	"description": "(Required) ",
+																	"key": "user",
+																	"value": "<uri>"
+																}
+															]
+														},
+														"url": {
+															"raw": "{{baseUrl}}/api/v1/vertex/chat/contextrules/",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v1",
+																"vertex",
+																"chat",
+																"contextrules",
+																""
+															]
+														}
+													},
+													"response": [
+														{
+															"id": "45bb23da-4692-4c8f-8401-a979fe58a6a8",
+															"name": "Untitled Example",
+															"originalRequest": {
+																"method": "POST",
+																"header": [
+																	{
+																		"key": "Content-Type",
+																		"value": "application/x-www-form-urlencoded"
+																	},
+																	{
+																		"key": "Accept",
+																		"value": "application/json"
+																	},
+																	{
+																		"description": "Added as a part of security scheme: apikey",
+																		"key": "sessionid",
+																		"value": "<API Key>"
+																	}
+																],
+																"body": {
+																	"mode": "urlencoded",
+																	"urlencoded": [
+																		{
+																			"description": "(Required) * `1` - imperai Managed\n* `2` - Unmanaged\n* `3` - Partner Managed\n* `4` - Hybrid Managed",
+																			"key": "managed_status",
+																			"value": "2"
+																		},
+																		{
+																			"description": "(Required) ",
+																			"key": "name",
+																			"value": "<string>"
+																		},
+																		{
+																			"description": "(Required) ",
+																			"key": "rule",
+																			"value": "<string>"
+																		},
+																		{
+																			"description": "(Required) ",
+																			"key": "url",
+																			"value": "<uri>"
+																		},
+																		{
+																			"description": "(Required) ",
+																			"key": "user",
+																			"value": "<uri>"
+																		}
+																	]
+																},
+																"url": {
+																	"raw": "{{baseUrl}}/api/v1/vertex/chat/contextrules/",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"api",
+																		"v1",
+																		"vertex",
+																		"chat",
+																		"contextrules",
+																		""
+																	]
+																}
+															},
+															"status": "Created",
+															"code": 201,
+															"_postman_previewlanguage": "json",
+															"header": [
+																{
+																	"key": "Content-Type",
+																	"value": "application/json"
+																}
+															],
+															"cookie": [],
+															"body": "{\n  \"managed_status\": 2,\n  \"name\": \"<string>\",\n  \"rule\": \"<string>\",\n  \"url\": \"<uri>\",\n  \"user\": \"<uri>\"\n}"
+														}
+													]
+												}
+											],
+											"id": "f9029aae-7366-4370-ba98-11e6b9a6ff03"
+										},
+										{
+											"name": "contexts",
+											"item": [
+												{
+													"name": "{id}",
+													"item": [
+														{
+															"name": "api v1 vertex chat contexts retrieve",
+															"id": "5422dbbf-8930-4240-817b-ae634ceff9d1",
+															"protocolProfileBehavior": {
+																"disableBodyPruning": true
+															},
+															"request": {
+																"auth": {
+																	"type": "apikey",
+																	"apikey": [
+																		{
+																			"key": "key",
+																			"value": "sessionid",
+																			"type": "string"
+																		},
+																		{
+																			"key": "value",
+																			"value": "{{apiKey}}",
+																			"type": "string"
+																		},
+																		{
+																			"key": "in",
+																			"value": "header",
+																			"type": "string"
+																		}
+																	]
+																},
+																"method": "GET",
+																"header": [
+																	{
+																		"key": "Accept",
+																		"value": "application/json"
+																	}
+																],
+																"url": {
+																	"raw": "{{baseUrl}}/api/v1/vertex/chat/contexts/:id/",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"api",
+																		"v1",
+																		"vertex",
+																		"chat",
+																		"contexts",
+																		":id",
+																		""
+																	],
+																	"variable": [
+																		{
+																			"key": "id",
+																			"value": "<uuid>"
+																		}
+																	]
+																}
+															},
+															"response": [
+																{
+																	"id": "0c32cf50-87b3-48d2-b082-ed037517f506",
+																	"name": "Untitled Example",
+																	"originalRequest": {
+																		"method": "GET",
+																		"header": [
+																			{
+																				"key": "Accept",
+																				"value": "application/json"
+																			},
+																			{
+																				"description": "Added as a part of security scheme: apikey",
+																				"key": "sessionid",
+																				"value": "<API Key>"
+																			}
+																		],
+																		"url": {
+																			"raw": "{{baseUrl}}/api/v1/vertex/chat/contexts/:id/",
+																			"host": [
+																				"{{baseUrl}}"
+																			],
+																			"path": [
+																				"api",
+																				"v1",
+																				"vertex",
+																				"chat",
+																				"contexts",
+																				":id",
+																				""
+																			],
+																			"variable": [
+																				{
+																					"key": "id"
+																				}
+																			]
+																		}
+																	},
+																	"status": "OK",
+																	"code": 200,
+																	"_postman_previewlanguage": "json",
+																	"header": [
+																		{
+																			"key": "Content-Type",
+																			"value": "application/json"
+																		}
+																	],
+																	"cookie": [],
+																	"body": "{\n  \"context\": \"<string>\",\n  \"detail\": \"<uri>\",\n  \"instruct\": \"<uri>\",\n  \"managed_status\": 3,\n  \"name\": \"<string>\",\n  \"rule\": \"<uri>\",\n  \"url\": \"<uri>\",\n  \"user\": \"<uri>\"\n}"
+																}
+															]
+														}
+													],
+													"id": "3cd2465a-f7c2-47a8-92a0-a9c1d9060a8d"
+												},
+												{
+													"name": "api v1 vertex chat contexts list",
+													"id": "a964830b-3461-49c0-8513-6577f6b72dcb",
+													"protocolProfileBehavior": {
+														"disableBodyPruning": true
+													},
+													"request": {
+														"auth": {
+															"type": "apikey",
+															"apikey": [
+																{
+																	"key": "key",
+																	"value": "sessionid",
+																	"type": "string"
+																},
+																{
+																	"key": "value",
+																	"value": "{{apiKey}}",
+																	"type": "string"
+																},
+																{
+																	"key": "in",
+																	"value": "header",
+																	"type": "string"
+																}
+															]
+														},
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v1/vertex/chat/contexts/?page=<integer>",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v1",
+																"vertex",
+																"chat",
+																"contexts",
+																""
+															],
+															"query": [
+																{
+																	"description": "A page number within the paginated result set.",
+																	"key": "page",
+																	"value": "<integer>"
+																}
+															]
+														}
+													},
+													"response": [
+														{
+															"id": "2acc790a-af95-42ff-be45-fba6cecadd46",
+															"name": "Untitled Example",
+															"originalRequest": {
+																"method": "GET",
+																"header": [
+																	{
+																		"key": "Accept",
+																		"value": "application/json"
+																	},
+																	{
+																		"description": "Added as a part of security scheme: apikey",
+																		"key": "sessionid",
+																		"value": "<API Key>"
+																	}
+																],
+																"url": {
+																	"raw": "{{baseUrl}}/api/v1/vertex/chat/contexts/?page=<integer>",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"api",
+																		"v1",
+																		"vertex",
+																		"chat",
+																		"contexts",
+																		""
+																	],
+																	"query": [
+																		{
+																			"description": "A page number within the paginated result set.",
+																			"key": "page",
+																			"value": "<integer>"
+																		}
+																	]
+																}
+															},
+															"status": "OK",
+															"code": 200,
+															"_postman_previewlanguage": "json",
+															"header": [
+																{
+																	"key": "Content-Type",
+																	"value": "application/json"
+																}
+															],
+															"cookie": [],
+															"body": "{\n  \"count\": \"<integer>\",\n  \"next\": \"<uri>\",\n  \"previous\": \"<uri>\",\n  \"results\": [\n    {\n      \"context\": \"<string>\",\n      \"detail\": \"<uri>\",\n      \"instruct\": \"<uri>\",\n      \"managed_status\": 1,\n      \"name\": \"<string>\",\n      \"rule\": \"<uri>\",\n      \"url\": \"<uri>\",\n      \"user\": \"<uri>\"\n    },\n    {\n      \"context\": \"<string>\",\n      \"detail\": \"<uri>\",\n      \"instruct\": \"<uri>\",\n      \"managed_status\": 2,\n      \"name\": \"<string>\",\n      \"rule\": \"<uri>\",\n      \"url\": \"<uri>\",\n      \"user\": \"<uri>\"\n    }\n  ]\n}"
+														}
+													]
+												},
+												{
+													"name": "api v1 vertex chat contexts create",
+													"id": "58436a31-65fb-425a-ae62-e61c690f25ca",
+													"protocolProfileBehavior": {
+														"disableBodyPruning": true
+													},
+													"request": {
+														"auth": {
+															"type": "apikey",
+															"apikey": [
+																{
+																	"key": "key",
+																	"value": "sessionid",
+																	"type": "string"
+																},
+																{
+																	"key": "value",
+																	"value": "{{apiKey}}",
+																	"type": "string"
+																},
+																{
+																	"key": "in",
+																	"value": "header",
+																	"type": "string"
+																}
+															]
+														},
+														"method": "POST",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/x-www-form-urlencoded"
+															},
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"body": {
+															"mode": "urlencoded",
+															"urlencoded": [
+																{
+																	"description": "(Required) ",
+																	"key": "context",
+																	"value": "<string>"
+																},
+																{
+																	"description": "(Required) ",
+																	"key": "detail",
+																	"value": "<uri>"
+																},
+																{
+																	"description": "(Required) ",
+																	"key": "instruct",
+																	"value": "<uri>"
+																},
+																{
+																	"description": "(Required) * `1` - imperai Managed\n* `2` - Unmanaged\n* `3` - Partner Managed\n* `4` - Hybrid Managed",
+																	"key": "managed_status",
+																	"value": "3"
+																},
+																{
+																	"description": "(Required) ",
+																	"key": "name",
+																	"value": "<string>"
+																},
+																{
+																	"description": "(Required) ",
+																	"key": "rule",
+																	"value": "<uri>"
+																},
+																{
+																	"description": "(Required) ",
+																	"key": "url",
+																	"value": "<uri>"
+																},
+																{
+																	"description": "(Required) ",
+																	"key": "user",
+																	"value": "<uri>"
+																}
+															]
+														},
+														"url": {
+															"raw": "{{baseUrl}}/api/v1/vertex/chat/contexts/",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v1",
+																"vertex",
+																"chat",
+																"contexts",
+																""
+															]
+														}
+													},
+													"response": [
+														{
+															"id": "15e22974-0bf6-4958-91d8-47c8c45f0c19",
+															"name": "Untitled Example",
+															"originalRequest": {
+																"method": "POST",
+																"header": [
+																	{
+																		"key": "Content-Type",
+																		"value": "application/x-www-form-urlencoded"
+																	},
+																	{
+																		"key": "Accept",
+																		"value": "application/json"
+																	},
+																	{
+																		"description": "Added as a part of security scheme: apikey",
+																		"key": "sessionid",
+																		"value": "<API Key>"
+																	}
+																],
+																"body": {
+																	"mode": "urlencoded",
+																	"urlencoded": [
+																		{
+																			"description": "(Required) ",
+																			"key": "context",
+																			"value": "<string>"
+																		},
+																		{
+																			"description": "(Required) ",
+																			"key": "detail",
+																			"value": "<uri>"
+																		},
+																		{
+																			"description": "(Required) ",
+																			"key": "instruct",
+																			"value": "<uri>"
+																		},
+																		{
+																			"description": "(Required) * `1` - imperai Managed\n* `2` - Unmanaged\n* `3` - Partner Managed\n* `4` - Hybrid Managed",
+																			"key": "managed_status",
+																			"value": "3"
+																		},
+																		{
+																			"description": "(Required) ",
+																			"key": "name",
+																			"value": "<string>"
+																		},
+																		{
+																			"description": "(Required) ",
+																			"key": "rule",
+																			"value": "<uri>"
+																		},
+																		{
+																			"description": "(Required) ",
+																			"key": "url",
+																			"value": "<uri>"
+																		},
+																		{
+																			"description": "(Required) ",
+																			"key": "user",
+																			"value": "<uri>"
+																		}
+																	]
+																},
+																"url": {
+																	"raw": "{{baseUrl}}/api/v1/vertex/chat/contexts/",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"api",
+																		"v1",
+																		"vertex",
+																		"chat",
+																		"contexts",
+																		""
+																	]
+																}
+															},
+															"status": "Created",
+															"code": 201,
+															"_postman_previewlanguage": "json",
+															"header": [
+																{
+																	"key": "Content-Type",
+																	"value": "application/json"
+																}
+															],
+															"cookie": [],
+															"body": "{\n  \"context\": \"<string>\",\n  \"detail\": \"<uri>\",\n  \"instruct\": \"<uri>\",\n  \"managed_status\": 3,\n  \"name\": \"<string>\",\n  \"rule\": \"<uri>\",\n  \"url\": \"<uri>\",\n  \"user\": \"<uri>\"\n}"
+														}
+													]
+												}
+											],
+											"id": "7a622d9e-3123-4d1f-a117-68179d6d772a"
+										},
+										{
+											"name": "exampleiopairs",
+											"item": [
+												{
+													"name": "{id}",
+													"item": [
+														{
+															"name": "api v1 vertex chat exampleiopairs retrieve",
+															"id": "1f2d5bee-a8b5-40d7-aa58-a1df8366b0d9",
+															"protocolProfileBehavior": {
+																"disableBodyPruning": true
+															},
+															"request": {
+																"auth": {
+																	"type": "apikey",
+																	"apikey": [
+																		{
+																			"key": "key",
+																			"value": "sessionid",
+																			"type": "string"
+																		},
+																		{
+																			"key": "value",
+																			"value": "{{apiKey}}",
+																			"type": "string"
+																		},
+																		{
+																			"key": "in",
+																			"value": "header",
+																			"type": "string"
+																		}
+																	]
+																},
+																"method": "GET",
+																"header": [
+																	{
+																		"key": "Accept",
+																		"value": "application/json"
+																	}
+																],
+																"url": {
+																	"raw": "{{baseUrl}}/api/v1/vertex/chat/exampleiopairs/:id/",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"api",
+																		"v1",
+																		"vertex",
+																		"chat",
+																		"exampleiopairs",
+																		":id",
+																		""
+																	],
+																	"variable": [
+																		{
+																			"key": "id",
+																			"value": "<uuid>"
+																		}
+																	]
+																}
+															},
+															"response": [
+																{
+																	"id": "04864e9b-49e5-4de1-974c-63d3024c20ea",
+																	"name": "Untitled Example",
+																	"originalRequest": {
+																		"method": "GET",
+																		"header": [
+																			{
+																				"key": "Accept",
+																				"value": "application/json"
+																			},
+																			{
+																				"description": "Added as a part of security scheme: apikey",
+																				"key": "sessionid",
+																				"value": "<API Key>"
+																			}
+																		],
+																		"url": {
+																			"raw": "{{baseUrl}}/api/v1/vertex/chat/exampleiopairs/:id/",
+																			"host": [
+																				"{{baseUrl}}"
+																			],
+																			"path": [
+																				"api",
+																				"v1",
+																				"vertex",
+																				"chat",
+																				"exampleiopairs",
+																				":id",
+																				""
+																			],
+																			"variable": [
+																				{
+																					"key": "id"
+																				}
+																			]
+																		}
+																	},
+																	"status": "OK",
+																	"code": 200,
+																	"_postman_previewlanguage": "json",
+																	"header": [
+																		{
+																			"key": "Content-Type",
+																			"value": "application/json"
+																		}
+																	],
+																	"cookie": [],
+																	"body": "{\n  \"description\": \"<string>\",\n  \"input_text\": \"<string>\",\n  \"managed_status\": 2,\n  \"name\": \"<string>\",\n  \"output_text\": \"<string>\",\n  \"url\": \"<uri>\",\n  \"user\": \"<uri>\"\n}"
+																}
+															]
+														}
+													],
+													"id": "3df79fd2-99a3-499a-b471-c92f0042d57d"
+												},
+												{
+													"name": "api v1 vertex chat exampleiopairs list",
+													"id": "4f2284ba-b989-4d46-a31c-b9deb0215df2",
+													"protocolProfileBehavior": {
+														"disableBodyPruning": true
+													},
+													"request": {
+														"auth": {
+															"type": "apikey",
+															"apikey": [
+																{
+																	"key": "key",
+																	"value": "sessionid",
+																	"type": "string"
+																},
+																{
+																	"key": "value",
+																	"value": "{{apiKey}}",
+																	"type": "string"
+																},
+																{
+																	"key": "in",
+																	"value": "header",
+																	"type": "string"
+																}
+															]
+														},
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v1/vertex/chat/exampleiopairs/?page=<integer>",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v1",
+																"vertex",
+																"chat",
+																"exampleiopairs",
+																""
+															],
+															"query": [
+																{
+																	"description": "A page number within the paginated result set.",
+																	"key": "page",
+																	"value": "<integer>"
+																}
+															]
+														}
+													},
+													"response": [
+														{
+															"id": "6f1b9a68-f351-4e9d-b3a8-4eb4989d89cb",
+															"name": "Untitled Example",
+															"originalRequest": {
+																"method": "GET",
+																"header": [
+																	{
+																		"key": "Accept",
+																		"value": "application/json"
+																	},
+																	{
+																		"description": "Added as a part of security scheme: apikey",
+																		"key": "sessionid",
+																		"value": "<API Key>"
+																	}
+																],
+																"url": {
+																	"raw": "{{baseUrl}}/api/v1/vertex/chat/exampleiopairs/?page=<integer>",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"api",
+																		"v1",
+																		"vertex",
+																		"chat",
+																		"exampleiopairs",
+																		""
+																	],
+																	"query": [
+																		{
+																			"description": "A page number within the paginated result set.",
+																			"key": "page",
+																			"value": "<integer>"
+																		}
+																	]
+																}
+															},
+															"status": "OK",
+															"code": 200,
+															"_postman_previewlanguage": "json",
+															"header": [
+																{
+																	"key": "Content-Type",
+																	"value": "application/json"
+																}
+															],
+															"cookie": [],
+															"body": "{\n  \"count\": \"<integer>\",\n  \"next\": \"<uri>\",\n  \"previous\": \"<uri>\",\n  \"results\": [\n    {\n      \"description\": \"<string>\",\n      \"input_text\": \"<string>\",\n      \"managed_status\": 2,\n      \"name\": \"<string>\",\n      \"output_text\": \"<string>\",\n      \"url\": \"<uri>\",\n      \"user\": \"<uri>\"\n    },\n    {\n      \"description\": \"<string>\",\n      \"input_text\": \"<string>\",\n      \"managed_status\": 1,\n      \"name\": \"<string>\",\n      \"output_text\": \"<string>\",\n      \"url\": \"<uri>\",\n      \"user\": \"<uri>\"\n    }\n  ]\n}"
+														}
+													]
+												},
+												{
+													"name": "api v1 vertex chat exampleiopairs create",
+													"id": "ff85058d-b63b-4eec-855d-2ec74dfc12cf",
+													"protocolProfileBehavior": {
+														"disableBodyPruning": true
+													},
+													"request": {
+														"auth": {
+															"type": "apikey",
+															"apikey": [
+																{
+																	"key": "key",
+																	"value": "sessionid",
+																	"type": "string"
+																},
+																{
+																	"key": "value",
+																	"value": "{{apiKey}}",
+																	"type": "string"
+																},
+																{
+																	"key": "in",
+																	"value": "header",
+																	"type": "string"
+																}
+															]
+														},
+														"method": "POST",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/x-www-form-urlencoded"
+															},
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"body": {
+															"mode": "urlencoded",
+															"urlencoded": [
+																{
+																	"description": "(Required) ",
+																	"key": "description",
+																	"value": "<string>"
+																},
+																{
+																	"description": "(Required) ",
+																	"key": "input_text",
+																	"value": "<string>"
+																},
+																{
+																	"description": "(Required) * `1` - imperai Managed\n* `2` - Unmanaged\n* `3` - Partner Managed\n* `4` - Hybrid Managed",
+																	"key": "managed_status",
+																	"value": "2"
+																},
+																{
+																	"description": "(Required) ",
+																	"key": "name",
+																	"value": "<string>"
+																},
+																{
+																	"description": "(Required) ",
+																	"key": "output_text",
+																	"value": "<string>"
+																},
+																{
+																	"description": "(Required) ",
+																	"key": "url",
+																	"value": "<uri>"
+																},
+																{
+																	"description": "(Required) ",
+																	"key": "user",
+																	"value": "<uri>"
+																}
+															]
+														},
+														"url": {
+															"raw": "{{baseUrl}}/api/v1/vertex/chat/exampleiopairs/",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v1",
+																"vertex",
+																"chat",
+																"exampleiopairs",
+																""
+															]
+														}
+													},
+													"response": [
+														{
+															"id": "0ff6ceeb-b430-41d8-b385-0e348f1e2f2d",
+															"name": "Untitled Example",
+															"originalRequest": {
+																"method": "POST",
+																"header": [
+																	{
+																		"key": "Content-Type",
+																		"value": "application/x-www-form-urlencoded"
+																	},
+																	{
+																		"key": "Accept",
+																		"value": "application/json"
+																	},
+																	{
+																		"description": "Added as a part of security scheme: apikey",
+																		"key": "sessionid",
+																		"value": "<API Key>"
+																	}
+																],
+																"body": {
+																	"mode": "urlencoded",
+																	"urlencoded": [
+																		{
+																			"description": "(Required) ",
+																			"key": "description",
+																			"value": "<string>"
+																		},
+																		{
+																			"description": "(Required) ",
+																			"key": "input_text",
+																			"value": "<string>"
+																		},
+																		{
+																			"description": "(Required) * `1` - imperai Managed\n* `2` - Unmanaged\n* `3` - Partner Managed\n* `4` - Hybrid Managed",
+																			"key": "managed_status",
+																			"value": "2"
+																		},
+																		{
+																			"description": "(Required) ",
+																			"key": "name",
+																			"value": "<string>"
+																		},
+																		{
+																			"description": "(Required) ",
+																			"key": "output_text",
+																			"value": "<string>"
+																		},
+																		{
+																			"description": "(Required) ",
+																			"key": "url",
+																			"value": "<uri>"
+																		},
+																		{
+																			"description": "(Required) ",
+																			"key": "user",
+																			"value": "<uri>"
+																		}
+																	]
+																},
+																"url": {
+																	"raw": "{{baseUrl}}/api/v1/vertex/chat/exampleiopairs/",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"api",
+																		"v1",
+																		"vertex",
+																		"chat",
+																		"exampleiopairs",
+																		""
+																	]
+																}
+															},
+															"status": "Created",
+															"code": 201,
+															"_postman_previewlanguage": "json",
+															"header": [
+																{
+																	"key": "Content-Type",
+																	"value": "application/json"
+																}
+															],
+															"cookie": [],
+															"body": "{\n  \"description\": \"<string>\",\n  \"input_text\": \"<string>\",\n  \"managed_status\": 2,\n  \"name\": \"<string>\",\n  \"output_text\": \"<string>\",\n  \"url\": \"<uri>\",\n  \"user\": \"<uri>\"\n}"
+														}
+													]
+												}
+											],
+											"id": "77ba5930-aa58-42a7-873d-1b256dcd48d5"
+										},
+										{
+											"name": "requests",
+											"item": [
+												{
+													"name": "{id}",
+													"item": [
+														{
+															"name": "api v1 vertex chat requests retrieve",
+															"id": "a5fdac75-7530-4720-8e2d-f3dace8ec9c5",
+															"protocolProfileBehavior": {
+																"disableBodyPruning": true
+															},
+															"request": {
+																"auth": {
+																	"type": "apikey",
+																	"apikey": [
+																		{
+																			"key": "key",
+																			"value": "sessionid",
+																			"type": "string"
+																		},
+																		{
+																			"key": "value",
+																			"value": "{{apiKey}}",
+																			"type": "string"
+																		},
+																		{
+																			"key": "in",
+																			"value": "header",
+																			"type": "string"
+																		}
+																	]
+																},
+																"method": "GET",
+																"header": [
+																	{
+																		"key": "Accept",
+																		"value": "application/json"
+																	}
+																],
+																"url": {
+																	"raw": "{{baseUrl}}/api/v1/vertex/chat/requests/:id/",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"api",
+																		"v1",
+																		"vertex",
+																		"chat",
+																		"requests",
+																		":id",
+																		""
+																	],
+																	"variable": [
+																		{
+																			"key": "id",
+																			"value": "<uuid>"
+																		}
+																	]
+																}
+															},
+															"response": [
+																{
+																	"id": "a36d0e33-0fea-44c0-8272-405d2d860d06",
+																	"name": "Untitled Example",
+																	"originalRequest": {
+																		"method": "GET",
+																		"header": [
+																			{
+																				"key": "Accept",
+																				"value": "application/json"
+																			},
+																			{
+																				"description": "Added as a part of security scheme: apikey",
+																				"key": "sessionid",
+																				"value": "<API Key>"
+																			}
+																		],
+																		"url": {
+																			"raw": "{{baseUrl}}/api/v1/vertex/chat/requests/:id/",
+																			"host": [
+																				"{{baseUrl}}"
+																			],
+																			"path": [
+																				"api",
+																				"v1",
+																				"vertex",
+																				"chat",
+																				"requests",
+																				":id",
+																				""
+																			],
+																			"variable": [
+																				{
+																					"key": "id"
+																				}
+																			]
+																		}
+																	},
+																	"status": "OK",
+																	"code": 200,
+																	"_postman_previewlanguage": "json",
+																	"header": [
+																		{
+																			"key": "Content-Type",
+																			"value": "application/json"
+																		}
+																	],
+																	"cookie": [],
+																	"body": "{\n  \"chat_config\": \"<uri>\",\n  \"context\": \"<uri>\",\n  \"example\": [\n    \"<uri>\",\n    \"<uri>\"\n  ],\n  \"id\": \"<uuid>\",\n  \"managed_status\": 3,\n  \"url\": \"<uri>\",\n  \"user\": \"<uri>\"\n}"
+																}
+															]
+														}
+													],
+													"id": "756fedaa-203e-477b-9a25-664d56ae9bce"
+												},
+												{
+													"name": "api v1 vertex chat requests list",
+													"id": "11104655-16fa-49ee-8133-b8fb0a3fee5f",
+													"protocolProfileBehavior": {
+														"disableBodyPruning": true
+													},
+													"request": {
+														"auth": {
+															"type": "apikey",
+															"apikey": [
+																{
+																	"key": "key",
+																	"value": "sessionid",
+																	"type": "string"
+																},
+																{
+																	"key": "value",
+																	"value": "{{apiKey}}",
+																	"type": "string"
+																},
+																{
+																	"key": "in",
+																	"value": "header",
+																	"type": "string"
+																}
+															]
+														},
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v1/vertex/chat/requests/?page=<integer>",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v1",
+																"vertex",
+																"chat",
+																"requests",
+																""
+															],
+															"query": [
+																{
+																	"description": "A page number within the paginated result set.",
+																	"key": "page",
+																	"value": "<integer>"
+																}
+															]
+														}
+													},
+													"response": [
+														{
+															"id": "127164bb-54e2-41d7-bebb-adc7954deec4",
+															"name": "Untitled Example",
+															"originalRequest": {
+																"method": "GET",
+																"header": [
+																	{
+																		"key": "Accept",
+																		"value": "application/json"
+																	},
+																	{
+																		"description": "Added as a part of security scheme: apikey",
+																		"key": "sessionid",
+																		"value": "<API Key>"
+																	}
+																],
+																"url": {
+																	"raw": "{{baseUrl}}/api/v1/vertex/chat/requests/?page=<integer>",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"api",
+																		"v1",
+																		"vertex",
+																		"chat",
+																		"requests",
+																		""
+																	],
+																	"query": [
+																		{
+																			"description": "A page number within the paginated result set.",
+																			"key": "page",
+																			"value": "<integer>"
+																		}
+																	]
+																}
+															},
+															"status": "OK",
+															"code": 200,
+															"_postman_previewlanguage": "json",
+															"header": [
+																{
+																	"key": "Content-Type",
+																	"value": "application/json"
+																}
+															],
+															"cookie": [],
+															"body": "{\n  \"count\": \"<integer>\",\n  \"next\": \"<uri>\",\n  \"previous\": \"<uri>\",\n  \"results\": [\n    {\n      \"chat_config\": \"<uri>\",\n      \"context\": \"<uri>\",\n      \"example\": [\n        \"<uri>\",\n        \"<uri>\"\n      ],\n      \"id\": \"<uuid>\",\n      \"managed_status\": 1,\n      \"url\": \"<uri>\",\n      \"user\": \"<uri>\"\n    },\n    {\n      \"chat_config\": \"<uri>\",\n      \"context\": \"<uri>\",\n      \"example\": [\n        \"<uri>\",\n        \"<uri>\"\n      ],\n      \"id\": \"<uuid>\",\n      \"managed_status\": 4,\n      \"url\": \"<uri>\",\n      \"user\": \"<uri>\"\n    }\n  ]\n}"
+														}
+													]
+												},
+												{
+													"name": "api v1 vertex chat requests create",
+													"id": "70225928-5e56-4dfb-afc3-c35c6064d513",
+													"protocolProfileBehavior": {
+														"disableBodyPruning": true
+													},
+													"request": {
+														"auth": {
+															"type": "apikey",
+															"apikey": [
+																{
+																	"key": "key",
+																	"value": "sessionid",
+																	"type": "string"
+																},
+																{
+																	"key": "value",
+																	"value": "{{apiKey}}",
+																	"type": "string"
+																},
+																{
+																	"key": "in",
+																	"value": "header",
+																	"type": "string"
+																}
+															]
+														},
+														"method": "POST",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/x-www-form-urlencoded"
+															},
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"body": {
+															"mode": "urlencoded",
+															"urlencoded": [
+																{
+																	"description": "(Required) ",
+																	"key": "chat_config",
+																	"value": "<uri>"
+																},
+																{
+																	"description": "(Required) ",
+																	"key": "context",
+																	"value": "<uri>"
+																},
+																{
+																	"description": "(Required) ",
+																	"key": "example",
+																	"value": "<uri>"
+																},
+																{
+																	"description": "(Required) ",
+																	"key": "example",
+																	"value": "<uri>"
+																},
+																{
+																	"description": "(Required) ",
+																	"key": "id",
+																	"value": "<uuid>"
+																},
+																{
+																	"description": "(Required) * `1` - imperai Managed\n* `2` - Unmanaged\n* `3` - Partner Managed\n* `4` - Hybrid Managed",
+																	"key": "managed_status",
+																	"value": "3"
+																},
+																{
+																	"description": "(Required) ",
+																	"key": "url",
+																	"value": "<uri>"
+																},
+																{
+																	"description": "(Required) ",
+																	"key": "user",
+																	"value": "<uri>"
+																}
+															]
+														},
+														"url": {
+															"raw": "{{baseUrl}}/api/v1/vertex/chat/requests/",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v1",
+																"vertex",
+																"chat",
+																"requests",
+																""
+															]
+														}
+													},
+													"response": [
+														{
+															"id": "9b78dc02-df73-4fbf-8146-f262e37ec416",
+															"name": "Untitled Example",
+															"originalRequest": {
+																"method": "POST",
+																"header": [
+																	{
+																		"key": "Content-Type",
+																		"value": "application/x-www-form-urlencoded"
+																	},
+																	{
+																		"key": "Accept",
+																		"value": "application/json"
+																	},
+																	{
+																		"description": "Added as a part of security scheme: apikey",
+																		"key": "sessionid",
+																		"value": "<API Key>"
+																	}
+																],
+																"body": {
+																	"mode": "urlencoded",
+																	"urlencoded": [
+																		{
+																			"description": "(Required) ",
+																			"key": "chat_config",
+																			"value": "<uri>"
+																		},
+																		{
+																			"description": "(Required) ",
+																			"key": "context",
+																			"value": "<uri>"
+																		},
+																		{
+																			"description": "(Required) ",
+																			"key": "example",
+																			"value": "<uri>"
+																		},
+																		{
+																			"description": "(Required) ",
+																			"key": "example",
+																			"value": "<uri>"
+																		},
+																		{
+																			"description": "(Required) ",
+																			"key": "id",
+																			"value": "<uuid>"
+																		},
+																		{
+																			"description": "(Required) * `1` - imperai Managed\n* `2` - Unmanaged\n* `3` - Partner Managed\n* `4` - Hybrid Managed",
+																			"key": "managed_status",
+																			"value": "3"
+																		},
+																		{
+																			"description": "(Required) ",
+																			"key": "url",
+																			"value": "<uri>"
+																		},
+																		{
+																			"description": "(Required) ",
+																			"key": "user",
+																			"value": "<uri>"
+																		}
+																	]
+																},
+																"url": {
+																	"raw": "{{baseUrl}}/api/v1/vertex/chat/requests/",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"api",
+																		"v1",
+																		"vertex",
+																		"chat",
+																		"requests",
+																		""
+																	]
+																}
+															},
+															"status": "Created",
+															"code": 201,
+															"_postman_previewlanguage": "json",
+															"header": [
+																{
+																	"key": "Content-Type",
+																	"value": "application/json"
+																}
+															],
+															"cookie": [],
+															"body": "{\n  \"chat_config\": \"<uri>\",\n  \"context\": \"<uri>\",\n  \"example\": [\n    \"<uri>\",\n    \"<uri>\"\n  ],\n  \"id\": \"<uuid>\",\n  \"managed_status\": 3,\n  \"url\": \"<uri>\",\n  \"user\": \"<uri>\"\n}"
+														}
+													]
+												}
+											],
+											"id": "1778bc4c-1fe0-4815-b5a8-2c9782731cd9"
+										}
+									],
+									"id": "731576fe-b39a-4c8e-99ab-cdade1521ea5"
+								}
+							],
+							"id": "2a8ae510-0719-4a6b-9878-33795070079f"
+						}
+					],
+					"id": "e2404fe7-445a-451d-8432-763d04590621"
+				}
+			],
+			"id": "1fa5a807-5e88-464f-8d7e-f44924022d8e"
+		}
+	],
+	"variable": [
+		{
+			"id": "768e80d6-750c-4ba5-9c7e-0836df0859b9",
+			"key": "baseUrl",
+			"value": "/"
+		}
+	]
+}
