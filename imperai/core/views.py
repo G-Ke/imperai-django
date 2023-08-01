@@ -7,8 +7,8 @@ from .models import Profile, CustomUser
 
 # Create your views here.
 
-class WelcomeView(LoginRequiredMixin, TemplateView):
-    template_name = "welcome.html"
+class DashboardView(LoginRequiredMixin, TemplateView):
+    template_name = "dashboard.html"
     login_url = 'accounts/login'
 
 
