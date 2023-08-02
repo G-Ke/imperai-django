@@ -806,6 +806,47 @@ paths:
                 $ref: '#/components/schemas/VertexChatRequest'
           description: ''
 components:
+  headers:
+    Allow:
+      description: Allow
+      schema:
+        type: string
+    Content-Length:
+      description: Content-Length
+      schema:
+        type: string
+    Content-Type:
+      description: Content-Type
+      schema:
+        type: string
+    Cross-Origin-Opener-Policy:
+      description: Cross-Origin-Opener-Policy
+      schema:
+        type: string
+    Date:
+      description: Date
+      schema:
+        type: string
+    Referrer-Policy:
+      description: Referrer-Policy
+      schema:
+        type: string
+    Server:
+      description: Server
+      schema:
+        type: string
+    Vary:
+      description: Vary
+      schema:
+        type: string
+    X-Content-Type-Options:
+      description: X-Content-Type-Options
+      schema:
+        type: string
+    X-Frame-Options:
+      description: X-Frame-Options
+      schema:
+        type: string
   schemas:
     Group:
       type: object
