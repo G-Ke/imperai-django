@@ -2938,26 +2938,6 @@
 																"disableBodyPruning": true
 															},
 															"request": {
-																"auth": {
-																	"type": "apikey",
-																	"apikey": [
-																		{
-																			"key": "key",
-																			"value": "sessionid",
-																			"type": "string"
-																		},
-																		{
-																			"key": "value",
-																			"value": "{{apiKey}}",
-																			"type": "string"
-																		},
-																		{
-																			"key": "in",
-																			"value": "header",
-																			"type": "string"
-																		}
-																	]
-																},
 																"method": "GET",
 																"header": [
 																	{
@@ -3139,26 +3119,6 @@
 														"disableBodyPruning": true
 													},
 													"request": {
-														"auth": {
-															"type": "apikey",
-															"apikey": [
-																{
-																	"key": "key",
-																	"value": "sessionid",
-																	"type": "string"
-																},
-																{
-																	"key": "value",
-																	"value": "{{apiKey}}",
-																	"type": "string"
-																},
-																{
-																	"key": "in",
-																	"value": "header",
-																	"type": "string"
-																}
-															]
-														},
 														"method": "GET",
 														"header": [
 															{
@@ -3167,7 +3127,7 @@
 															}
 														],
 														"url": {
-															"raw": "{{baseUrl}}/api/v1/vertex/chat/contextinstructs/?page=<integer>",
+															"raw": "{{baseUrl}}/api/v1/vertex/chat/contextinstructs/?page=1",
 															"host": [
 																"{{baseUrl}}"
 															],
@@ -3181,32 +3141,27 @@
 															],
 															"query": [
 																{
-																	"description": "A page number within the paginated result set.",
 																	"key": "page",
-																	"value": "<integer>"
+																	"value": "1",
+																	"description": "A page number within the paginated result set."
 																}
 															]
 														}
 													},
 													"response": [
 														{
-															"id": "605794e2-cd98-4414-93cf-2dba2e5151b9",
-															"name": "Untitled Example",
+															"id": "1ef331d3-4aeb-4e20-a020-5c03238ab749",
+															"name": "200: Success",
 															"originalRequest": {
 																"method": "GET",
 																"header": [
 																	{
 																		"key": "Accept",
 																		"value": "application/json"
-																	},
-																	{
-																		"description": "Added as a part of security scheme: apikey",
-																		"key": "sessionid",
-																		"value": "<API Key>"
 																	}
 																],
 																"url": {
-																	"raw": "{{baseUrl}}/api/v1/vertex/chat/contextinstructs/?page=<integer>",
+																	"raw": "{{baseUrl}}/api/v1/vertex/chat/contextinstructs/?page=1",
 																	"host": [
 																		"{{baseUrl}}"
 																	],
@@ -3220,9 +3175,9 @@
 																	],
 																	"query": [
 																		{
-																			"description": "A page number within the paginated result set.",
 																			"key": "page",
-																			"value": "<integer>"
+																			"value": "1",
+																			"description": "A page number within the paginated result set."
 																		}
 																	]
 																}
@@ -3232,102 +3187,48 @@
 															"_postman_previewlanguage": "json",
 															"header": [
 																{
+																	"key": "Date",
+																	"value": "Thu, 03 Aug 2023 03:58:21 GMT"
+																},
+																{
+																	"key": "Server",
+																	"value": "WSGIServer/0.2 CPython/3.10.6"
+																},
+																{
 																	"key": "Content-Type",
 																	"value": "application/json"
 																},
 																{
-																	"disabled": false,
-																	"description": {
-																		"content": "",
-																		"type": "text/plain"
-																	},
-																	"key": "Date",
-																	"value": "<string>"
-																},
-																{
-																	"disabled": false,
-																	"description": {
-																		"content": "",
-																		"type": "text/plain"
-																	},
-																	"key": "Server",
-																	"value": "<string>"
-																},
-																{
-																	"disabled": false,
-																	"description": {
-																		"content": "",
-																		"type": "text/plain"
-																	},
-																	"key": "Content-Length",
-																	"value": "<string>"
-																},
-																{
-																	"disabled": false,
-																	"description": {
-																		"content": "",
-																		"type": "text/plain"
-																	},
-																	"key": "Content-Type",
-																	"value": "<string>"
-																},
-																{
-																	"disabled": false,
-																	"description": {
-																		"content": "",
-																		"type": "text/plain"
-																	},
 																	"key": "Vary",
-																	"value": "<string>"
+																	"value": "Accept, Cookie"
 																},
 																{
-																	"disabled": false,
-																	"description": {
-																		"content": "",
-																		"type": "text/plain"
-																	},
 																	"key": "Allow",
-																	"value": "<string>"
+																	"value": "GET, POST"
 																},
 																{
-																	"disabled": false,
-																	"description": {
-																		"content": "",
-																		"type": "text/plain"
-																	},
 																	"key": "X-Frame-Options",
-																	"value": "<string>"
+																	"value": "DENY"
 																},
 																{
-																	"disabled": false,
-																	"description": {
-																		"content": "",
-																		"type": "text/plain"
-																	},
+																	"key": "Content-Length",
+																	"value": "370"
+																},
+																{
 																	"key": "X-Content-Type-Options",
-																	"value": "<string>"
+																	"value": "nosniff"
 																},
 																{
-																	"disabled": false,
-																	"description": {
-																		"content": "",
-																		"type": "text/plain"
-																	},
 																	"key": "Referrer-Policy",
-																	"value": "<string>"
+																	"value": "same-origin"
 																},
 																{
-																	"disabled": false,
-																	"description": {
-																		"content": "",
-																		"type": "text/plain"
-																	},
 																	"key": "Cross-Origin-Opener-Policy",
-																	"value": "<string>"
+																	"value": "same-origin"
 																}
 															],
 															"cookie": [],
-															"body": "{\n\t\"count\": \"<integer>\",\n\t\"next\": \"<uri>\",\n\t\"previous\": \"<uri>\",\n\t\"results\": [\n\t\t{\n\t\t\t\"instruct\": \"<string>\",\n\t\t\t\"managed_status\": 4,\n\t\t\t\"name\": \"<string>\",\n\t\t\t\"url\": \"<uri>\",\n\t\t\t\"user\": \"<uri>\"\n\t\t},\n\t\t{\n\t\t\t\"instruct\": \"<string>\",\n\t\t\t\"managed_status\": 4,\n\t\t\t\"name\": \"<string>\",\n\t\t\t\"url\": \"<uri>\",\n\t\t\t\"user\": \"<uri>\"\n\t\t}\n\t]\n}"
+															"body": "{\n    \"count\": 1,\n    \"next\": null,\n    \"previous\": null,\n    \"results\": [\n        {\n            \"url\": \"http://127.0.0.1:8000/api/v1/vertex/chat/contextinstructs/f02a2c5c-044d-468a-a34e-c4ee8d0d06ab/\",\n            \"name\": \"Test Instruct 1\",\n            \"instruct\": \"When a user asks you about a product, you should look at the in-scope data provided and give them an answer.\",\n            \"managed_status\": 1,\n            \"user\": \"http://127.0.0.1:8000/api/v1/users/2/\"\n        }\n    ]\n}"
 														}
 													]
 												},
@@ -3801,26 +3702,6 @@
 														"disableBodyPruning": true
 													},
 													"request": {
-														"auth": {
-															"type": "apikey",
-															"apikey": [
-																{
-																	"key": "key",
-																	"value": "sessionid",
-																	"type": "string"
-																},
-																{
-																	"key": "value",
-																	"value": "{{apiKey}}",
-																	"type": "string"
-																},
-																{
-																	"key": "in",
-																	"value": "header",
-																	"type": "string"
-																}
-															]
-														},
 														"method": "GET",
 														"header": [
 															{
@@ -3829,7 +3710,7 @@
 															}
 														],
 														"url": {
-															"raw": "{{baseUrl}}/api/v1/vertex/chat/contextrules/?page=<integer>",
+															"raw": "{{baseUrl}}/api/v1/vertex/chat/contextrules/?page=1",
 															"host": [
 																"{{baseUrl}}"
 															],
@@ -3843,32 +3724,27 @@
 															],
 															"query": [
 																{
-																	"description": "A page number within the paginated result set.",
 																	"key": "page",
-																	"value": "<integer>"
+																	"value": "1",
+																	"description": "A page number within the paginated result set."
 																}
 															]
 														}
 													},
 													"response": [
 														{
-															"id": "65abcb37-2f25-40c4-9e35-2a3b7ea2be87",
-															"name": "Untitled Example",
+															"id": "2eacadaf-643e-4301-a8e7-5e8ef6027192",
+															"name": "200: Success",
 															"originalRequest": {
 																"method": "GET",
 																"header": [
 																	{
 																		"key": "Accept",
 																		"value": "application/json"
-																	},
-																	{
-																		"description": "Added as a part of security scheme: apikey",
-																		"key": "sessionid",
-																		"value": "<API Key>"
 																	}
 																],
 																"url": {
-																	"raw": "{{baseUrl}}/api/v1/vertex/chat/contextrules/?page=<integer>",
+																	"raw": "{{baseUrl}}/api/v1/vertex/chat/contextrules/?page=1",
 																	"host": [
 																		"{{baseUrl}}"
 																	],
@@ -3882,9 +3758,9 @@
 																	],
 																	"query": [
 																		{
-																			"description": "A page number within the paginated result set.",
 																			"key": "page",
-																			"value": "<integer>"
+																			"value": "1",
+																			"description": "A page number within the paginated result set."
 																		}
 																	]
 																}
@@ -3894,102 +3770,48 @@
 															"_postman_previewlanguage": "json",
 															"header": [
 																{
+																	"key": "Date",
+																	"value": "Thu, 03 Aug 2023 02:18:39 GMT"
+																},
+																{
+																	"key": "Server",
+																	"value": "WSGIServer/0.2 CPython/3.10.6"
+																},
+																{
 																	"key": "Content-Type",
 																	"value": "application/json"
 																},
 																{
-																	"disabled": false,
-																	"description": {
-																		"content": "",
-																		"type": "text/plain"
-																	},
-																	"key": "Date",
-																	"value": "<string>"
-																},
-																{
-																	"disabled": false,
-																	"description": {
-																		"content": "",
-																		"type": "text/plain"
-																	},
-																	"key": "Server",
-																	"value": "<string>"
-																},
-																{
-																	"disabled": false,
-																	"description": {
-																		"content": "",
-																		"type": "text/plain"
-																	},
-																	"key": "Content-Length",
-																	"value": "<string>"
-																},
-																{
-																	"disabled": false,
-																	"description": {
-																		"content": "",
-																		"type": "text/plain"
-																	},
-																	"key": "Content-Type",
-																	"value": "<string>"
-																},
-																{
-																	"disabled": false,
-																	"description": {
-																		"content": "",
-																		"type": "text/plain"
-																	},
 																	"key": "Vary",
-																	"value": "<string>"
+																	"value": "Accept, Cookie"
 																},
 																{
-																	"disabled": false,
-																	"description": {
-																		"content": "",
-																		"type": "text/plain"
-																	},
 																	"key": "Allow",
-																	"value": "<string>"
+																	"value": "GET, POST"
 																},
 																{
-																	"disabled": false,
-																	"description": {
-																		"content": "",
-																		"type": "text/plain"
-																	},
 																	"key": "X-Frame-Options",
-																	"value": "<string>"
+																	"value": "DENY"
 																},
 																{
-																	"disabled": false,
-																	"description": {
-																		"content": "",
-																		"type": "text/plain"
-																	},
+																	"key": "Content-Length",
+																	"value": "325"
+																},
+																{
 																	"key": "X-Content-Type-Options",
-																	"value": "<string>"
+																	"value": "nosniff"
 																},
 																{
-																	"disabled": false,
-																	"description": {
-																		"content": "",
-																		"type": "text/plain"
-																	},
 																	"key": "Referrer-Policy",
-																	"value": "<string>"
+																	"value": "same-origin"
 																},
 																{
-																	"disabled": false,
-																	"description": {
-																		"content": "",
-																		"type": "text/plain"
-																	},
 																	"key": "Cross-Origin-Opener-Policy",
-																	"value": "<string>"
+																	"value": "same-origin"
 																}
 															],
 															"cookie": [],
-															"body": "{\n\t\"count\": \"<integer>\",\n\t\"next\": \"<uri>\",\n\t\"previous\": \"<uri>\",\n\t\"results\": [\n\t\t{\n\t\t\t\"managed_status\": 2,\n\t\t\t\"name\": \"<string>\",\n\t\t\t\"rule\": \"<string>\",\n\t\t\t\"url\": \"<uri>\",\n\t\t\t\"user\": \"<uri>\"\n\t\t},\n\t\t{\n\t\t\t\"managed_status\": 2,\n\t\t\t\"name\": \"<string>\",\n\t\t\t\"rule\": \"<string>\",\n\t\t\t\"url\": \"<uri>\",\n\t\t\t\"user\": \"<uri>\"\n\t\t}\n\t]\n}"
+															"body": "{\n    \"count\": 1,\n    \"next\": null,\n    \"previous\": null,\n    \"results\": [\n        {\n            \"url\": \"http://127.0.0.1:8000/api/v1/vertex/chat/contextrules/74267ed8-cf8f-4a5d-b588-338ac396f8b8/\",\n            \"name\": \"Test Rule 1\",\n            \"rule\": \"Never engage in talk about current events, politics, or other social items.\",\n            \"managed_status\": 1,\n            \"user\": \"http://127.0.0.1:8000/api/v1/users/2/\"\n        }\n    ]\n}"
 														}
 													]
 												},
@@ -4000,26 +3822,6 @@
 														"disableBodyPruning": true
 													},
 													"request": {
-														"auth": {
-															"type": "apikey",
-															"apikey": [
-																{
-																	"key": "key",
-																	"value": "sessionid",
-																	"type": "string"
-																},
-																{
-																	"key": "value",
-																	"value": "{{apiKey}}",
-																	"type": "string"
-																},
-																{
-																	"key": "in",
-																	"value": "header",
-																	"type": "string"
-																}
-															]
-														},
 														"method": "POST",
 														"header": [
 															{
@@ -5155,26 +4957,6 @@
 														"disableBodyPruning": true
 													},
 													"request": {
-														"auth": {
-															"type": "apikey",
-															"apikey": [
-																{
-																	"key": "key",
-																	"value": "sessionid",
-																	"type": "string"
-																},
-																{
-																	"key": "value",
-																	"value": "{{apiKey}}",
-																	"type": "string"
-																},
-																{
-																	"key": "in",
-																	"value": "header",
-																	"type": "string"
-																}
-															]
-														},
 														"method": "GET",
 														"header": [
 															{
@@ -5183,7 +4965,7 @@
 															}
 														],
 														"url": {
-															"raw": "{{baseUrl}}/api/v1/vertex/chat/exampleiopairs/?page=<integer>",
+															"raw": "{{baseUrl}}/api/v1/vertex/chat/exampleiopairs/?page=1",
 															"host": [
 																"{{baseUrl}}"
 															],
@@ -5197,32 +4979,27 @@
 															],
 															"query": [
 																{
-																	"description": "A page number within the paginated result set.",
 																	"key": "page",
-																	"value": "<integer>"
+																	"value": "1",
+																	"description": "A page number within the paginated result set."
 																}
 															]
 														}
 													},
 													"response": [
 														{
-															"id": "b7b64bf6-4085-4599-b477-db2382c6e79d",
-															"name": "Untitled Example",
+															"id": "85e7241d-558f-4fe8-bc14-434b39a3fa15",
+															"name": "list vertex chat exampleiopairs",
 															"originalRequest": {
 																"method": "GET",
 																"header": [
 																	{
 																		"key": "Accept",
 																		"value": "application/json"
-																	},
-																	{
-																		"description": "Added as a part of security scheme: apikey",
-																		"key": "sessionid",
-																		"value": "<API Key>"
 																	}
 																],
 																"url": {
-																	"raw": "{{baseUrl}}/api/v1/vertex/chat/exampleiopairs/?page=<integer>",
+																	"raw": "{{baseUrl}}/api/v1/vertex/chat/exampleiopairs/?page=1",
 																	"host": [
 																		"{{baseUrl}}"
 																	],
@@ -5236,9 +5013,9 @@
 																	],
 																	"query": [
 																		{
-																			"description": "A page number within the paginated result set.",
 																			"key": "page",
-																			"value": "<integer>"
+																			"value": "1",
+																			"description": "A page number within the paginated result set."
 																		}
 																	]
 																}
@@ -5248,102 +5025,48 @@
 															"_postman_previewlanguage": "json",
 															"header": [
 																{
+																	"key": "Date",
+																	"value": "Thu, 03 Aug 2023 02:15:14 GMT"
+																},
+																{
+																	"key": "Server",
+																	"value": "WSGIServer/0.2 CPython/3.10.6"
+																},
+																{
 																	"key": "Content-Type",
 																	"value": "application/json"
 																},
 																{
-																	"disabled": false,
-																	"description": {
-																		"content": "",
-																		"type": "text/plain"
-																	},
-																	"key": "Date",
-																	"value": "<string>"
-																},
-																{
-																	"disabled": false,
-																	"description": {
-																		"content": "",
-																		"type": "text/plain"
-																	},
-																	"key": "Server",
-																	"value": "<string>"
-																},
-																{
-																	"disabled": false,
-																	"description": {
-																		"content": "",
-																		"type": "text/plain"
-																	},
-																	"key": "Content-Length",
-																	"value": "<string>"
-																},
-																{
-																	"disabled": false,
-																	"description": {
-																		"content": "",
-																		"type": "text/plain"
-																	},
-																	"key": "Content-Type",
-																	"value": "<string>"
-																},
-																{
-																	"disabled": false,
-																	"description": {
-																		"content": "",
-																		"type": "text/plain"
-																	},
 																	"key": "Vary",
-																	"value": "<string>"
+																	"value": "Accept, Cookie"
 																},
 																{
-																	"disabled": false,
-																	"description": {
-																		"content": "",
-																		"type": "text/plain"
-																	},
 																	"key": "Allow",
-																	"value": "<string>"
+																	"value": "GET, POST"
 																},
 																{
-																	"disabled": false,
-																	"description": {
-																		"content": "",
-																		"type": "text/plain"
-																	},
 																	"key": "X-Frame-Options",
-																	"value": "<string>"
+																	"value": "DENY"
 																},
 																{
-																	"disabled": false,
-																	"description": {
-																		"content": "",
-																		"type": "text/plain"
-																	},
+																	"key": "Content-Length",
+																	"value": "434"
+																},
+																{
 																	"key": "X-Content-Type-Options",
-																	"value": "<string>"
+																	"value": "nosniff"
 																},
 																{
-																	"disabled": false,
-																	"description": {
-																		"content": "",
-																		"type": "text/plain"
-																	},
 																	"key": "Referrer-Policy",
-																	"value": "<string>"
+																	"value": "same-origin"
 																},
 																{
-																	"disabled": false,
-																	"description": {
-																		"content": "",
-																		"type": "text/plain"
-																	},
 																	"key": "Cross-Origin-Opener-Policy",
-																	"value": "<string>"
+																	"value": "same-origin"
 																}
 															],
 															"cookie": [],
-															"body": "{\n\t\"count\": \"<integer>\",\n\t\"next\": \"<uri>\",\n\t\"previous\": \"<uri>\",\n\t\"results\": [\n\t\t{\n\t\t\t\"description\": \"<string>\",\n\t\t\t\"input_text\": \"<string>\",\n\t\t\t\"managed_status\": 2,\n\t\t\t\"name\": \"<string>\",\n\t\t\t\"output_text\": \"<string>\",\n\t\t\t\"url\": \"<uri>\",\n\t\t\t\"user\": \"<uri>\"\n\t\t},\n\t\t{\n\t\t\t\"description\": \"<string>\",\n\t\t\t\"input_text\": \"<string>\",\n\t\t\t\"managed_status\": 1,\n\t\t\t\"name\": \"<string>\",\n\t\t\t\"output_text\": \"<string>\",\n\t\t\t\"url\": \"<uri>\",\n\t\t\t\"user\": \"<uri>\"\n\t\t}\n\t]\n}"
+															"body": "{\n    \"count\": 1,\n    \"next\": null,\n    \"previous\": null,\n    \"results\": [\n        {\n            \"url\": \"http://127.0.0.1:8000/api/v1/vertex/chat/exampleiopairs/ecebd885-5a3f-4908-9e01-c63dc13dc6b0/\",\n            \"name\": \"Test IO Pair\",\n            \"input_text\": \"What is the name of your store?\",\n            \"output_text\": \"The name of this store is ShoeCrafters. Welcome!\",\n            \"description\": \"A general question IO pair for what is the name of your store.\",\n            \"managed_status\": 1,\n            \"user\": \"http://127.0.0.1:8000/api/v1/users/2/\"\n        }\n    ]\n}"
 														}
 													]
 												},
@@ -6288,7 +6011,7 @@
 	],
 	"variable": [
 		{
-			"id": "6095ece0-3bd7-41d1-859c-9237bf95dc1b",
+			"id": "638f1450-4c88-4214-ad75-43e1d2d50f5e",
 			"key": "baseUrl",
 			"value": "/"
 		}
