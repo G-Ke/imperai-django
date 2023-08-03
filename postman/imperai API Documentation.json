@@ -4466,6 +4466,798 @@
 								}
 							],
 							"id": "103d0ecd-25c5-4a62-8557-b70264a48ddc"
+						},
+						{
+							"name": "user-management",
+							"item": [
+								{
+									"name": "api v1 user management groups list",
+									"id": "b6cccf2a-ef41-4950-ac8f-cdc7993d908b",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "apikey",
+											"apikey": [
+												{
+													"key": "key",
+													"value": "sessionid",
+													"type": "string"
+												},
+												{
+													"key": "value",
+													"value": "{{apiKey}}",
+													"type": "string"
+												},
+												{
+													"key": "in",
+													"value": "header",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/user-management/groups/?page=<integer>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"user-management",
+												"groups",
+												""
+											],
+											"query": [
+												{
+													"description": "A page number within the paginated result set.",
+													"key": "page",
+													"value": "<integer>"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"id": "50b14ae3-14c5-453a-a2b1-2f00371f9153",
+											"name": "Untitled Example",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													},
+													{
+														"description": "Added as a part of security scheme: apikey",
+														"key": "sessionid",
+														"value": "<API Key>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/user-management/groups/?page=<integer>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"user-management",
+														"groups",
+														""
+													],
+													"query": [
+														{
+															"description": "A page number within the paginated result set.",
+															"key": "page",
+															"value": "<integer>"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "Text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"disabled": false,
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													},
+													"key": "Date",
+													"value": "<string>"
+												},
+												{
+													"disabled": false,
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													},
+													"key": "Server",
+													"value": "<string>"
+												},
+												{
+													"disabled": false,
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													},
+													"key": "Content-Length",
+													"value": "<string>"
+												},
+												{
+													"disabled": false,
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													},
+													"key": "Content-Type",
+													"value": "<string>"
+												},
+												{
+													"disabled": false,
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													},
+													"key": "Vary",
+													"value": "<string>"
+												},
+												{
+													"disabled": false,
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													},
+													"key": "Allow",
+													"value": "<string>"
+												},
+												{
+													"disabled": false,
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													},
+													"key": "X-Frame-Options",
+													"value": "<string>"
+												},
+												{
+													"disabled": false,
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													},
+													"key": "X-Content-Type-Options",
+													"value": "<string>"
+												},
+												{
+													"disabled": false,
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													},
+													"key": "Referrer-Policy",
+													"value": "<string>"
+												},
+												{
+													"disabled": false,
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													},
+													"key": "Cross-Origin-Opener-Policy",
+													"value": "<string>"
+												}
+											],
+											"cookie": [],
+											"body": "{\n\t\"count\": \"<integer>\",\n\t\"next\": \"<uri>\",\n\t\"previous\": \"<uri>\",\n\t\"results\": [\n\t\t{\n\t\t\t\"name\": \"<string>\",\n\t\t\t\"url\": \"<uri>\"\n\t\t},\n\t\t{\n\t\t\t\"name\": \"<string>\",\n\t\t\t\"url\": \"<uri>\"\n\t\t}\n\t]\n}"
+										}
+									]
+								},
+								{
+									"name": "api v1 user management groups retrieve",
+									"id": "fea9afd2-e7bb-4869-8fd7-762acd45fc49",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "apikey",
+											"apikey": [
+												{
+													"key": "key",
+													"value": "sessionid",
+													"type": "string"
+												},
+												{
+													"key": "value",
+													"value": "{{apiKey}}",
+													"type": "string"
+												},
+												{
+													"key": "in",
+													"value": "header",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/user-management/groups/:id/",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"user-management",
+												"groups",
+												":id",
+												""
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<integer>"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"id": "70627a3b-3fb2-4fb9-8ec3-9f4250470901",
+											"name": "Untitled Example",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													},
+													{
+														"description": "Added as a part of security scheme: apikey",
+														"key": "sessionid",
+														"value": "<API Key>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/user-management/groups/:id/",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"user-management",
+														"groups",
+														":id",
+														""
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "Text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"disabled": false,
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													},
+													"key": "Date",
+													"value": "<string>"
+												},
+												{
+													"disabled": false,
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													},
+													"key": "Server",
+													"value": "<string>"
+												},
+												{
+													"disabled": false,
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													},
+													"key": "Content-Length",
+													"value": "<string>"
+												},
+												{
+													"disabled": false,
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													},
+													"key": "Content-Type",
+													"value": "<string>"
+												},
+												{
+													"disabled": false,
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													},
+													"key": "Vary",
+													"value": "<string>"
+												},
+												{
+													"disabled": false,
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													},
+													"key": "Allow",
+													"value": "<string>"
+												},
+												{
+													"disabled": false,
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													},
+													"key": "X-Frame-Options",
+													"value": "<string>"
+												},
+												{
+													"disabled": false,
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													},
+													"key": "X-Content-Type-Options",
+													"value": "<string>"
+												},
+												{
+													"disabled": false,
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													},
+													"key": "Referrer-Policy",
+													"value": "<string>"
+												},
+												{
+													"disabled": false,
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													},
+													"key": "Cross-Origin-Opener-Policy",
+													"value": "<string>"
+												}
+											],
+											"cookie": [],
+											"body": "{\n\t\"name\": \"<string>\",\n\t\"url\": \"<uri>\"\n}"
+										}
+									]
+								},
+								{
+									"name": "api v1 user management users list",
+									"id": "96c1f292-d010-4981-9c3a-fb12b0d84561",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "apikey",
+											"apikey": [
+												{
+													"key": "key",
+													"value": "sessionid",
+													"type": "string"
+												},
+												{
+													"key": "value",
+													"value": "{{apiKey}}",
+													"type": "string"
+												},
+												{
+													"key": "in",
+													"value": "header",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/user-management/users/?page=<integer>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"user-management",
+												"users",
+												""
+											],
+											"query": [
+												{
+													"description": "A page number within the paginated result set.",
+													"key": "page",
+													"value": "<integer>"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"id": "3b9fdabe-aade-4d38-9177-5d9d37cefaae",
+											"name": "Untitled Example",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													},
+													{
+														"description": "Added as a part of security scheme: apikey",
+														"key": "sessionid",
+														"value": "<API Key>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/user-management/users/?page=<integer>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"user-management",
+														"users",
+														""
+													],
+													"query": [
+														{
+															"description": "A page number within the paginated result set.",
+															"key": "page",
+															"value": "<integer>"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "Text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"disabled": false,
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													},
+													"key": "Date",
+													"value": "<string>"
+												},
+												{
+													"disabled": false,
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													},
+													"key": "Server",
+													"value": "<string>"
+												},
+												{
+													"disabled": false,
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													},
+													"key": "Content-Length",
+													"value": "<string>"
+												},
+												{
+													"disabled": false,
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													},
+													"key": "Content-Type",
+													"value": "<string>"
+												},
+												{
+													"disabled": false,
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													},
+													"key": "Vary",
+													"value": "<string>"
+												},
+												{
+													"disabled": false,
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													},
+													"key": "Allow",
+													"value": "<string>"
+												},
+												{
+													"disabled": false,
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													},
+													"key": "X-Frame-Options",
+													"value": "<string>"
+												},
+												{
+													"disabled": false,
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													},
+													"key": "X-Content-Type-Options",
+													"value": "<string>"
+												},
+												{
+													"disabled": false,
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													},
+													"key": "Referrer-Policy",
+													"value": "<string>"
+												},
+												{
+													"disabled": false,
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													},
+													"key": "Cross-Origin-Opener-Policy",
+													"value": "<string>"
+												}
+											],
+											"cookie": [],
+											"body": "{\n\t\"count\": \"<integer>\",\n\t\"next\": \"<uri>\",\n\t\"previous\": \"<uri>\",\n\t\"results\": [\n\t\t{\n\t\t\t\"email\": \"<email>\",\n\t\t\t\"url\": \"<uri>\",\n\t\t\t\"groups\": [\n\t\t\t\t\"<uri>\",\n\t\t\t\t\"<uri>\"\n\t\t\t]\n\t\t},\n\t\t{\n\t\t\t\"email\": \"<email>\",\n\t\t\t\"url\": \"<uri>\",\n\t\t\t\"groups\": [\n\t\t\t\t\"<uri>\",\n\t\t\t\t\"<uri>\"\n\t\t\t]\n\t\t}\n\t]\n}"
+										}
+									]
+								},
+								{
+									"name": "api v1 user management users retrieve",
+									"id": "e74956f5-32ca-4974-9972-91d9589d65f1",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "apikey",
+											"apikey": [
+												{
+													"key": "key",
+													"value": "sessionid",
+													"type": "string"
+												},
+												{
+													"key": "value",
+													"value": "{{apiKey}}",
+													"type": "string"
+												},
+												{
+													"key": "in",
+													"value": "header",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/user-management/users/:id/",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"user-management",
+												"users",
+												":id",
+												""
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<integer>"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"id": "515fcfc3-18c2-4e7b-8b9a-fea91922bbb7",
+											"name": "Untitled Example",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													},
+													{
+														"description": "Added as a part of security scheme: apikey",
+														"key": "sessionid",
+														"value": "<API Key>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/user-management/users/:id/",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"user-management",
+														"users",
+														":id",
+														""
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "Text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"disabled": false,
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													},
+													"key": "Date",
+													"value": "<string>"
+												},
+												{
+													"disabled": false,
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													},
+													"key": "Server",
+													"value": "<string>"
+												},
+												{
+													"disabled": false,
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													},
+													"key": "Content-Length",
+													"value": "<string>"
+												},
+												{
+													"disabled": false,
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													},
+													"key": "Content-Type",
+													"value": "<string>"
+												},
+												{
+													"disabled": false,
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													},
+													"key": "Vary",
+													"value": "<string>"
+												},
+												{
+													"disabled": false,
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													},
+													"key": "Allow",
+													"value": "<string>"
+												},
+												{
+													"disabled": false,
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													},
+													"key": "X-Frame-Options",
+													"value": "<string>"
+												},
+												{
+													"disabled": false,
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													},
+													"key": "X-Content-Type-Options",
+													"value": "<string>"
+												},
+												{
+													"disabled": false,
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													},
+													"key": "Referrer-Policy",
+													"value": "<string>"
+												},
+												{
+													"disabled": false,
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													},
+													"key": "Cross-Origin-Opener-Policy",
+													"value": "<string>"
+												}
+											],
+											"cookie": [],
+											"body": "{\n\t\"email\": \"<email>\",\n\t\"url\": \"<uri>\",\n\t\"groups\": [\n\t\t\"<uri>\",\n\t\t\"<uri>\"\n\t]\n}"
+										}
+									]
+								}
+							],
+							"id": "f1b39303-9de6-4516-a790-64203da874b5"
 						}
 					],
 					"id": "9478d00c-c16f-4182-a67b-8186f1219c14"
@@ -4516,7 +5308,7 @@
 			"id": "638f1450-4c88-4214-ad75-43e1d2d50f5e",
 			"key": "baseUrl",
 			"value": "/",
-			"type": "any"
+			"type": "string"
 		}
 	]
 }
