@@ -22,10 +22,7 @@ paths:
       responses:
         '200':
           headers:
-            Date:
-              schema:
-                type: string
-            Server:
+            Allow:
               schema:
                 type: string
             Content-Length:
@@ -34,22 +31,25 @@ paths:
             Content-Type:
               schema:
                 type: string
-            Vary:
+            Cross-Origin-Opener-Policy:
               schema:
                 type: string
-            Allow:
+            Date:
+              schema:
+                type: string
+            Referrer-Policy:
+              schema:
+                type: string
+            Server:
+              schema:
+                type: string
+            Vary:
               schema:
                 type: string
             X-Frame-Options:
               schema:
                 type: string
             X-Content-Type-Options:
-              schema:
-                type: string
-            Referrer-Policy:
-              schema:
-                type: string
-            Cross-Origin-Opener-Policy:
               schema:
                 type: string
           content:
@@ -75,10 +75,7 @@ paths:
       responses:
         '200':
           headers:
-            Date:
-              schema:
-                type: string
-            Server:
+            Allow:
               schema:
                 type: string
             Content-Length:
@@ -87,22 +84,25 @@ paths:
             Content-Type:
               schema:
                 type: string
-            Vary:
+            Cross-Origin-Opener-Policy:
               schema:
                 type: string
-            Allow:
+            Date:
+              schema:
+                type: string
+            Referrer-Policy:
+              schema:
+                type: string
+            Server:
+              schema:
+                type: string
+            Vary:
               schema:
                 type: string
             X-Frame-Options:
               schema:
                 type: string
             X-Content-Type-Options:
-              schema:
-                type: string
-            Referrer-Policy:
-              schema:
-                type: string
-            Cross-Origin-Opener-Policy:
               schema:
                 type: string
           content:
@@ -128,10 +128,7 @@ paths:
       responses:
         '200':
           headers:
-            Date:
-              schema:
-                type: string
-            Server:
+            Allow:
               schema:
                 type: string
             Content-Length:
@@ -140,22 +137,25 @@ paths:
             Content-Type:
               schema:
                 type: string
-            Vary:
+            Cross-Origin-Opener-Policy:
               schema:
                 type: string
-            Allow:
+            Date:
+              schema:
+                type: string
+            Referrer-Policy:
+              schema:
+                type: string
+            Server:
+              schema:
+                type: string
+            Vary:
               schema:
                 type: string
             X-Frame-Options:
               schema:
                 type: string
             X-Content-Type-Options:
-              schema:
-                type: string
-            Referrer-Policy:
-              schema:
-                type: string
-            Cross-Origin-Opener-Policy:
               schema:
                 type: string
           content:
@@ -181,10 +181,7 @@ paths:
       responses:
         '200':
           headers:
-            Date:
-              schema:
-                type: string
-            Server:
+            Allow:
               schema:
                 type: string
             Content-Length:
@@ -193,22 +190,25 @@ paths:
             Content-Type:
               schema:
                 type: string
-            Vary:
+            Cross-Origin-Opener-Policy:
               schema:
                 type: string
-            Allow:
+            Date:
+              schema:
+                type: string
+            Referrer-Policy:
+              schema:
+                type: string
+            Server:
+              schema:
+                type: string
+            Vary:
               schema:
                 type: string
             X-Frame-Options:
               schema:
                 type: string
             X-Content-Type-Options:
-              schema:
-                type: string
-            Referrer-Policy:
-              schema:
-                type: string
-            Cross-Origin-Opener-Policy:
               schema:
                 type: string
           content:
@@ -234,10 +234,7 @@ paths:
       responses:
         '200':
           headers:
-            Date:
-              schema:
-                type: string
-            Server:
+            Allow:
               schema:
                 type: string
             Content-Length:
@@ -246,22 +243,25 @@ paths:
             Content-Type:
               schema:
                 type: string
-            Vary:
+            Cross-Origin-Opener-Policy:
               schema:
                 type: string
-            Allow:
+            Date:
+              schema:
+                type: string
+            Referrer-Policy:
+              schema:
+                type: string
+            Server:
+              schema:
+                type: string
+            Vary:
               schema:
                 type: string
             X-Frame-Options:
               schema:
                 type: string
             X-Content-Type-Options:
-              schema:
-                type: string
-            Referrer-Policy:
-              schema:
-                type: string
-            Cross-Origin-Opener-Policy:
               schema:
                 type: string
           content:
@@ -291,10 +291,7 @@ paths:
       responses:
         '201':
           headers:
-            Date:
-              schema:
-                type: string
-            Server:
+            Allow:
               schema:
                 type: string
             Content-Length:
@@ -303,22 +300,25 @@ paths:
             Content-Type:
               schema:
                 type: string
-            Vary:
+            Cross-Origin-Opener-Policy:
               schema:
                 type: string
-            Allow:
+            Date:
+              schema:
+                type: string
+            Referrer-Policy:
+              schema:
+                type: string
+            Server:
+              schema:
+                type: string
+            Vary:
               schema:
                 type: string
             X-Frame-Options:
               schema:
                 type: string
             X-Content-Type-Options:
-              schema:
-                type: string
-            Referrer-Policy:
-              schema:
-                type: string
-            Cross-Origin-Opener-Policy:
               schema:
                 type: string
           content:
@@ -345,10 +345,7 @@ paths:
       responses:
         '200':
           headers:
-            Date:
-              schema:
-                type: string
-            Server:
+            Allow:
               schema:
                 type: string
             Content-Length:
@@ -357,22 +354,25 @@ paths:
             Content-Type:
               schema:
                 type: string
-            Vary:
+            Cross-Origin-Opener-Policy:
               schema:
                 type: string
-            Allow:
+            Date:
+              schema:
+                type: string
+            Referrer-Policy:
+              schema:
+                type: string
+            Server:
+              schema:
+                type: string
+            Vary:
               schema:
                 type: string
             X-Frame-Options:
               schema:
                 type: string
             X-Content-Type-Options:
-              schema:
-                type: string
-            Referrer-Policy:
-              schema:
-                type: string
-            Cross-Origin-Opener-Policy:
               schema:
                 type: string
           content:
@@ -398,10 +398,7 @@ paths:
       responses:
         '200':
           headers:
-            Date:
-              schema:
-                type: string
-            Server:
+            Allow:
               schema:
                 type: string
             Content-Length:
@@ -410,22 +407,25 @@ paths:
             Content-Type:
               schema:
                 type: string
-            Vary:
+            Cross-Origin-Opener-Policy:
               schema:
                 type: string
-            Allow:
+            Date:
+              schema:
+                type: string
+            Referrer-Policy:
+              schema:
+                type: string
+            Server:
+              schema:
+                type: string
+            Vary:
               schema:
                 type: string
             X-Frame-Options:
               schema:
                 type: string
             X-Content-Type-Options:
-              schema:
-                type: string
-            Referrer-Policy:
-              schema:
-                type: string
-            Cross-Origin-Opener-Policy:
               schema:
                 type: string
           content:
@@ -455,10 +455,7 @@ paths:
       responses:
         '201':
           headers:
-            Date:
-              schema:
-                type: string
-            Server:
+            Allow:
               schema:
                 type: string
             Content-Length:
@@ -467,22 +464,25 @@ paths:
             Content-Type:
               schema:
                 type: string
-            Vary:
+            Cross-Origin-Opener-Policy:
               schema:
                 type: string
-            Allow:
+            Date:
+              schema:
+                type: string
+            Referrer-Policy:
+              schema:
+                type: string
+            Server:
+              schema:
+                type: string
+            Vary:
               schema:
                 type: string
             X-Frame-Options:
               schema:
                 type: string
             X-Content-Type-Options:
-              schema:
-                type: string
-            Referrer-Policy:
-              schema:
-                type: string
-            Cross-Origin-Opener-Policy:
               schema:
                 type: string
           content:
@@ -509,10 +509,7 @@ paths:
       responses:
         '200':
           headers:
-            Date:
-              schema:
-                type: string
-            Server:
+            Allow:
               schema:
                 type: string
             Content-Length:
@@ -521,22 +518,25 @@ paths:
             Content-Type:
               schema:
                 type: string
-            Vary:
+            Cross-Origin-Opener-Policy:
               schema:
                 type: string
-            Allow:
+            Date:
+              schema:
+                type: string
+            Referrer-Policy:
+              schema:
+                type: string
+            Server:
+              schema:
+                type: string
+            Vary:
               schema:
                 type: string
             X-Frame-Options:
               schema:
                 type: string
             X-Content-Type-Options:
-              schema:
-                type: string
-            Referrer-Policy:
-              schema:
-                type: string
-            Cross-Origin-Opener-Policy:
               schema:
                 type: string
           content:
@@ -562,10 +562,7 @@ paths:
       responses:
         '200':
           headers:
-            Date:
-              schema:
-                type: string
-            Server:
+            Allow:
               schema:
                 type: string
             Content-Length:
@@ -574,22 +571,25 @@ paths:
             Content-Type:
               schema:
                 type: string
-            Vary:
+            Cross-Origin-Opener-Policy:
               schema:
                 type: string
-            Allow:
+            Date:
+              schema:
+                type: string
+            Referrer-Policy:
+              schema:
+                type: string
+            Server:
+              schema:
+                type: string
+            Vary:
               schema:
                 type: string
             X-Frame-Options:
               schema:
                 type: string
             X-Content-Type-Options:
-              schema:
-                type: string
-            Referrer-Policy:
-              schema:
-                type: string
-            Cross-Origin-Opener-Policy:
               schema:
                 type: string
           content:
@@ -619,10 +619,7 @@ paths:
       responses:
         '201':
           headers:
-            Date:
-              schema:
-                type: string
-            Server:
+            Allow:
               schema:
                 type: string
             Content-Length:
@@ -631,22 +628,25 @@ paths:
             Content-Type:
               schema:
                 type: string
-            Vary:
+            Cross-Origin-Opener-Policy:
               schema:
                 type: string
-            Allow:
+            Date:
+              schema:
+                type: string
+            Referrer-Policy:
+              schema:
+                type: string
+            Server:
+              schema:
+                type: string
+            Vary:
               schema:
                 type: string
             X-Frame-Options:
               schema:
                 type: string
             X-Content-Type-Options:
-              schema:
-                type: string
-            Referrer-Policy:
-              schema:
-                type: string
-            Cross-Origin-Opener-Policy:
               schema:
                 type: string
           content:
@@ -673,10 +673,7 @@ paths:
       responses:
         '200':
           headers:
-            Date:
-              schema:
-                type: string
-            Server:
+            Allow:
               schema:
                 type: string
             Content-Length:
@@ -685,22 +682,25 @@ paths:
             Content-Type:
               schema:
                 type: string
-            Vary:
+            Cross-Origin-Opener-Policy:
               schema:
                 type: string
-            Allow:
+            Date:
+              schema:
+                type: string
+            Referrer-Policy:
+              schema:
+                type: string
+            Server:
+              schema:
+                type: string
+            Vary:
               schema:
                 type: string
             X-Frame-Options:
               schema:
                 type: string
             X-Content-Type-Options:
-              schema:
-                type: string
-            Referrer-Policy:
-              schema:
-                type: string
-            Cross-Origin-Opener-Policy:
               schema:
                 type: string
           content:
@@ -726,10 +726,7 @@ paths:
       responses:
         '200':
           headers:
-            Date:
-              schema:
-                type: string
-            Server:
+            Allow:
               schema:
                 type: string
             Content-Length:
@@ -738,22 +735,25 @@ paths:
             Content-Type:
               schema:
                 type: string
-            Vary:
+            Cross-Origin-Opener-Policy:
               schema:
                 type: string
-            Allow:
+            Date:
+              schema:
+                type: string
+            Referrer-Policy:
+              schema:
+                type: string
+            Server:
+              schema:
+                type: string
+            Vary:
               schema:
                 type: string
             X-Frame-Options:
               schema:
                 type: string
             X-Content-Type-Options:
-              schema:
-                type: string
-            Referrer-Policy:
-              schema:
-                type: string
-            Cross-Origin-Opener-Policy:
               schema:
                 type: string
           content:
@@ -783,10 +783,7 @@ paths:
       responses:
         '201':
           headers:
-            Date:
-              schema:
-                type: string
-            Server:
+            Allow:
               schema:
                 type: string
             Content-Length:
@@ -795,22 +792,25 @@ paths:
             Content-Type:
               schema:
                 type: string
-            Vary:
+            Cross-Origin-Opener-Policy:
               schema:
                 type: string
-            Allow:
+            Date:
+              schema:
+                type: string
+            Referrer-Policy:
+              schema:
+                type: string
+            Server:
+              schema:
+                type: string
+            Vary:
               schema:
                 type: string
             X-Frame-Options:
               schema:
                 type: string
             X-Content-Type-Options:
-              schema:
-                type: string
-            Referrer-Policy:
-              schema:
-                type: string
-            Cross-Origin-Opener-Policy:
               schema:
                 type: string
           content:
@@ -837,10 +837,7 @@ paths:
       responses:
         '200':
           headers:
-            Date:
-              schema:
-                type: string
-            Server:
+            Allow:
               schema:
                 type: string
             Content-Length:
@@ -849,22 +846,25 @@ paths:
             Content-Type:
               schema:
                 type: string
-            Vary:
+            Cross-Origin-Opener-Policy:
               schema:
                 type: string
-            Allow:
+            Date:
+              schema:
+                type: string
+            Referrer-Policy:
+              schema:
+                type: string
+            Server:
+              schema:
+                type: string
+            Vary:
               schema:
                 type: string
             X-Frame-Options:
               schema:
                 type: string
             X-Content-Type-Options:
-              schema:
-                type: string
-            Referrer-Policy:
-              schema:
-                type: string
-            Cross-Origin-Opener-Policy:
               schema:
                 type: string
           content:
@@ -890,10 +890,7 @@ paths:
       responses:
         '200':
           headers:
-            Date:
-              schema:
-                type: string
-            Server:
+            Allow:
               schema:
                 type: string
             Content-Length:
@@ -902,22 +899,25 @@ paths:
             Content-Type:
               schema:
                 type: string
-            Vary:
+            Cross-Origin-Opener-Policy:
               schema:
                 type: string
-            Allow:
+            Date:
+              schema:
+                type: string
+            Referrer-Policy:
+              schema:
+                type: string
+            Server:
+              schema:
+                type: string
+            Vary:
               schema:
                 type: string
             X-Frame-Options:
               schema:
                 type: string
             X-Content-Type-Options:
-              schema:
-                type: string
-            Referrer-Policy:
-              schema:
-                type: string
-            Cross-Origin-Opener-Policy:
               schema:
                 type: string
           content:
@@ -947,10 +947,7 @@ paths:
       responses:
         '201':
           headers:
-            Date:
-              schema:
-                type: string
-            Server:
+            Allow:
               schema:
                 type: string
             Content-Length:
@@ -959,22 +956,25 @@ paths:
             Content-Type:
               schema:
                 type: string
-            Vary:
+            Cross-Origin-Opener-Policy:
               schema:
                 type: string
-            Allow:
+            Date:
+              schema:
+                type: string
+            Referrer-Policy:
+              schema:
+                type: string
+            Server:
+              schema:
+                type: string
+            Vary:
               schema:
                 type: string
             X-Frame-Options:
               schema:
                 type: string
             X-Content-Type-Options:
-              schema:
-                type: string
-            Referrer-Policy:
-              schema:
-                type: string
-            Cross-Origin-Opener-Policy:
               schema:
                 type: string
           content:
@@ -1001,10 +1001,7 @@ paths:
       responses:
         '200':
           headers:
-            Date:
-              schema:
-                type: string
-            Server:
+            Allow:
               schema:
                 type: string
             Content-Length:
@@ -1013,22 +1010,25 @@ paths:
             Content-Type:
               schema:
                 type: string
-            Vary:
+            Cross-Origin-Opener-Policy:
               schema:
                 type: string
-            Allow:
+            Date:
+              schema:
+                type: string
+            Referrer-Policy:
+              schema:
+                type: string
+            Server:
+              schema:
+                type: string
+            Vary:
               schema:
                 type: string
             X-Frame-Options:
               schema:
                 type: string
             X-Content-Type-Options:
-              schema:
-                type: string
-            Referrer-Policy:
-              schema:
-                type: string
-            Cross-Origin-Opener-Policy:
               schema:
                 type: string
           content:
@@ -1054,10 +1054,7 @@ paths:
       responses:
         '200':
           headers:
-            Date:
-              schema:
-                type: string
-            Server:
+            Allow:
               schema:
                 type: string
             Content-Length:
@@ -1066,22 +1063,25 @@ paths:
             Content-Type:
               schema:
                 type: string
-            Vary:
+            Cross-Origin-Opener-Policy:
               schema:
                 type: string
-            Allow:
+            Date:
+              schema:
+                type: string
+            Referrer-Policy:
+              schema:
+                type: string
+            Server:
+              schema:
+                type: string
+            Vary:
               schema:
                 type: string
             X-Frame-Options:
               schema:
                 type: string
             X-Content-Type-Options:
-              schema:
-                type: string
-            Referrer-Policy:
-              schema:
-                type: string
-            Cross-Origin-Opener-Policy:
               schema:
                 type: string
           content:
@@ -1111,10 +1111,7 @@ paths:
       responses:
         '201':
           headers:
-            Date:
-              schema:
-                type: string
-            Server:
+            Allow:
               schema:
                 type: string
             Content-Length:
@@ -1123,22 +1120,25 @@ paths:
             Content-Type:
               schema:
                 type: string
-            Vary:
+            Cross-Origin-Opener-Policy:
               schema:
                 type: string
-            Allow:
+            Date:
+              schema:
+                type: string
+            Referrer-Policy:
+              schema:
+                type: string
+            Server:
+              schema:
+                type: string
+            Vary:
               schema:
                 type: string
             X-Frame-Options:
               schema:
                 type: string
             X-Content-Type-Options:
-              schema:
-                type: string
-            Referrer-Policy:
-              schema:
-                type: string
-            Cross-Origin-Opener-Policy:
               schema:
                 type: string
           content:
@@ -1165,10 +1165,7 @@ paths:
       responses:
         '200':
           headers:
-            Date:
-              schema:
-                type: string
-            Server:
+            Allow:
               schema:
                 type: string
             Content-Length:
@@ -1177,22 +1174,25 @@ paths:
             Content-Type:
               schema:
                 type: string
-            Vary:
+            Cross-Origin-Opener-Policy:
               schema:
                 type: string
-            Allow:
+            Date:
+              schema:
+                type: string
+            Referrer-Policy:
+              schema:
+                type: string
+            Server:
+              schema:
+                type: string
+            Vary:
               schema:
                 type: string
             X-Frame-Options:
               schema:
                 type: string
             X-Content-Type-Options:
-              schema:
-                type: string
-            Referrer-Policy:
-              schema:
-                type: string
-            Cross-Origin-Opener-Policy:
               schema:
                 type: string
           content:
@@ -1218,10 +1218,7 @@ paths:
       responses:
         '200':
           headers:
-            Date:
-              schema:
-                type: string
-            Server:
+            Allow:
               schema:
                 type: string
             Content-Length:
@@ -1230,22 +1227,25 @@ paths:
             Content-Type:
               schema:
                 type: string
-            Vary:
+            Cross-Origin-Opener-Policy:
               schema:
                 type: string
-            Allow:
+            Date:
+              schema:
+                type: string
+            Referrer-Policy:
+              schema:
+                type: string
+            Server:
+              schema:
+                type: string
+            Vary:
               schema:
                 type: string
             X-Frame-Options:
               schema:
                 type: string
             X-Content-Type-Options:
-              schema:
-                type: string
-            Referrer-Policy:
-              schema:
-                type: string
-            Cross-Origin-Opener-Policy:
               schema:
                 type: string
           content:
@@ -1313,10 +1313,7 @@ paths:
       responses:
         '201':
           headers:
-            Date:
-              schema:
-                type: string
-            Server:
+            Allow:
               schema:
                 type: string
             Content-Length:
@@ -1325,22 +1322,25 @@ paths:
             Content-Type:
               schema:
                 type: string
-            Vary:
+            Cross-Origin-Opener-Policy:
               schema:
                 type: string
-            Allow:
+            Date:
+              schema:
+                type: string
+            Referrer-Policy:
+              schema:
+                type: string
+            Server:
+              schema:
+                type: string
+            Vary:
               schema:
                 type: string
             X-Frame-Options:
               schema:
                 type: string
             X-Content-Type-Options:
-              schema:
-                type: string
-            Referrer-Policy:
-              schema:
-                type: string
-            Cross-Origin-Opener-Policy:
               schema:
                 type: string
           content:
@@ -1384,10 +1384,7 @@ paths:
       responses:
         '200':
           headers:
-            Date:
-              schema:
-                type: string
-            Server:
+            Allow:
               schema:
                 type: string
             Content-Length:
@@ -1396,22 +1393,25 @@ paths:
             Content-Type:
               schema:
                 type: string
-            Vary:
+            Cross-Origin-Opener-Policy:
               schema:
                 type: string
-            Allow:
+            Date:
+              schema:
+                type: string
+            Referrer-Policy:
+              schema:
+                type: string
+            Server:
+              schema:
+                type: string
+            Vary:
               schema:
                 type: string
             X-Frame-Options:
               schema:
                 type: string
             X-Content-Type-Options:
-              schema:
-                type: string
-            Referrer-Policy:
-              schema:
-                type: string
-            Cross-Origin-Opener-Policy:
               schema:
                 type: string
           content:
