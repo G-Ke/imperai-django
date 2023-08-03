@@ -325,6 +325,37 @@ paths:
       - basicAuth: []
       responses:
         '200':
+          headers:
+            Date:
+              schema:
+                type: string
+            Server:
+              schema:
+                type: string
+            Content-Length:
+              schema:
+                type: string
+            Content-Type:
+              schema:
+                type: string
+            Vary:
+              schema:
+                type: string
+            Allow:
+              schema:
+                type: string
+            X-Frame-Options:
+              schema:
+                type: string
+            X-Content-Type-Options:
+              schema:
+                type: string
+            Referrer-Policy:
+              schema:
+                type: string
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
           content:
             application/json:
               schema:
@@ -351,6 +382,37 @@ paths:
       - basicAuth: []
       responses:
         '201':
+          headers:
+            Date:
+              schema:
+                type: string
+            Server:
+              schema:
+                type: string
+            Content-Length:
+              schema:
+                type: string
+            Content-Type:
+              schema:
+                type: string
+            Vary:
+              schema:
+                type: string
+            Allow:
+              schema:
+                type: string
+            X-Frame-Options:
+              schema:
+                type: string
+            X-Content-Type-Options:
+              schema:
+                type: string
+            Referrer-Policy:
+              schema:
+                type: string
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
           content:
             application/json:
               schema:
@@ -374,6 +436,37 @@ paths:
       - basicAuth: []
       responses:
         '200':
+          headers:
+            Date:
+              schema:
+                type: string
+            Server:
+              schema:
+                type: string
+            Content-Length:
+              schema:
+                type: string
+            Content-Type:
+              schema:
+                type: string
+            Vary:
+              schema:
+                type: string
+            Allow:
+              schema:
+                type: string
+            X-Frame-Options:
+              schema:
+                type: string
+            X-Content-Type-Options:
+              schema:
+                type: string
+            Referrer-Policy:
+              schema:
+                type: string
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
           content:
             application/json:
               schema:
@@ -396,6 +489,37 @@ paths:
       - basicAuth: []
       responses:
         '200':
+          headers:
+            Date:
+              schema:
+                type: string
+            Server:
+              schema:
+                type: string
+            Content-Length:
+              schema:
+                type: string
+            Content-Type:
+              schema:
+                type: string
+            Vary:
+              schema:
+                type: string
+            Allow:
+              schema:
+                type: string
+            X-Frame-Options:
+              schema:
+                type: string
+            X-Content-Type-Options:
+              schema:
+                type: string
+            Referrer-Policy:
+              schema:
+                type: string
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
           content:
             application/json:
               schema:
@@ -422,6 +546,37 @@ paths:
       - basicAuth: []
       responses:
         '201':
+          headers:
+            Date:
+              schema:
+                type: string
+            Server:
+              schema:
+                type: string
+            Content-Length:
+              schema:
+                type: string
+            Content-Type:
+              schema:
+                type: string
+            Vary:
+              schema:
+                type: string
+            Allow:
+              schema:
+                type: string
+            X-Frame-Options:
+              schema:
+                type: string
+            X-Content-Type-Options:
+              schema:
+                type: string
+            Referrer-Policy:
+              schema:
+                type: string
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
           content:
             application/json:
               schema:
@@ -445,6 +600,37 @@ paths:
       - basicAuth: []
       responses:
         '200':
+          headers:
+            Date:
+              schema:
+                type: string
+            Server:
+              schema:
+                type: string
+            Content-Length:
+              schema:
+                type: string
+            Content-Type:
+              schema:
+                type: string
+            Vary:
+              schema:
+                type: string
+            Allow:
+              schema:
+                type: string
+            X-Frame-Options:
+              schema:
+                type: string
+            X-Content-Type-Options:
+              schema:
+                type: string
+            Referrer-Policy:
+              schema:
+                type: string
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
           content:
             application/json:
               schema:
@@ -467,6 +653,37 @@ paths:
       - basicAuth: []
       responses:
         '200':
+          headers:
+            Date:
+              schema:
+                type: string
+            Server:
+              schema:
+                type: string
+            Content-Length:
+              schema:
+                type: string
+            Content-Type:
+              schema:
+                type: string
+            Vary:
+              schema:
+                type: string
+            Allow:
+              schema:
+                type: string
+            X-Frame-Options:
+              schema:
+                type: string
+            X-Content-Type-Options:
+              schema:
+                type: string
+            Referrer-Policy:
+              schema:
+                type: string
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
           content:
             application/json:
               schema:
@@ -493,6 +710,37 @@ paths:
       - basicAuth: []
       responses:
         '201':
+          headers:
+            Date:
+              schema:
+                type: string
+            Server:
+              schema:
+                type: string
+            Content-Length:
+              schema:
+                type: string
+            Content-Type:
+              schema:
+                type: string
+            Vary:
+              schema:
+                type: string
+            Allow:
+              schema:
+                type: string
+            X-Frame-Options:
+              schema:
+                type: string
+            X-Content-Type-Options:
+              schema:
+                type: string
+            Referrer-Policy:
+              schema:
+                type: string
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
           content:
             application/json:
               schema:
@@ -516,6 +764,37 @@ paths:
       - basicAuth: []
       responses:
         '200':
+          headers:
+            Date:
+              schema:
+                type: string
+            Server:
+              schema:
+                type: string
+            Content-Length:
+              schema:
+                type: string
+            Content-Type:
+              schema:
+                type: string
+            Vary:
+              schema:
+                type: string
+            Allow:
+              schema:
+                type: string
+            X-Frame-Options:
+              schema:
+                type: string
+            X-Content-Type-Options:
+              schema:
+                type: string
+            Referrer-Policy:
+              schema:
+                type: string
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
           content:
             application/json:
               schema:
@@ -538,6 +817,37 @@ paths:
       - basicAuth: []
       responses:
         '200':
+          headers:
+            Date:
+              schema:
+                type: string
+            Server:
+              schema:
+                type: string
+            Content-Length:
+              schema:
+                type: string
+            Content-Type:
+              schema:
+                type: string
+            Vary:
+              schema:
+                type: string
+            Allow:
+              schema:
+                type: string
+            X-Frame-Options:
+              schema:
+                type: string
+            X-Content-Type-Options:
+              schema:
+                type: string
+            Referrer-Policy:
+              schema:
+                type: string
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
           content:
             application/json:
               schema:
@@ -564,6 +874,37 @@ paths:
       - basicAuth: []
       responses:
         '201':
+          headers:
+            Date:
+              schema:
+                type: string
+            Server:
+              schema:
+                type: string
+            Content-Length:
+              schema:
+                type: string
+            Content-Type:
+              schema:
+                type: string
+            Vary:
+              schema:
+                type: string
+            Allow:
+              schema:
+                type: string
+            X-Frame-Options:
+              schema:
+                type: string
+            X-Content-Type-Options:
+              schema:
+                type: string
+            Referrer-Policy:
+              schema:
+                type: string
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
           content:
             application/json:
               schema:
@@ -587,6 +928,37 @@ paths:
       - basicAuth: []
       responses:
         '200':
+          headers:
+            Date:
+              schema:
+                type: string
+            Server:
+              schema:
+                type: string
+            Content-Length:
+              schema:
+                type: string
+            Content-Type:
+              schema:
+                type: string
+            Vary:
+              schema:
+                type: string
+            Allow:
+              schema:
+                type: string
+            X-Frame-Options:
+              schema:
+                type: string
+            X-Content-Type-Options:
+              schema:
+                type: string
+            Referrer-Policy:
+              schema:
+                type: string
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
           content:
             application/json:
               schema:
@@ -609,6 +981,37 @@ paths:
       - basicAuth: []
       responses:
         '200':
+          headers:
+            Date:
+              schema:
+                type: string
+            Server:
+              schema:
+                type: string
+            Content-Length:
+              schema:
+                type: string
+            Content-Type:
+              schema:
+                type: string
+            Vary:
+              schema:
+                type: string
+            Allow:
+              schema:
+                type: string
+            X-Frame-Options:
+              schema:
+                type: string
+            X-Content-Type-Options:
+              schema:
+                type: string
+            Referrer-Policy:
+              schema:
+                type: string
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
           content:
             application/json:
               schema:
@@ -635,6 +1038,37 @@ paths:
       - basicAuth: []
       responses:
         '201':
+          headers:
+            Date:
+              schema:
+                type: string
+            Server:
+              schema:
+                type: string
+            Content-Length:
+              schema:
+                type: string
+            Content-Type:
+              schema:
+                type: string
+            Vary:
+              schema:
+                type: string
+            Allow:
+              schema:
+                type: string
+            X-Frame-Options:
+              schema:
+                type: string
+            X-Content-Type-Options:
+              schema:
+                type: string
+            Referrer-Policy:
+              schema:
+                type: string
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
           content:
             application/json:
               schema:
@@ -658,6 +1092,37 @@ paths:
       - basicAuth: []
       responses:
         '200':
+          headers:
+            Date:
+              schema:
+                type: string
+            Server:
+              schema:
+                type: string
+            Content-Length:
+              schema:
+                type: string
+            Content-Type:
+              schema:
+                type: string
+            Vary:
+              schema:
+                type: string
+            Allow:
+              schema:
+                type: string
+            X-Frame-Options:
+              schema:
+                type: string
+            X-Content-Type-Options:
+              schema:
+                type: string
+            Referrer-Policy:
+              schema:
+                type: string
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
           content:
             application/json:
               schema:
@@ -680,6 +1145,37 @@ paths:
       - basicAuth: []
       responses:
         '200':
+          headers:
+            Date:
+              schema:
+                type: string
+            Server:
+              schema:
+                type: string
+            Content-Length:
+              schema:
+                type: string
+            Content-Type:
+              schema:
+                type: string
+            Vary:
+              schema:
+                type: string
+            Allow:
+              schema:
+                type: string
+            X-Frame-Options:
+              schema:
+                type: string
+            X-Content-Type-Options:
+              schema:
+                type: string
+            Referrer-Policy:
+              schema:
+                type: string
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
           content:
             application/json:
               schema:
@@ -706,6 +1202,37 @@ paths:
       - basicAuth: []
       responses:
         '201':
+          headers:
+            Date:
+              schema:
+                type: string
+            Server:
+              schema:
+                type: string
+            Content-Length:
+              schema:
+                type: string
+            Content-Type:
+              schema:
+                type: string
+            Vary:
+              schema:
+                type: string
+            Allow:
+              schema:
+                type: string
+            X-Frame-Options:
+              schema:
+                type: string
+            X-Content-Type-Options:
+              schema:
+                type: string
+            Referrer-Policy:
+              schema:
+                type: string
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
           content:
             application/json:
               schema:
@@ -729,6 +1256,37 @@ paths:
       - basicAuth: []
       responses:
         '200':
+          headers:
+            Date:
+              schema:
+                type: string
+            Server:
+              schema:
+                type: string
+            Content-Length:
+              schema:
+                type: string
+            Content-Type:
+              schema:
+                type: string
+            Vary:
+              schema:
+                type: string
+            Allow:
+              schema:
+                type: string
+            X-Frame-Options:
+              schema:
+                type: string
+            X-Content-Type-Options:
+              schema:
+                type: string
+            Referrer-Policy:
+              schema:
+                type: string
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
           content:
             application/json:
               schema:
@@ -752,7 +1310,34 @@ paths:
       responses:
         '200':
           headers:
+            Date:
+              schema:
+                type: string
+            Server:
+              schema:
+                type: string
+            Content-Length:
+              schema:
+                type: string
+            Content-Type:
+              schema:
+                type: string
             Vary:
+              schema:
+                type: string
+            Allow:
+              schema:
+                type: string
+            X-Frame-Options:
+              schema:
+                type: string
+            X-Content-Type-Options:
+              schema:
+                type: string
+            Referrer-Policy:
+              schema:
+                type: string
+            Cross-Origin-Opener-Policy:
               schema:
                 type: string
           content:
@@ -820,7 +1405,34 @@ paths:
       responses:
         '201':
           headers:
+            Date:
+              schema:
+                type: string
+            Server:
+              schema:
+                type: string
+            Content-Length:
+              schema:
+                type: string
+            Content-Type:
+              schema:
+                type: string
             Vary:
+              schema:
+                type: string
+            Allow:
+              schema:
+                type: string
+            X-Frame-Options:
+              schema:
+                type: string
+            X-Content-Type-Options:
+              schema:
+                type: string
+            Referrer-Policy:
+              schema:
+                type: string
+            Cross-Origin-Opener-Policy:
               schema:
                 type: string
           content:
@@ -864,7 +1476,34 @@ paths:
       responses:
         '200':
           headers:
+            Date:
+              schema:
+                type: string
+            Server:
+              schema:
+                type: string
+            Content-Length:
+              schema:
+                type: string
+            Content-Type:
+              schema:
+                type: string
             Vary:
+              schema:
+                type: string
+            Allow:
+              schema:
+                type: string
+            X-Frame-Options:
+              schema:
+                type: string
+            X-Content-Type-Options:
+              schema:
+                type: string
+            Referrer-Policy:
+              schema:
+                type: string
+            Cross-Origin-Opener-Policy:
               schema:
                 type: string
           content:
@@ -890,47 +1529,6 @@ paths:
                   description: longer description
           description: ''
 components:
-  headers:
-    Allow:
-      description: Allow
-      schema:
-        type: string
-    Content-Length:
-      description: Content-Length
-      schema:
-        type: string
-    Content-Type:
-      description: Content-Type
-      schema:
-        type: string
-    Cross-Origin-Opener-Policy:
-      description: Cross-Origin-Opener-Policy
-      schema:
-        type: string
-    Date:
-      description: Date
-      schema:
-        type: string
-    Referrer-Policy:
-      description: Referrer-Policy
-      schema:
-        type: string
-    Server:
-      description: Server
-      schema:
-        type: string
-    Vary:
-      description: Vary
-      schema:
-        type: string
-    X-Content-Type-Options:
-      description: X-Content-Type-Options
-      schema:
-        type: string
-    X-Frame-Options:
-      description: X-Frame-Options
-      schema:
-        type: string
   schemas:
     Group:
       type: object
