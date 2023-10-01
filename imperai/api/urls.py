@@ -1,19 +1,19 @@
 from django.urls import path, include
 from rest_framework import routers
-from . import views
+from . import vertex
 from rest_framework import permissions
 from drf_spectacular.views import SpectacularAPIView, SpectacularSwaggerView, SpectacularRedocView
 
 router = routers.DefaultRouter()
-router.register(r'user-management/users', views.UserViewSet)
-router.register(r'user-management/groups', views.GroupViewSet)
-router.register(r'vertex/chat/requests', views.VertexChatRequestViewSet)
-router.register(r'vertex/chat/configs', views.VertexChatConfigViewSet)
-router.register(r'vertex/chat/exampleiopairs', views.VertexChatExampleIOPairViewSet)
-router.register(r'vertex/chat/contexts', views.VertexChatContextViewSet)
-router.register(r'vertex/chat/contextinstructs', views.VertexChatContextInstructViewSet)
-router.register(r'vertex/chat/contextrules', views.VertexChatContextRuleViewSet)
-router.register(r'vertex/chat/contextdetails', views.VertexChatContextDetailViewSet)
+router.register(r'user-management/users', vertex.UserViewSet)
+router.register(r'user-management/groups', vertex.GroupViewSet)
+router.register(r'vertex/chat/requests', vertex.VertexChatRequestViewSet)
+router.register(r'vertex/chat/configs', vertex.VertexChatConfigViewSet)
+router.register(r'vertex/chat/exampleiopairs', vertex.VertexChatExampleIOPairViewSet)
+router.register(r'vertex/chat/contexts', vertex.VertexChatContextViewSet)
+router.register(r'vertex/chat/contextinstructs', vertex.VertexChatContextInstructViewSet)
+router.register(r'vertex/chat/contextrules', vertex.VertexChatContextRuleViewSet)
+router.register(r'vertex/chat/contextdetails', vertex.VertexChatContextDetailViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),
