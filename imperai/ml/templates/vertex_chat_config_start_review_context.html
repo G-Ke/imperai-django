@@ -1,0 +1,85 @@
+{% extends 'rebase.html' %}
+{% load widget_tweaks %}
+{% block head_title %}Configuration{% endblock %}
+{% block pagename %}Configuration{% endblock %}
+{% load account %}
+
+{% block content %}
+<section class="bg-gray-50 shadow shadow-lg shadow-gray-800 mx-auto max-w-3xl overflow-hidden px-6 py-24 sm:py-8 lg:px-8 rounded-2xl">
+    <div class="flex flex-col justify-center px-6 py-12 lg:px-8">
+        <h1 class="text-3xl font-bold text-center text-gray-900 mb-8">Context Generation Complete</h1>
+        <p class="text-sm text-gray-600 mb-8">
+            Amazing work! You just created critical guidance that the AI model will use to create better responses for your customers.
+            The guidance does big work too, as it is reused to help improve each request. You can improve or modify all of this later.
+        </p>
+        <a href="{% url 'vertex_chat_config_start_connect' %}" type="button" class="max-w-md mx-auto focus:outline-none text-white bg-indigo-700 hover:bg-indigo-800 focus:ring-4 focus:ring-indigo-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2">Continue</a>
+    </div>
+    <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+        <table class="w-full text-sm text-left text-gray-500">
+            <caption class="p-5 text-lg font-semibold text-left text-gray-900 bg-gray-300 border-b">
+                Your AI Context
+                <p class="mt-1 text-sm font-normal text-gray-700">You may not know it, but you just created something very powerful. The context that will be reused continually to help the AI Model generate accurate responses.</p>
+            </caption>
+            <thead class="text-xs text-gray-700 uppercase bg-gray-300">
+                <tr>
+                    <th scope="col" class="px-6 py-3">
+                        Component
+                    </th>
+                    <th scope="col" class="px-6 py-3 text-gray-600">
+                        Count
+                    </th>
+                    <th scope="col" class="px-6 py-3 text-gray-600">
+                        Why?
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="bg-white border-b">
+                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                        Examples
+                    </th>
+                    <td class="px-6 py-4 text-gray-600">
+                        {{ example_count }}
+                    </td>
+                    <td class="px-6 py-4 text-gray-600">
+                        High-quality message-response pairs.
+                    </td>
+                </tr>
+                <tr class="bg-white border-b">
+                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                        Details
+                    </th>
+                    <td class="px-6 py-4 text-gray-600">
+                        {{ details_count }}
+                    </td>
+                    <td class="px-6 py-4 text-gray-600">
+                        Information about the storefront.
+                    </td>
+                </tr>
+                <tr class="bg-white border-b">
+                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                        Instructions
+                    </th>
+                    <td class="px-6 py-4 text-gray-600">
+                        {{ instructs_count }}
+                    </td>
+                    <td class="px-6 py-4 text-gray-600">
+                        Guidance on responding to customers.
+                    </td>
+                </tr>
+                <tr class="bg-white">
+                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                        Rules
+                    </th>
+                    <td class="px-6 py-4 text-gray-600">
+                        {{ rules_count }}
+                    </td>
+                    <td class="px-6 py-4 text-gray-600">
+                        Rulesets for discouraged responses.
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+{% endblock content %}

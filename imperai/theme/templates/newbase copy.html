@@ -1,0 +1,180 @@
+{% load static tailwind_tags %}
+{% load account %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <title>{% block title %}imperai{% endblock %}</title>
+        {% tailwind_css %}
+    </head>
+    <style>
+        .material-symbols-outlined {
+            color: #fff;
+            font-variation-settings:
+            'FILL' 1,
+            'wght' 600,
+            'GRAD' 200,
+            'opsz' 48
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.js"></script>
+    <body class="flex flex-col min-h-screen">
+        <div class="min-h-full">
+            <nav class="bg-gray-800">
+                <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                    <div class="flex h-16 items-center justify-between">
+                        <div class="flex items-center md:order-2">
+                            <button type="button" class="flex mr-3 text-sm bg-gray-800 rounded-full md:mr-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600" id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown" data-dropdown-placement="bottom">
+                                <span class="sr-only">Open user menu</span>
+                                <span class="material-symbols-outlined">
+                                    account_circle
+                                </span>
+                            </button>
+                            <!-- Dropdown menu -->
+                            <div class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600" id="user-dropdown">
+                                <div class="px-4 py-3">
+                                    <span class="block text-sm text-gray-900 dark:text-white">{% if user.is_authenticated %}{% if user.first_name %}{{ user.first_name }}{% endif %} {% if user.last_name %}{{ user.last_name }}{% endif %}{% endif %}</span>
+                                    <span class="block text-sm  text-gray-500 truncate dark:text-gray-400">{{ user }}</span>
+                                </div>
+                                <ul class="py-2" aria-labelledby="user-menu-button">
+                                    <li>
+                                        <a href="{% url 'profile' %}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Profile</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Settings</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Earnings</a>
+                                    </li>
+                                    {% if user.is_authenticated %}
+                                    <li>
+                                        <a href="{% url 'account_logout' %}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Logout</a>
+                                    </li>
+                                    {% endif %}
+                                </ul>
+                            </div>
+                            <button data-collapse-toggle="navbar-user" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-user" aria-expanded="false">
+                                <span class="sr-only">Open main menu</span>
+                                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="flex-shrink-0">
+                                <img class="h-9 w-14" src="https://i.ibb.co/N3vG7Xd/imperai-logo-only.png" alt="imperai">
+                            </div>
+                            <div class="hidden md:block">
+                                <div class="ml-10 flex items-baseline space-x-4">
+                                    <a href="#" class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium" aria-current="page">Welcome</a>
+                                    <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Dashboard</a>
+                                    <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Models</a>
+                                    <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Configurations</a>
+                                    <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Analytics</a>
+                                    <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <header class="bg-white shadow px-4 py-6">
+                <div class="mx-auto max-w-2xl">
+                    <div class="flex justify-between">
+                        <h1 class="text-3xl content-center font-bold tracking-tight text-gray-900 mr-2">{% block pagename %}{% endblock %}</h1>
+                        {% if messages %}
+                        <div id="alert-1" class="flex p-3 mb-3 text-purple-800 rounded-lg bg-purple-50 dark:bg-gray-600 dark:text-blue-400" role="alert">
+                            <svg class="flex-shrink-0 w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z"/>
+                            </svg>
+                            <span class="sr-only">Info</span>
+                            <div class="ml-3 text-sm font-medium">
+                                {% for message in messages %}
+                                    {{message}}
+                                {% endfor %}
+                            </div>
+                            <button type="button" class="ml-auto -mx-1.5 -my-1.5 bg-purple-50 text-purple-500 rounded-lg focus:ring-2 focus:ring-purple-400 p-1.5 hover:bg-purple-200 inline-flex items-center justify-center h-8 w-8 dark:bg-gray-600 dark:text-purple-400 dark:hover:bg-purple-700" data-dismiss-target="#alert-1" aria-label="Close">
+                                <span class="sr-only">Close</span>
+                                <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                                </svg>
+                            </button>
+                        </div>
+                    {% endif %}
+                    </div>
+                </div>
+            </header>
+            <main>
+                <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
+                    {% block content %}
+
+                    {% endblock content %}
+                </div>
+            </main>
+            
+        </div>
+        <footer class="bg-white mt-auto">
+            <div class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
+                <div class="lg:grid lg:grid-cols-2">
+            </div>
+            <div class="py-8 lg:py-16 lg:pe-16">
+                <div class="hidden text-teal-600 lg:block">
+                    <img class="h-8 w-35" src="https://i.ibb.co/3B2CfNk/default.png" alt="imperai">
+                </div>
+                <div class="mt-8 grid grid-cols-1 gap-8 sm:grid-cols-4">
+                    <div>
+                        <p class="font-medium text-gray-900">Solutions</p>
+                        <ul class="mt-6 space-y-4 text-sm">
+                            <li>
+                                <a href="#" class="text-gray-700 transition hover:opacity-75">1on1 Coaching</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-gray-700 transition hover:opacity-75">Company Review</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p class="font-medium text-gray-900">Company</p>
+                        <ul class="mt-6 space-y-4 text-sm">
+                            <li>
+                                <a href="#" class="text-gray-700 transition hover:opacity-75">About</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-gray-700 transition hover:opacity-75">Meet the Team</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p class="font-medium text-gray-900">Resources</p>
+                        <ul class="mt-6 space-y-4 text-sm">
+                            <li>
+                                <a href="#" class="text-gray-700 transition hover:opacity-75">Contact</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-gray-700 transition hover:opacity-75">FAQs</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p class="font-medium text-gray-900">Policies</p>
+                        <ul class="mt-6 space-y-4 text-sm">
+                            <li>
+                                <a href="#" class="text-gray-500 transition hover:opacity-75">Terms & Conditions</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-gray-500 transition hover:opacity-75">Privacy Policy</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="mt-4 content-center text-center justify-center border-t border-gray-100 pt-4">
+                    <p class="text-xs text-gray-500">Copyright &copy; 2023 imperai. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

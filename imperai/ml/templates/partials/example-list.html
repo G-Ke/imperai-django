@@ -1,0 +1,30 @@
+{% if examples %}
+<p class="mb-2 text-xl font-bold ml-6">{{ example_count }}/10 Examples Created</p>
+<p class="text-sm text-gray-600 mb-8">You can edit your examples or add more later.</p>
+<div class="relative overflow-auto shadow-md sm:rounded-lg h-60">
+    <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+        <thead class="text-xs sticky top-0 text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+            <tr>
+                <th scope="col" class="px-6 py-3">
+                    Input Text
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Output Text
+                </th>
+            </tr>
+        </thead>
+        <tbody class="">
+            {% for ex in examples %}
+            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    {{ ex.input_text }}
+                </th>
+                <td class="px-6 py-4">
+                    {{ ex.output_text }}
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endif %}
