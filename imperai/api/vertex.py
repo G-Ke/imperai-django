@@ -67,7 +67,6 @@ global_openapi_parameters = [
         location=OpenApiParameter.HEADER,
         response=True,
     ),
-    
     OpenApiParameter(
         name='Vary',
         type=str,

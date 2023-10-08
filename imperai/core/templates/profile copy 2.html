@@ -1,0 +1,229 @@
+{% extends 'rebase.html' %}
+{% load widget_tweaks %}
+{% block head_title %}Profile{% endblock %}
+{% block pagename %}Profile{% endblock %}
+{% load account %}
+
+{% block content %}
+<section class="mx-auto bg-gray-50 max-w-3xl px-6 py-24 sm:py-8 lg:px-8 rounded-2xl">
+  <div class="px-4 py-4 mx-auto lg:py-4">
+    <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+      <table class="table-auto w-full text-sm text-gray-500 dark:text-gray-400">
+          <tbody>
+              <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                  <th scope="row" class="pl-4 py-4 text-left font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    Email Address
+                  </th>
+                  <td class="px-1 py-6 text-left">
+                    {{ user.email }}
+                  </td>
+                  <td class="px-6 py-6 text-right">
+                    <a href="#" class="font-medium text-xs text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                </td>
+              </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="mt-4 relative overflow-x-auto shadow-md sm:rounded-lg">
+      <table class="table-auto w-full text-sm text-gray-500 dark:text-gray-400">
+          <tbody>
+              <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                  <th scope="row" class="pl-4 py-4 text-left font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    First Name
+                  </th>
+                  <td class="px-1 py-6 text-center">
+                    {{ user.first_name }}
+                  </td>
+                  <td class="px-6 py-6 text-right">
+                    <a href="#" class="font-medium text-xs text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                </td>
+              </tr>
+              <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                <th scope="row" class="pl-4 py-4 text-left font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                  Last Name
+                </th>
+                <td class="px-1 py-6 text-center">
+                  {{ user.last_name }}
+                </td>
+                <td class="px-6 py-6 text-right">
+                  <a href="#" class="font-medium text-xs text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+              </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="mt-4 relative overflow-x-auto shadow-md sm:rounded-lg">
+      <table class="w-full text-sm text-gray-500 dark:text-gray-400">
+          <tbody>
+              <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                  <th scope="row" class="pl-4 py-4 text-left font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    First Name
+                  </th>
+                  <td class="ml-4">
+                      {{ user.first_name }}
+                  </td>
+                  <td class="px-6 py-6 text-right">
+                    <a href="#" class="font-medium text-xs text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                </td>
+              </tr>
+              <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                <th scope="row" class="pl-4 py-4 text-left font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                  Last Name
+                </th>
+                <td class="">
+                    {{ user.last_name }}
+                </td>
+                <td class="px-6 py-6 text-right">
+                  <a href="#" class="font-medium text-xs text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+              </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+  </div>
+  <div class="px-4 py-4 mx-auto lg:py-4">
+    <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+      <table class="w-full text-sm text-gray-500 dark:text-gray-400">
+        <tbody>
+            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                <th scope="row" class="px-6 py-4 text-left font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    Primary Email Address
+                </th>
+                <td class="px-1 py-6 text-right">
+                    {{ user.email }}
+                </td>
+                <td class="px-6 py-6 text-left">
+                  <a href="#" class="font-medium text-xs text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+              </td>
+            </tr>
+          </tbody>
+      </table>
+        <table class="w-full text-sm text-gray-500 dark:text-gray-400">
+            <tbody>
+                <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                    <th scope="row" class="px-6 py-4 text-left font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                        First Name
+                    </th>
+                    <td class="px-1 py-6 text-right">
+                      {{ user.first_name }}
+                    </td>
+                    <td class="px-6 py-6 text-left">
+                      <a href="#" class="font-medium text-xs text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                  </td>
+                </tr>
+                <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                    <th scope="row" class="px-6 py-4 text-left font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                        Last Name
+                    </th>
+                    <td class="px-1 py-6 text-right">
+                      {{ user.last_name }}
+                    </td>
+                    <td class="px-6 py-6 text-left">
+                        <a href="#" class="font-medium text-xs text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                    </td>
+                </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="px-4 py-4 mx-auto">
+      <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+          <table class="w-full text-sm text-gray-500 dark:text-gray-400">
+              <tbody>
+                  <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                    <th scope="row" class="px-6 py-4 text-left font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                        Location
+                    </th>
+                    <td class="px-1 py-6 text-right">
+                      {{ user.profile.location }}
+                    </td>
+                    <td class="px-6 py-6 text-right">
+                      <a href="#" class="font-medium text-xs text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                  </td>
+                </tr>
+                <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                  <th scope="row" class="px-6 py-4 text-left font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                      Title
+                  </th>
+                  <td class="px-1 py-6 text-right">
+                    {{ user.profile.title }}
+                  </td>
+                  <td class="px-6 py-6 text-right">
+                    <a href="#" class="font-medium text-xs text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+  </div>
+</section>
+  {# profile section 1 #}
+  <div class="px-4 py-4 mx-auto lg:py-4">
+    <div class="px-4 py-4 mx-auto">
+      <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+        <table class="w-full text-sm text-gray-500 dark:text-gray-400">
+          <tbody>
+            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+              <th scope="row" class="px-6 py-4 text-left font-medium text-gray-900 whitespace-nowrap dark:text-white">Primary Email</th>
+              <td class="px-1 py-6">{{ user.email }}</td>
+              <td class="px-6 py-6 text-right">
+                <a href="#" class="font-medium text-xs text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  {# profile section 2 #}
+  <div class="px-4 py-4 mx-auto lg:py-4">
+    <div class="px-4 py-4 mx-auto">
+      <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+        <table class="w-full text-sm text-gray-500 dark:text-gray-400">
+          <tbody>
+            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+              <th scope="row" class="px-6 py-4 text-left font-medium text-gray-900 whitespace-nowrap dark:text-white">First Name</th>
+              <td class="px-1 py-6">{{ user.first_name }}</td>
+              <td class="px-6 py-6 text-right">
+                <a href="#" class="font-medium text-xs text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+              </td>
+            </tr>
+            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+              <th scope="row" class="px-6 py-4 text-left font-medium text-gray-900 whitespace-nowrap dark:text-white">Last Name</th>
+              <td class="px-1 py-6 text-right">{{ user.last_name}}</td>
+              <td class="px-6 py-6 text-right">
+                <a href="#" class="font-medium text-xs text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  {# profile section 3 #}
+  <div class="px-4 py-4 mx-auto lg:py-4">
+    <div class="px-4 py-4 mx-auto">
+      <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+        <table class="w-full text-sm text-gray-500 dark:text-gray-400">
+          <tbody>
+            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+              <th scope="row" class="px-6 py-4 text-left font-medium text-gray-900 whitespace-nowrap dark:text-white">Location</th>
+              <td class="px-1 py-6 text-right">{{ user.profile.location }}</td>
+              <td class="px-6 py-6 text-right">
+                <a href="#" class="font-medium text-xs text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+              </td>
+            </tr>
+            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+              <th scope="row" class="px-6 py-4 text-left font-medium text-gray-900 whitespace-nowrap dark:text-white">Title</th>
+              <td class="px-1 py-6 text-right">{{ user.profile.title }}</td>
+              <td class="px-6 py-6 text-right">
+                <a href="#" class="font-medium text-xs text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+{% endblock content %}

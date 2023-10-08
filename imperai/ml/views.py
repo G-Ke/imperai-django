@@ -111,6 +111,7 @@ class VertexChatConfigStartExampleCreateView(LoginRequiredMixin, CreateView):
         context['examples'] = VertexChatExampleIOPair.objects.filter(user=self.request.user).order_by('-created_at')
         return context
 
+    # Handle making sure users are creating several examples during the onboarding flow.
     def form_valid(self, form):
         self.object = form.save(commit=False)
         self.object.user = self.request.user

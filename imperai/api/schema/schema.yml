@@ -4,6 +4,44 @@ info:
   version: 1.0.0
   description: imperai
 paths:
+  /api/v1/genie/chat/beta:
+    post:
+      operationId: api_v1_genie_chat_beta_create
+      tags:
+      - api
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ChatRequest'
+            examples:
+              MessageOnlyRequest:
+                value:
+                  message: What sort of tasks can you help with?
+                summary: Message Only Request
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/ChatRequest'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/ChatRequest'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ChatRequest'
+              examples:
+                MessageOnlyRequest:
+                  value:
+                    message: What sort of tasks can you help with?
+                  summary: Message Only Request
+          description: ''
   /api/v1/user-management/groups/:
     get:
       operationId: api_v1_user_management_groups_list
@@ -1438,6 +1476,14 @@ paths:
           description: ''
 components:
   schemas:
+    ChatRequest:
+      type: object
+      properties:
+        message:
+          type: string
+          maxLength: 1000
+      required:
+      - message
     Group:
       type: object
       properties:
@@ -1840,10 +1886,16 @@ components:
           type: string
         managed_status:
           $ref: '#/components/schemas/ManagedStatusEnum'
+        created_at:
+          type: string
+          format: date-time
+          readOnly: true
+          nullable: true
         user:
           type: string
           format: uri
       required:
+      - created_at
       - description
       - input_text
       - managed_status

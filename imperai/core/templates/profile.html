@@ -3,35 +3,59 @@
 {% block head_title %}Profile{% endblock %}
 {% block pagename %}Profile{% endblock %}
 {% load account %}
+
 {% block content %}
-<section class="bg-gray-50 shadow shadow-lg shadow-gray-800 mx-auto max-w-2xl overflow-hidden px-6 py-24 sm:py-8 lg:px-8 rounded-2xl">
-  <div class="px-4 py-4 mx-auto lg:py-4">
-    <h1 class="mb-6 text-lg font-bold text-gray-900">Your Profile</h1>
-    <div class="grid gap-4 mb-4 sm:grid-cols-2 sm:gap-6 sm:mb-5">
-      <div class="sm:col-span-2">
-        <label for="email" class="block mb-2 text-md font-medium text-gray-900">Primary Email Address</label>
-        <input disabled type="text" name="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5" value="{{ user.email }}">
-        <a href="{% url 'account_email' %}" type="button" class="text-white m-3 bg-indigo-700 hover:bg-indigo-800 focus:ring-4 focus:ring-indigo-300 font-medium rounded-lg text-xs px-5 py-2.5 mr-2 mb-2 dark:bg-indigo-600 dark:hover:bg-indigo-700 focus:outline-none dark:focus:ring-indigo-800">Change Email</a>
-      </div>
-      <div class="w-full">
-        <label for="first_name" class="block mb-2 text-md font-medium text-gray-900">First Name</label>
-        <input disabled type="text" name="first_name" id="first_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5" value="{% if user.first_name %}{{ user.first_name }}{% endif %}">
-        <a href="{% url 'user_update' pk=user.pk %}" type="button" class="text-white m-3 bg-indigo-700 hover:bg-indigo-800 focus:ring-4 focus:ring-indigo-300 font-medium rounded-lg text-xs px-5 py-2.5 mr-2 mb-2 dark:bg-indigo-600 dark:hover:bg-indigo-700 focus:outline-none dark:focus:ring-indigo-800">Change Names</a>
-      </div>
-      <div class="w-full">
-        <label for="last_name" class="block mb-2 text-md font-medium text-gray-900">Last Name</label>
-        <input disabled name="last_name" id="last_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5" value="{% if user.last_name %}{{ user.last_name }}{% endif %}">
-      </div>
-      <div class="w-full">
-        <label for="location" class="block mb-2 text-md font-medium text-gray-900">Location</label>
-        <input disabled name="location" id="location" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5" value="{% if user.profile.location %}{{ user.profile.location }}{% endif %}">
-        <a href="{% url 'profile_update' pk=user.profile.pk %}" type="button" class="text-white m-3 bg-indigo-700 hover:bg-indigo-800 focus:ring-4 focus:ring-indigo-300 font-medium rounded-lg text-xs px-5 py-2.5 mr-2 mb-2 dark:bg-indigo-600 dark:hover:bg-indigo-700 focus:outline-none dark:focus:ring-indigo-800">Change Details</a>
-      </div>
-      <div class="w-full">
-        <label for="title" class="block mb-2 text-md font-medium text-gray-900">Job Title</label>
-        <input disabled name="title" id="title" class="disabled bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5" value="{% if user.profile.title %}{{ user.profile.title }}{% endif %}">
-      </div>
+<div class="mx-auto max-w-3xl">
+    <h2 class="text-3xl font-bold mb-2">User Profile</h2>
+</div>
+<section class="mx-auto mb-3 bg-slate-100 max-w-3xl px-6 py-24 sm:py-8 lg:px-8 rounded-2xl">
+    <div id="user-profile">
+        <div class="grid">
+            <label class="block mb-2 text-md font-medium text-gray-900">Primary Email</label>
+            <input value="{{ user.email }}" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" disabled>
+        </div>
+        <div class="pt-2 mt-2">
+            <a href="{% url 'account_email' %}" class="mt-4 focus:outline-none text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5">Change Email Address</a>
+        </div>
     </div>
-  </div>
+</section>
+<section class="mx-auto bg-slate-100 max-w-3xl px-6 py-24 sm:py-8 lg:px-8 rounded-2xl">
+    <div id="first-last">
+        <form hx-post="{% url 'user_update' pk=user.pk %}" hx-swap="none" hx-target="#first-last">
+            {% csrf_token %}
+            <div class="grid gap-4 mb-4 mt-4 sm:grid-cols-2">
+                <div>
+                    <label for="first_name" class="block mb-2 text-md font-medium text-gray-900">First Name</label>
+                    <input type="text" name="first_name" id="first_name" value="{{ user.first_name }}" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Enter your first name..">
+                </div>
+                <div>
+                    <label for="last_name" class="block mb-2 text-md font-medium text-gray-900">Last Name</label>
+                    <input type="text" name="last_name" id="last_name" value="{{ user.last_name }}" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Enter your last name..">
+                </div>
+                <button hx-trigger="submit changed" type="submit" class="mt-4 focus:outline-none text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5">
+                    Change Name
+                </button>
+            </div>
+        </form>
+    </div>
+    <hr class="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-700">
+    <div id="user-details">
+        <form hx-post="{% url 'profile_update' pk=user.profile.pk %}" hx-swap="none" hx-target="#user-details">
+            {% csrf_token %}
+            <div class="grid gap-4 mb-4 mt-4 sm:grid-cols-2">
+                <div>
+                    <label for="title" class="block mb-2 text-md font-medium text-gray-900">Job Title</label>
+                    <input type="text" name="title" id="title" value="{{ user.profile.title }}" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Enter your job title..">
+                </div>
+                <div>
+                    <label for="location" class="block mb-2 text-md font-medium text-gray-900">Location</label>
+                    <input type="text" name="location" id="location" value="{{ user.profile.location }}" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Enter your location..">
+                </div>
+                <button hx-trigger="submit" type="submit" class="mt-4 focus:outline-none text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5">
+                    Change Details
+                </button>
+            </div>
+        </form>
+    </div>
 </section>
 {% endblock content %}

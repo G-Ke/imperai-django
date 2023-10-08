@@ -1,6 +1,6 @@
 from django.urls import path, include
 from rest_framework import routers
-from . import vertex
+from . import vertex, genie
 from rest_framework import permissions
 from drf_spectacular.views import SpectacularAPIView, SpectacularSwaggerView, SpectacularRedocView
 
@@ -14,6 +14,7 @@ router.register(r'vertex/chat/contexts', vertex.VertexChatContextViewSet)
 router.register(r'vertex/chat/contextinstructs', vertex.VertexChatContextInstructViewSet)
 router.register(r'vertex/chat/contextrules', vertex.VertexChatContextRuleViewSet)
 router.register(r'vertex/chat/contextdetails', vertex.VertexChatContextDetailViewSet)
+# router.register(r'genie/chat/beta', genie.CohereChatBetaRequestView, basename='cohere')
 
 urlpatterns = [
     path('', include(router.urls)),
@@ -21,4 +22,6 @@ urlpatterns = [
     path('schema/', SpectacularAPIView.as_view(), name='schema'),
     path('swagger/', SpectacularSwaggerView.as_view(url_name='schema'), name='swagger-ui'),
     path('redoc/', SpectacularRedocView.as_view(url_name='schema'), name='redoc'),
+    # path('genie/chat/beta', genie.CohereChatBetaRequestView.as_view(), name='cohere'),
+    path('genie/chat/beta', genie.make_cohere_chat_beta_request, name='genie-chat-beta')
 ]
