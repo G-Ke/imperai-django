@@ -4,6 +4,7 @@ from rest_framework.decorators import api_view
 from drf_spectacular.utils import extend_schema, OpenApiExample, OpenApiParameter, OpenApiTypes
 from rest_framework import serializers
 from rest_framework.views import APIView
+from .vertex import global_openapi_parameters
 import cohere
 import os
 
@@ -20,6 +21,8 @@ class ChatRequestSerializer(serializers.Serializer):
 @extend_schema(
         request=ChatRequestSerializer,
         responses={200: ChatRequestSerializer},
+        tags=['Genie v1'], 
+        parameters=global_openapi_parameters,
         examples=[
             OpenApiExample(
                 'Message Only Request',
