@@ -23,5 +23,6 @@ urlpatterns = [
     path('swagger/', SpectacularSwaggerView.as_view(url_name='schema'), name='swagger-ui'),
     path('redoc/', SpectacularRedocView.as_view(url_name='schema'), name='redoc'),
     # path('genie/chat/beta', genie.CohereChatBetaRequestView.as_view(), name='cohere'),
-    path('genie/chat/beta', genie.make_cohere_chat_beta_request, name='genie-chat-beta')
+    path('genie/chat/beta', genie.make_cohere_chat_beta_request, name='genie-chat-beta'),
+    path('genie/image/', genie.make_stability_image_request, name='genie-image')
 ]
