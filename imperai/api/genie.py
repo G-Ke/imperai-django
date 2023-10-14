@@ -5,12 +5,9 @@ from drf_spectacular.utils import extend_schema, OpenApiExample, OpenApiParamete
 from rest_framework import serializers
 from rest_framework.views import APIView
 from .vertex import global_openapi_parameters
-<<<<<<< HEAD
 from rest_framework.authentication import SessionAuthentication, BasicAuthentication
 from rest_framework.permissions import IsAuthenticated
 import requests
-=======
->>>>>>> 7c39f95bdcfce8350dacbc59cd0b02aad4221b55
 import cohere
 import os
 import base64
