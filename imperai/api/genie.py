@@ -27,8 +27,6 @@ class ChatRequestSerializer(serializers.Serializer):
         parameters=global_openapi_parameters,
         request=ChatRequestSerializer,
         responses={200: ChatRequestSerializer},
-        tags=['Genie v1'], 
-        parameters=global_openapi_parameters,
         examples=[
             OpenApiExample(
                 'Message Only Request',
@@ -59,17 +57,17 @@ class ImageRequestSerializer(serializers.Serializer):
     prompt = serializers.CharField(max_length=1000)
 
 @extend_schema(
-        tags=['Genie v1'], 
-        parameters=global_openapi_parameters,
-        request=ImageRequestSerializer,
-        responses={200: ImageRequestSerializer},
-        examples=[
-            OpenApiExample(
-                'Text to Image Prompt',
-                value={'prompt': 'A colorful abstract happy image with a mouse at the center.'}
-            )
-        ]
-    ) 
+    tags=['Genie v1'], 
+    parameters=global_openapi_parameters,
+    request=ImageRequestSerializer,
+    responses={200: ImageRequestSerializer},
+    examples=[
+        OpenApiExample(
+            'Text to Image Prompt',
+            value={'prompt': 'A colorful abstract happy image with a mouse at the center.'}
+        )
+    ]
+) 
 @api_view(['post'])
 def make_stability_image_request(request):
     serializer = ImageRequestSerializer(data=request.data)

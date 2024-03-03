@@ -13,6 +13,7 @@ import os
 from pathlib import Path
 from dotenv import load_dotenv
 from django.core.exceptions import ImproperlyConfigured
+from datetime import timedelta
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -37,12 +38,15 @@ SECRET_KEY = get_env_value('DJANGO_SECRET_KEY')
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    
+    "*"
 ]
 
 INTERNAL_IPS = [
     "127.0.0.1",
+    "localhost:3000"
 ]
+
+CORS_ALLOW_ALL_ORIGINS=True
 # Application definition
 
 INSTALLED_APPS = [
@@ -58,6 +62,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'allauth.socialaccount.providers.auth0',
     'allauth.socialaccount.providers.shopify',
+    'corsheaders',
     'core',
     'tailwind',
     'theme',
@@ -73,6 +78,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -80,6 +86,16 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django_browser_reload.middleware.BrowserReloadMiddleware',
 ]
+
+SIMPLE_JWT = {
+    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=240),
+    'REFRESH_TOKEN_LIFETIME': timedelta(days=2),
+    'ALGORITHM': 'HS512',
+    'AUTH_HEADER_TYPES': ('Bearer',),
+    'AUTH_HEADER_NAME': 'HTTP_AUTHORIZATION',
+    'USER_ID_CLAIM': 'token_id',
+    'USER_ID_FIELD': 'token_id',
+}
 
 ROOT_URLCONF = 'imperai.urls'
 
@@ -209,8 +225,7 @@ REST_FRAMEWORK = {
     'PAGE_SIZE': 10,
     'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
     'DEFAULT_AUTHENTICATION_CLASSES': [
-        'rest_framework.authentication.BasicAuthentication',
-        'rest_framework.authentication.SessionAuthentication',
+        'rest_framework_simplejwt.authentication.JWTAuthentication'
     ],
 }
 
@@ -229,6 +244,13 @@ SPECTACULAR_SETTINGS = {
             'name': 'Vertex Chat Context', 
             'description': 'Context endpoints'
         },
+        {
+            'name': 'Together', 
+            'description': 'Together.ai Endpoints'
+        },
     ],
-    
+    'SWAGGER_UI_SETTINGS': {
+        "deepLinking": True,
+    },
+    "SWAGGER_UI_DIST": "//unpkg.com/swagger-ui-dist@5.11.0",
 }

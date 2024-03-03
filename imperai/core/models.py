@@ -8,6 +8,7 @@ from django.db.models.signals import post_save
 from allauth.account.signals import email_changed
 from allauth.account.utils import user_email, user_username
 from allauth.account.models import EmailAddress
+import uuid
 
 # Create your models here.
 
@@ -17,6 +18,7 @@ class CustomUser(AbstractUser):
     USERNAME_FIELD = "email"
     REQUIRED_FIELDS = []
     objects = CustomUserManager()
+    token_id = models.OneToOneField('TokenIdentifier', on_delete=models.CASCADE, blank=True, null=True)
 
     def __str__(self):
         return self.email
@@ -37,3 +39,16 @@ def create_user_profile(sender, instance, created, **kwargs):
 @receiver(post_save, sender=settings.AUTH_USER_MODEL)
 def save_user_profile(sender, instance, **kwargs):
     instance.profile.save()
+
+@receiver(post_save, sender=settings.AUTH_USER_MODEL)
+def generate_token_identifier(sender, instance, created, **kwargs):
+    if created:
+        TokenIdentifier.objects.create(user=instance)
+        instance.token_id = TokenIdentifier.objects.get(user=instance)
+
+class TokenIdentifier(models.Model):
+    user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, editable=False)
+    token_id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+
+    def __str__(self):
+        return str(self.token_id)
