@@ -1,7 +1,8 @@
 from django.urls import path, include
 from rest_framework import routers
-from . import vertex, genie
+from . import vertex, genie, together
 from rest_framework import permissions
+from rest_framework_simplejwt import views as jwt_views
 from drf_spectacular.views import SpectacularAPIView, SpectacularSwaggerView, SpectacularRedocView
 
 router = routers.DefaultRouter()
@@ -19,9 +20,14 @@ router.register(r'vertex/chat/contextdetails', vertex.VertexChatContextDetailVie
 urlpatterns = [
     path('', include(router.urls)),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+    path('auth/token', jwt_views.TokenObtainPairView.as_view(), name='token_obtain_pair'),
+    path('auth/token/refresh', jwt_views.TokenRefreshView.as_view(), name='token_refresh'),
     path('schema/', SpectacularAPIView.as_view(), name='schema'),
     path('swagger/', SpectacularSwaggerView.as_view(url_name='schema'), name='swagger-ui'),
     path('redoc/', SpectacularRedocView.as_view(url_name='schema'), name='redoc'),
     # path('genie/chat/beta', genie.CohereChatBetaRequestView.as_view(), name='cohere'),
-    path('genie/chat/beta', genie.make_cohere_chat_beta_request, name='genie-chat-beta')
+    path('genie/chat/beta', genie.make_cohere_chat_beta_request, name='genie-chat-beta'),
+    path('genie/image/', genie.make_stability_image_request, name='genie-image'),
+    path('together/models', together.get_together_models, name='together-models'),
+    path('together/chat', together.send_together_chat_completion, name='together-chat')
 ]

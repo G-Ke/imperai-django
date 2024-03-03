@@ -28,3 +28,12 @@ media/
 
 migrations/
 imperai/db.sqlite3.old
+imperai/db.sqlite3.old2
+
+.coverage
+
+imperai/api/test.json
+
+
+# imperai/shopifymanagement/
+# imperai\theme\*
