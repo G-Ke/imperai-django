@@ -26,16 +26,12 @@ media/
 # My Notes
 *notes.md
 
-migrations/
 imperai/db.sqlite3.old
 imperai/db.sqlite3.old2
-
 .coverage
-
+migrations/
 imperai/api/test.json
-
 shopifymanagement/
-
-
-# imperai/shopifymanagement/
-# imperai\theme\*
+theme/
+sent_emails/
+htmlcov/
